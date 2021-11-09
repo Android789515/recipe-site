@@ -1,0 +1,10 @@
+Colors:
+
+Log in button base and open folder color: #d94d1e
+Hover: #df6e4a
+Active: #ad3d18
+
+Light gray color: #c5cbd5
+Line color: #e7e9ef
+
+Form bg: #f7f7fb

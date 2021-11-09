@@ -1,0 +1,70 @@
+Pages
+=====
+- Main page {
+    Contains side bar?
+
+
+}
+
+- Current recipe page {
+
+}
+
+Components
+==========
+
+- Header {
+    Contains favicon?, search button w/Icon, and profile button w/Icon.
+}
+
+- Sidebar {
+
+}
+
+- Current recipe info {
+    Might use grid for this.
+
+    Contains picture on the left, info on the right.
+    On mobile, picture takes full width of container;
+    on large screens, there will be padding in the container.
+
+    Title at top, share button w/Icon at top right,
+    and icons at the bottom: stars, ?, time, and calories.
+}
+
+- Primary button {
+    Has hover and active.
+
+    Login button and new recipe button look very different in terms of button content.
+    The only similarities I can see are the background and pill shape.
+
+    Wraps inside another component as a render prop, so the outer component can provide
+    functionality such as logging in or adding a new recipe.
+}
+
+- Button w/Icon {
+    Uses a toggle hook and will modify a simple boolean state value,
+    which will determine if a component such as the search box or profile tab will
+    appear.
+
+
+}
+
+- Ingredient input form {
+    Deletable
+
+    2 inputs, 1 for the ingredient and 1 for calories
+}
+
+- Description form {
+    Resizable text area;
+}
+
+Note: I don't see any submit buttons for the 2 above forms
+so I will assume for now that they submit on enter
+
+- Log in form {
+    Has hide/show functionality for password; password is serialized when hidden.
+
+    Submits an ajax request to the server to log in.
+}

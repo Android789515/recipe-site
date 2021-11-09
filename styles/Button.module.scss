@@ -1,0 +1,31 @@
+@use 'variables';
+
+$hover-color: #df6e4a;
+$active-color: #ad3d18;
+
+.btn {
+  $scale: 1;
+  font-family: variables.$font-stack;
+  font-size: $scale * 0.9rem;
+  font-weight: 600;
+  color: #fff;
+
+  cursor: pointer;
+
+  padding: $scale * 1rem $scale * 5.375rem;
+  background: variables.$accent-color;
+  border-radius: 50px;
+}
+
+.btn:focus,
+.btn:hover {
+  background: $hover-color;
+}
+
+.btn:active {
+  background: $active-color;
+}
+
+.btn > * {
+  margin: 0;
+}
