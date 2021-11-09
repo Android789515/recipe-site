@@ -1,0 +1,10 @@
+@use 'variables';
+
+.text {
+  $scale: 1;
+  font-size: $scale * 0.9rem;
+  font-weight: 600;
+
+  padding: $scale * 1rem $scale * 5.375rem;
+  margin: 0;
+}

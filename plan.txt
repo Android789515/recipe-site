@@ -38,6 +38,8 @@ Components
     Login button and new recipe button look very different in terms of button content.
     The only similarities I can see are the background and pill shape.
 
+    For the new recipe button it might be easier to use an icon.
+
     Wraps inside another component as a render prop, so the outer component can provide
     functionality such as logging in or adding a new recipe.
 }

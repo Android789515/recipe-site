@@ -1,31 +1,50 @@
 @use 'variables';
 @use 'Button.module';
 
+$scale: 1;
+
 .newRecipeContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: $scale * 1em;
+  align-items: center;
+
+  padding: $scale * .8rem $scale * 1.75rem;
 }
 
+$dimensions: $scale * 26px;
 .newRecipeAdd {
-  //font-size: 2rem;
-  color: variables.$accent-color;
 
-  display: inline-block;
+  width: $dimensions;
+  height: $dimensions;
 
   background: #fff;
   border-radius: 50%;
 }
 
-.newRecipeAdd:focus,
-.newRecipeAdd:hover {
+.newRecipeAdd::after {
+  content: '+';
+
+  font-size: $scale * 1.75rem;
+  font-weight: 700;
+  color: variables.$accent-color;
+
+  display: inline-block;
+
+  transform: translate(0, -$dimensions / 3.5);
+}
+
+.newRecipeAdd::after:focus,
+.newRecipeAdd::after:hover {
   color: Button.$hover-color;
 }
 
-.newRecipeAdd:active {
+.newRecipeAdd::after:active {
   color: Button.$active-color;
 }
 
 .newRecipeText {
+  font-size: $scale * 1rem;
+
   margin: 0;
 }
