@@ -6,10 +6,10 @@ $scale: 1;
 .newRecipeContainer {
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-column-gap: $scale * 1em;
+  grid-column-gap: $scale * 1.55em;
   align-items: center;
 
-  padding: $scale * .8rem $scale * 1.75rem;
+  padding: $scale * 1em $scale * 2em;
 }
 
 $dimensions: $scale * 26px;
@@ -31,15 +31,15 @@ $dimensions: $scale * 26px;
 
   display: inline-block;
 
-  transform: translate(0, -$dimensions / 3.5);
+  transform: translateY(-$dimensions / 3.5);
 }
 
-.newRecipeAdd::after:focus,
-.newRecipeAdd::after:hover {
+button:focus .newRecipeAdd::after,
+.newRecipeContainer:hover .newRecipeAdd::after {
   color: Button.$hover-color;
 }
 
-.newRecipeAdd::after:active {
+.newRecipeContainer:active .newRecipeAdd::after {
   color: Button.$active-color;
 }
 
