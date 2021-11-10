@@ -1,11 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-import Button from '../components/Button'
-import NewRecipe from '../components/NewRecipe'
-import LoginText from '../components/LoginText'
+import LoginInput from '../components/forms-and-inputs/LoginInput'
+import LoginForm from '../components/forms-and-inputs/LoginForm'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +13,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+        <div style={{ width: '18%', margin: '1em' }}>
+            <LoginForm />
+        </div>
     </div>
   )
 }

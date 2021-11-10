@@ -1,0 +1,33 @@
+@use '../variables';
+
+.inputSection {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-column-gap: 2em;
+  align-items: center;
+
+  padding: .75em .25em;
+
+  border-bottom: solid variables.$line-color 2px;
+}
+
+.inputSection:not(.inputSection:last-child) {
+  margin-bottom: 1em;
+}
+
+.icon {
+
+}
+
+// Remove default styling
+.input {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.input {
+  color: variables.$light-gray;
+
+  display: inline-block;
+}
