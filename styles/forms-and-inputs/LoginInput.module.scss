@@ -2,6 +2,7 @@
 
 .inputSection {
   display: grid;
+  grid-template-rows: 2em;
   grid-template-columns: max-content auto;
   grid-column-gap: 2em;
   align-items: center;
@@ -30,4 +31,10 @@
   color: variables.$light-gray;
 
   display: inline-block;
+
+  height: 100%;
+}
+
+.input:focus {
+  outline: none;
 }
