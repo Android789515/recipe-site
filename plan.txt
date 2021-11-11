@@ -58,8 +58,9 @@ Components
     2 inputs, 1 for the ingredient and 1 for calories
 }
 
-- Description form {
+- Step description form {
     Resizable text area;
+    Goes into a list of steps
 }
 
 Note: I don't see any submit buttons for the 2 above forms

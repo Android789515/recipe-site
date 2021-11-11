@@ -13,9 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <div style={{ width: '18%', margin: '1em' }}>
-            <LoginForm />
-        </div>
+        
     </div>
   )
 }

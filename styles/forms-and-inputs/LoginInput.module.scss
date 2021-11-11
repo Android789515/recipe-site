@@ -21,13 +21,13 @@
 }
 
 // Remove default styling
-.input {
+.inputArea {
   padding: 0;
   background: none;
   border: none;
 }
 
-.input {
+.inputArea {
   color: variables.$light-gray;
 
   display: inline-block;
@@ -35,6 +35,6 @@
   height: 100%;
 }
 
-.input:focus {
+.inputArea:focus {
   outline: none;
 }
