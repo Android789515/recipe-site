@@ -11,12 +11,18 @@ a {
   text-decoration: none;
 }
 
-button {
+* {
+  box-sizing: border-box;
+}
+
+.unstyled-button {
   padding: 0;
   background: none;
   border: none;
 }
 
-* {
-  box-sizing: border-box;
+.unstyled-ul {
+  list-style: none;
+
+  padding: 0;
 }

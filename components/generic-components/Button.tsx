@@ -7,7 +7,7 @@ interface Props {
 
 const Button: React.FC<Props> = ({ children }) => {
     return (
-        <button type='button' className={styles.btn}>{children}</button>
+        <button type='button' className={`unstyled-button ${styles.btn}`}>{children}</button>
     )
 }
 

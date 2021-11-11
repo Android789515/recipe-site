@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 
 import LoginInput from '../components/forms-and-inputs/LoginInput'
 import LoginForm from '../components/forms-and-inputs/LoginForm'
+import Button from '../components/generic-components/Button'
+import LoginText from '../components/LoginText'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +15,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        
     </div>
   )
 }
