@@ -11,18 +11,28 @@ a {
   text-decoration: none;
 }
 
+input {
+  font: inherit;
+}
+
 * {
   box-sizing: border-box;
 }
 
-.unstyled-button {
+.unstyledButton {
   padding: 0;
   background: none;
   border: none;
 }
 
-.unstyled-ul {
+.unstyledUl {
   list-style: none;
 
   padding: 0;
+}
+
+.unstyledInput {
+  padding: 0;
+  background: none;
+  border: none;
 }

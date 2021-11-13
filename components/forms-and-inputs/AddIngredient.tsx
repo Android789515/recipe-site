@@ -18,8 +18,14 @@ const AddIngredient = ({ updateIngredients }: Props) => {
     })
 
     return (
-        <div>
-
+        <div className={styles.inputs}>
+            <input
+                className={`unstyledInput ${styles.input}`}
+                name='ingredient-name'
+                placeholder='Enter your Ingredient'
+                required
+            />
+            <input className={`unstyledInput ${styles.input}`} name='calories' placeholder='Calories' />
         </div>
     )
 }

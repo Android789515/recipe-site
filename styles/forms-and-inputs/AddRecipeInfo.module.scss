@@ -2,16 +2,39 @@
 
 .layout {
   display: grid;
+  grid-template: auto 1fr / 1fr 120%;
+  grid-row-gap: .4em;
+}
+
+.index,
+.deleteIcon {
+  grid-row: 1;
 }
 
 .index {
+  grid-column: 1;
 
+  width: max-content;
+
+  padding: .125em .55em;
+  background: variables.$form-bg;
+  border-radius: 50%;
 }
 
 .inputArea {
+  order: 2;
+  grid-column: span 2;
 
+
+
+  padding: 1em 1.15em;
+  background: variables.$form-bg;
+  border-radius: 5px;
 }
 
 .deleteIcon {
+  order: 1;
+  grid-column: 2;
 
+  margin-left: auto;
 }

@@ -16,7 +16,7 @@ const AddRecipeInfo: React.FC<Props> = ({ index, children }) =>
                 {children}
             </div>
 
-            <img src='' alt='Delete' />
+            <img className={styles.deleteIcon} src='' alt='Delete' />
         </div>
     )
 }

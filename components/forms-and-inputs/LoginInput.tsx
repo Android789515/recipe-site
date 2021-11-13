@@ -15,7 +15,7 @@ const LoginInput = ({ iconSrc, inputType = 'text', name, placeholder }: Props) =
             <img className={styles.icon} src={iconSrc} alt='placeholder icon'/>
 
             <input
-                className={styles.input}
+                className={`${styles.input} unstyled-input`}
                 type={inputType}
                 name={name}
                 placeholder={placeholder}

@@ -21,16 +21,16 @@ const IngredientsList = ({  }: Props) => {
         return prevIngredients.filter(ingredient => ingredient.entryId !== ingredientId)
     })
 
-    const ingredientEntries = ingredients.map(ingredient => {
+    const ingredientEntries = ingredients.map((ingredient, index) => {
         const { entryId, name, calories } = ingredient
         return (
-            <Ingredient key={entryId} entryId={entryId} name={name} calories={calories} />
+            <Ingredient key={entryId} entryId={entryId} index={index} name={name} calories={calories} />
         )
     })
 
     return (
         <div>
-            <ul className={`unstyled-ul`}>
+            <ul className={`unstyledUl`}>
                 {ingredientEntries}
             </ul>
 

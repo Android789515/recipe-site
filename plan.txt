@@ -21,7 +21,7 @@ Components
 
 }
 
-- Current recipe info {
+- Current recipe {
     Might use grid for this.
 
     Contains picture on the left, info on the right.
@@ -31,6 +31,8 @@ Components
     Title at top, share button w/Icon at top right,
     and icons at the bottom: stars, ?, time, and calories.
 }
+
+-
 
 - Primary button {
     Has hover and active.

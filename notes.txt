@@ -8,3 +8,7 @@ Light gray color: #c5cbd5, #8f98a5, #57606c
 Line color: #e7e9ef
 
 Form bg: #f7f7fb
+
+
+Both the add ingredient list and step list need to be in a container to keep them aligned.
+Might call it recipe info
