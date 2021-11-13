@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styles from '../../styles/forms-and-inputs/AddIngredient.module.scss'
+import useControlledInput from '../../hooks/useControlledInput'
 
 interface Props {
     updateIngredients: Function
@@ -13,6 +14,8 @@ interface Ingredient {
 }
 
 const AddIngredient = ({ updateIngredients }: Props) => {
+    const { text, setText, submitOnEnter } = useControlledInput()
+
     const addIngredient = (ingredient: Ingredient) => updateIngredients( (prevIngredients: Ingredient[]) => {
         return [...prevIngredients, ingredient]
     })
@@ -24,6 +27,9 @@ const AddIngredient = ({ updateIngredients }: Props) => {
                 name='ingredient-name'
                 placeholder='Enter your Ingredient'
                 required
+                onChange={setText}
+                value={text}
+                onKeyDown={submitOnEnter}
             />
             <input className={`unstyledInput ${styles.input}`} name='calories' placeholder='Calories' />
         </div>
