@@ -1,12 +1,11 @@
 import React from 'react'
+
+import inputTypes from '../../types/inputTypes'
+
 import LoginInput from './LoginInput'
 
 interface Props {
 
-}
-
-const inputTypes = {
-    password: 'password'
 }
 
 const LoginForm = (props: Props) => {
@@ -15,14 +14,14 @@ const LoginForm = (props: Props) => {
         <form name='login' action='' method='post'>
             <LoginInput
                 iconSrc=''
-                inputType=''
+                inputType={inputTypes._text}
                 name='username-or-email'
                 placeholder='Username or email'
             />
 
             <LoginInput
                 iconSrc=''
-                inputType={inputTypes.password}
+                inputType={inputTypes._password}
                 name='password'
                 placeholder='Password'
             />

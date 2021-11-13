@@ -1,7 +1,8 @@
 import React from 'react'
 
 import styles from '../../styles/forms-and-inputs/LoginInput.module.scss'
-import useControlledInput from '../../hooks/useControlledInput'
+
+import ControlledInput from './ControlledInput'
 
 interface Props {
     iconSrc: string,
@@ -10,22 +11,17 @@ interface Props {
     placeholder: string
 }
 
-const LoginInput = ({ iconSrc, inputType = 'text', name, placeholder }: Props) => {
-    const { text, setText, submitOnEnter } = useControlledInput()
-
+const LoginInput = ({ iconSrc, inputType, name, placeholder }: Props) => {
     return (
         <div className={styles.inputSection}>
             <img className={styles.icon} src={iconSrc} alt='placeholder icon'/>
 
-            <input
+            <ControlledInput
                 className={`${styles.input} unstyled-input`}
                 type={inputType}
                 name={name}
                 placeholder={placeholder}
                 required
-                onChange={setText}
-                value={text}
-                onKeyDown={submitOnEnter}
             />
         </div>
     )

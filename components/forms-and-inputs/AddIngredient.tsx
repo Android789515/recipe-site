@@ -1,10 +1,14 @@
 import React from 'react'
 
 import styles from '../../styles/forms-and-inputs/AddIngredient.module.scss'
-import useControlledInput from '../../hooks/useControlledInput'
+
+import inputTypes from '../../types/inputTypes'
+
+import ControlledInput from './ControlledInput'
 
 interface Props {
-    updateIngredients: Function
+    updateIngredients: Function,
+    shouldResetInputs: boolean
 }
 
 interface Ingredient {
@@ -13,8 +17,7 @@ interface Ingredient {
     calories: number
 }
 
-const AddIngredient = ({ updateIngredients }: Props) => {
-    const { text, setText, submitOnEnter } = useControlledInput()
+const AddIngredient = ({ updateIngredients, shouldResetInputs }: Props) => {
 
     const addIngredient = (ingredient: Ingredient) => updateIngredients( (prevIngredients: Ingredient[]) => {
         return [...prevIngredients, ingredient]
@@ -22,16 +25,22 @@ const AddIngredient = ({ updateIngredients }: Props) => {
 
     return (
         <div className={styles.inputs}>
-            <input
+            <ControlledInput
                 className={`unstyledInput ${styles.input}`}
                 name='ingredient-name'
+                type={inputTypes._text}
                 placeholder='Enter your Ingredient'
                 required
-                onChange={setText}
-                value={text}
-                onKeyDown={submitOnEnter}
+                shouldResetInputs={shouldResetInputs}
             />
-            <input className={`unstyledInput ${styles.input}`} name='calories' placeholder='Calories' />
+            <ControlledInput
+                className={`unstyledInput ${styles.input}`}
+                name='calories'
+                type={inputTypes._text}
+                placeholder='Calories'
+                required={false}
+                shouldResetInputs={shouldResetInputs}
+            />
         </div>
     )
 }
