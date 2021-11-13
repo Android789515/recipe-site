@@ -4,7 +4,7 @@ import styles from '../../styles/forms-and-inputs/AddIngredient.module.scss'
 
 import inputTypes from '../../types/inputTypes'
 
-import ControlledInput from './ControlledInput'
+import ControlledInput from '../generic-components/ControlledInput'
 
 interface Props {
     updateIngredients: Function,

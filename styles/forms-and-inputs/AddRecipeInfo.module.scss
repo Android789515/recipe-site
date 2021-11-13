@@ -11,21 +11,21 @@
   grid-row: 1;
 }
 
+$colored-index-bg: true;
 .index {
+  color: if($colored-index-bg, #fff, #000);
   grid-column: 1;
 
   width: max-content;
 
   padding: .125em .55em;
-  background: variables.$form-bg;
+  background: if($colored-index-bg, variables.$accent-color, variables.$form-bg);
   border-radius: 50%;
 }
 
 .inputArea {
   order: 2;
   grid-column: span 2;
-
-
 
   padding: 1em 1.15em;
   background: variables.$form-bg;

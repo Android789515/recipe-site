@@ -11,7 +11,8 @@ a {
   text-decoration: none;
 }
 
-input {
+input,
+textarea {
   font: inherit;
 }
 

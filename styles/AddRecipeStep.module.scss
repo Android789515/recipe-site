@@ -1,0 +1,10 @@
+@use 'variables';
+
+$resizable: false;
+.textarea {
+  resize: if($resizable, both, none);
+}
+
+:export {
+  resizable: $resizable;
+}

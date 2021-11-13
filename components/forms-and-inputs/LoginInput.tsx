@@ -2,7 +2,7 @@ import React from 'react'
 
 import styles from '../../styles/forms-and-inputs/LoginInput.module.scss'
 
-import ControlledInput from './ControlledInput'
+import ControlledInput from '../generic-components/ControlledInput'
 
 interface Props {
     iconSrc: string,
