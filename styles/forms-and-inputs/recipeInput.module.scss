@@ -1,0 +1,13 @@
+@use '../variables';
+
+.recipeInput {
+  font-size: 1.125rem;
+  color: variables.$light-gray;
+
+  outline: none;
+
+  display: block;
+
+  padding-bottom: .25em;
+  border-bottom: solid variables.$line-color 2px;
+}
