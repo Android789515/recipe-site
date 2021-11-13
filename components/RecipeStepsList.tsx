@@ -33,7 +33,7 @@ const RecipeStepsList = ({  }: Props) => {
                 {recipeStepEntries}
             </ul>
 
-            <AddRecipeInfo index={recipeSteps.length + 1}>
+            <AddRecipeInfo isAccentSection index={recipeSteps.length + 1}>
                 {/* @ts-ignore */}
                 <AddRecipeStep />
             </AddRecipeInfo>

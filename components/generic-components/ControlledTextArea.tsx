@@ -13,7 +13,7 @@ interface Props {
 const ControlledArea = (
     { className, name, shouldResetTextArea, placeholder, required }: Props) => {
 
-    const { text, setText, clearText, submitOnEnter } = useControlledInput()
+    const { text, setText, clearText } = useControlledInput()
 
     const resetTextArea = () => {
         if (shouldResetTextArea) {
@@ -31,7 +31,6 @@ const ControlledArea = (
             required={required}
             value={text}
             onChange={setText}
-            onKeyDown={submitOnEnter}
         />
     )
 }

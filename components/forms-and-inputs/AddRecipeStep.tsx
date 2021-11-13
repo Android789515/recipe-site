@@ -10,6 +10,8 @@ interface Props {
 }
 
 const AddRecipeStep = ({ shouldResetInputs }: Props) => {
+    // TODO - Figure out what submits this since it's a text area and enter
+    // should make a new line without clearing the text
     return (
         <ControlledTextArea
             className={`${styles.textarea} ${inputStyles.recipeInput} unstyledInput`}

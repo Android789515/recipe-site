@@ -20,6 +20,12 @@ textarea {
   box-sizing: border-box;
 }
 
+/* For testing components */
+/* TODO remove later */
+.test-container > * {
+  grid-column: 2 / -2;
+}
+
 .unstyledButton {
   padding: 0;
   background: none;

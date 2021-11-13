@@ -2,7 +2,7 @@
 
 .layout {
   display: grid;
-  grid-template: auto 1fr / 1fr 120%;
+  grid-template: auto 1fr / 1fr 15em;
   grid-row-gap: .4em;
 }
 
@@ -11,16 +11,20 @@
   grid-row: 1;
 }
 
-$colored-index-bg: true;
 .index {
-  color: if($colored-index-bg, #fff, #000);
   grid-column: 1;
 
   width: max-content;
 
   padding: .125em .55em;
-  background: if($colored-index-bg, variables.$accent-color, variables.$form-bg);
+  background: variables.$form-bg;
   border-radius: 50%;
+}
+
+.indexAccent {
+  color: #fff;
+
+  background: variables.$accent-color;
 }
 
 .inputArea {

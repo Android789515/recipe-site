@@ -2,7 +2,7 @@
 
 $resizable: true;
 .textarea {
-  resize: if($resizable, both, none);
+  resize: if($resizable, vertical, none);
 
   outline: none;
 

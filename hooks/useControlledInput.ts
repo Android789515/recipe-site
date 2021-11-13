@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 const useControlledInput = (initialText = '') => {
-    const [ text, updateText ] = useState('')
+    const [ text, updateText ] = useState(initialText)
 
     interface InputText {
         target: {

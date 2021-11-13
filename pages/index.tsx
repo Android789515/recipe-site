@@ -3,20 +3,30 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import RecipeStepsList from '../components/RecipeStepsList'
+import IngredientsList from '../components/IngredientsList'
 
 const Home: NextPage = () => {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Recipe Site</title>
-          <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-      </Head>
+    const testContainerStyles = {
+        display: 'grid',
+        gridTemplateColumns: 'minmax(1em, 1fr) auto minmax(1em, 1fr)',
+        justifyContent: 'center',
+        alignItems: 'center',
+        minHeight: '100vh'
+    }
 
-        <div style={{ display: 'grid', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-            <RecipeStepsList />
+    return (
+        <div className={styles.container}>
+            <Head>
+                <title>Recipe Site</title>
+                <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+            </Head>
+
+            <div style={testContainerStyles} className='test-container'>
+                <IngredientsList />
+                <RecipeStepsList />
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Home

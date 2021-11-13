@@ -3,10 +3,11 @@ import React, { useState } from 'react'
 import styles from '../../styles/forms-and-inputs/AddRecipeInfo.module.scss'
 
 interface Props {
-    index: number
+    index: number,
+    isAccentSection: boolean
 }
 
-const AddRecipeInfo: React.FC<Props> = ({ index, children }) =>
+const AddRecipeInfo: React.FC<Props> = ({ index, isAccentSection, children }) =>
 {
     const [ shouldResetInputs, setShouldResetInputs ] = useState(false)
 
@@ -17,7 +18,7 @@ const AddRecipeInfo: React.FC<Props> = ({ index, children }) =>
 
     return (
         <div className={styles.layout}>
-            <span className={styles.index}>{index}</span>
+            <span className={`${styles.index} ${isAccentSection && styles.indexAccent}`}>{index}</span>
 
             <div className={styles.inputArea}>
                 {React.isValidElement(children) &&
@@ -32,6 +33,10 @@ const AddRecipeInfo: React.FC<Props> = ({ index, children }) =>
             />
         </div>
     )
+}
+
+AddRecipeInfo.defaultProps = {
+    isAccentSection: false
 }
 
 export default AddRecipeInfo
