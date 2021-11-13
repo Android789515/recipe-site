@@ -35,6 +35,7 @@ const IngredientsList = ({  }: Props) => {
             </ul>
 
             <AddRecipeInfo index={ingredients.length + 1}>
+                {/* @ts-ignore */}
                 <AddIngredient updateIngredients={updateIngredients} />
             </AddRecipeInfo>
         </div>

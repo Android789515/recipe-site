@@ -10,8 +10,8 @@ const AddRecipeInfo: React.FC<Props> = ({ index, children }) =>
 {
     const [ shouldResetInputs, setShouldResetInputs ] = useState(false)
 
-    const resetInputs = () => {
-        setShouldResetInputs(true)
+    const resetInputs = async () => {
+        await setShouldResetInputs(true)
         setShouldResetInputs(false)
     }
 
@@ -21,7 +21,7 @@ const AddRecipeInfo: React.FC<Props> = ({ index, children }) =>
 
             <div className={styles.inputArea}>
                 {React.isValidElement(children) &&
-                React.cloneElement(children, { shouldClearInputs: shouldResetInputs })}
+                React.cloneElement(children, { shouldResetInputs: shouldResetInputs })}
             </div>
 
             <img
