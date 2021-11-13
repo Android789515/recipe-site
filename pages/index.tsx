@@ -2,8 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import RecipeStepsList from '../components/RecipeStepsList'
-import IngredientsList from '../components/IngredientsList'
 
 const Home: NextPage = () => {
     const testContainerStyles = {
@@ -22,8 +20,6 @@ const Home: NextPage = () => {
             </Head>
 
             <div style={testContainerStyles} className='test-container'>
-                <IngredientsList />
-                <RecipeStepsList />
             </div>
         </div>
     )

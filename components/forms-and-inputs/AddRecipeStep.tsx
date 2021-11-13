@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../styles/AddRecipeStep.module.scss'
+import styles from '../../styles/forms-and-inputs/AddRecipeStep.module.scss'
 import inputStyles from '../../styles/forms-and-inputs/recipeInput.module.scss'
 
 import ControlledTextArea from '../generic-components/ControlledTextArea'
