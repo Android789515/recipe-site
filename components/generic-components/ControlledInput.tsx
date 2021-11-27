@@ -10,6 +10,7 @@ interface Props {
     type: string,
     placeholder: string,
     required: boolean,
+    hasIcon: { src: string }
     shouldResetInputs: boolean
 }
 
@@ -27,21 +28,26 @@ const ControlledInput = (
     useEffect(resetInputs, [shouldResetInputs])
 
     return (
-        <input
-            className={className}
-            name={name}
-            type={type}
-            placeholder={placeholder}
-            required={required}
-            value={text}
-            onChange={setText}
-            onKeyDown={submitOnEnter}
-        />
+        <div>
+            <input
+                className={className}
+                name={name}
+                type={type}
+                placeholder={placeholder}
+                required={required}
+                value={text}
+                onChange={setText}
+                onKeyDown={submitOnEnter}
+            />
+
+
+        </div>
     )
 }
 
 ControlledInput.defaultProps = {
-    shouldResetInputs: false
+    shouldResetInputs: false,
+    hasIcon: undefined
 }
 
 export default ControlledInput

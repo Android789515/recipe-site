@@ -1,0 +1,13 @@
+.layout {
+  position: fixed;
+  z-index: 1;
+
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) auto minmax(1em, 1fr);
+
+  min-height: 100vh;
+}
+
+.content {
+  grid-column: 2 / -2;
+}

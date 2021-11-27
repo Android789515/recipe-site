@@ -25,21 +25,3 @@ textarea {
 .test-container > * {
   grid-column: 2 / -2;
 }
-
-.unstyledButton {
-  padding: 0;
-  background: none;
-  border: none;
-}
-
-.unstyledUl {
-  list-style: none;
-
-  padding: 0;
-}
-
-.unstyledInput {
-  padding: 0;
-  background: none;
-  border: none;
-}

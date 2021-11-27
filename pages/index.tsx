@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <div className={styles.container}>
             <Head>
                 <title>Recipe Site</title>
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+                <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
             <div style={testContainerStyles} className='test-container'>

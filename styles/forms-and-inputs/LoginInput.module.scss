@@ -1,4 +1,5 @@
 @use '../variables';
+@use '../mixins';
 
 .inputSection {
   display: grid;
@@ -20,7 +21,9 @@
 
 }
 
-.inputArea {
+.input {
+  @include mixins.unstyledInput;
+
   color: variables.$dark-gray;
 
   outline: none;

@@ -1,0 +1,17 @@
+@mixin unstyledButton {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+@mixin unstyledUl {
+  list-style: none;
+
+  padding: 0;
+}
+
+@mixin unstyledInput {
+  padding: 0;
+  background: none;
+  border: none;
+}

@@ -4,6 +4,9 @@ import inputTypes from '../../types/inputTypes'
 
 import LoginInput from './LoginInput'
 
+import usernameIcon from '../../public/assets/icons/person.svg'
+import passwordEyeIcon from '../../public/assets/icons/password_eye.svg'
+
 interface Props {
 
 }
@@ -13,14 +16,14 @@ const LoginForm = (props: Props) => {
         // TODO add action url
         <form name='login' action='' method='post'>
             <LoginInput
-                iconSrc=''
+                iconSrc={usernameIcon}
                 inputType={inputTypes._text}
                 name='username-or-email'
                 placeholder='Username or email'
             />
 
             <LoginInput
-                iconSrc=''
+                iconSrc={'/placeholder'}
                 inputType={inputTypes._password}
                 name='password'
                 placeholder='Password'

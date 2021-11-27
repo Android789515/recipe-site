@@ -1,23 +1,24 @@
 import React from 'react'
+import Image from 'next/image'
 
 import styles from '../../styles/forms-and-inputs/LoginInput.module.scss'
 
 import ControlledInput from '../generic-components/ControlledInput'
 
 interface Props {
-    iconSrc: string,
-    inputType: string,
-    name: string,
+    iconSrc: string
+    inputType: string
+    name: string
     placeholder: string
 }
 
 const LoginInput = ({ iconSrc, inputType, name, placeholder }: Props) => {
     return (
         <div className={styles.inputSection}>
-            <img className={styles.icon} src={iconSrc} alt='placeholder icon'/>
+            <Image className={styles.icon} src={iconSrc} width='30px' height='28px' alt='placeholder icon'/>
 
             <ControlledInput
-                className={`${styles.input} unstyled-input`}
+                className={styles.input}
                 type={inputType}
                 name={name}
                 placeholder={placeholder}
