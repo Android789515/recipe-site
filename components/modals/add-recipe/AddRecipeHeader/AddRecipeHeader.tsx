@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../../../styles/main-components/add-recipe/add-recipe-header/AddRecipeHeader.module.scss'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-header/AddRecipeHeader.module.scss'
 import closeBtn from '../../../../public/assets/icons/close-btn.svg'
 
 import Image from '../../../generic-components/Image'

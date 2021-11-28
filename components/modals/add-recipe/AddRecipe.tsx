@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../../styles/main-components/add-recipe/AddRecipe.module.scss'
+import styles from '../../../styles/modals/add-recipe/AddRecipe.module.scss'
 
 import AddRecipeHeader from './AddRecipeHeader/AddRecipeHeader'
 import Widget from '../../generic-components/Widget'

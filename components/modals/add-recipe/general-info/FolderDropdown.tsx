@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from '../../../generic-components/Image'
 
-import styles from '../../../../styles/main-components/add-recipe/general-info/FolderDropdown.module.scss'
+import styles from '../../../../styles/modals/add-recipe/general-info/FolderDropdown.module.scss'
 import dropdownArrow from '../../../../public/assets/icons/dropdown-arrow.svg'
 
 import useControlledDropdown from '../../../../hooks/useControlledDropdown'

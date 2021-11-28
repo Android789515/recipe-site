@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 import TestingContainer from '../components/TestingContainer'
-import AddRecipe from '../components/main-components/add-recipe/AddRecipe'
+import AddRecipe from '../components/modals/add-recipe/AddRecipe'
 
 
 const Home: NextPage = () => {

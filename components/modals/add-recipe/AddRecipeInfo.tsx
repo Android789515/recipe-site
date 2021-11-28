@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import styles from '../../../styles/main-components/add-recipe/AddRecipeInfo.module.scss'
+import styles from '../../../styles/modals/add-recipe/AddRecipeInfo.module.scss'
 import trashIcon from '../../../public/assets/icons/trash.svg'
 
 import Image  from '../../generic-components/Image'

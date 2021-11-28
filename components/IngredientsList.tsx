@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import AddRecipeInfo from './main-components/add-recipe/AddRecipeInfo'
-import AddIngredient from './main-components/add-recipe/AddIngredient'
+import AddRecipeInfo from './modals/add-recipe/AddRecipeInfo'
+import AddIngredient from './modals/add-recipe/AddIngredient'
 import Ingredient from './Ingredient'
 
 interface Props {

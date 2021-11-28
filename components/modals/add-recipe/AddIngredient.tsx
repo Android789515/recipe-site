@@ -1,7 +1,7 @@
 import React from 'react'
 
-import styles from '../../../styles/main-components/add-recipe/AddIngredient.module.scss'
-import inputStyles from '../../../styles/main-components/add-recipe/recipeInput.module.scss'
+import styles from '../../../styles/modals/add-recipe/AddIngredient.module.scss'
+import inputStyles from '../../../styles/modals/add-recipe/recipeInput.module.scss'
 
 import inputTypes from '../../../types/inputTypes'
 
