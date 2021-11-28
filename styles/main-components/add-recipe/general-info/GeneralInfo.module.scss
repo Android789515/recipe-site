@@ -1,10 +1,14 @@
+@use '../addRecipeVariables';
+
 .layout {
   display: grid;
   grid-template-columns: 1fr 15em;
   grid-row-gap: .4em;
   align-items: center;
+
+  padding: addRecipeVariables.$widgetPadding;
 }
 
 .title {
-
+  grid-column: span 2;
 }
