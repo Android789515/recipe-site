@@ -29,7 +29,7 @@ const AddIngredient = ({ updateIngredients, shouldResetInputs }: Props) => {
             <ControlledInput
                 className={inputStyles.recipeInput}
                 name='ingredient-name'
-                type={inputTypes._text}
+                type={inputTypes.text}
                 placeholder='Enter your Ingredient'
                 required
                 shouldResetInputs={shouldResetInputs}
@@ -37,7 +37,7 @@ const AddIngredient = ({ updateIngredients, shouldResetInputs }: Props) => {
             <ControlledInput
                 className={inputStyles.recipeInput}
                 name='calories'
-                type={inputTypes._text}
+                type={inputTypes.text}
                 placeholder='Calories'
                 required={false}
                 shouldResetInputs={shouldResetInputs}

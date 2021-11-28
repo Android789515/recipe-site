@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import inputTypes from '../../types/inputTypes'
 
 import useControlledInput from '../../hooks/useControlledInput'
+import { no } from '../../utils/responses'
 
 interface Props {
     className: string,
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const ControlledInput = (
-    { className, name, type = inputTypes._text, shouldResetInputs, placeholder, required }: Props) => {
+    { className, name, type, shouldResetInputs, placeholder, required }: Props) => {
 
     const { text, setText, clearText, submitOnEnter } = useControlledInput()
 
@@ -46,6 +47,8 @@ const ControlledInput = (
 }
 
 ControlledInput.defaultProps = {
+    type: inputTypes.text,
+    required: no,
     shouldResetInputs: false,
     hasIcon: undefined
 }

@@ -17,14 +17,14 @@ const LoginForm = (props: Props) => {
         <form name='login' action='' method='post'>
             <LoginInput
                 iconSrc={usernameIcon}
-                inputType={inputTypes._text}
+                inputType={inputTypes.text}
                 name='username-or-email'
                 placeholder='Username or email'
             />
 
             <LoginInput
                 iconSrc={'/placeholder'}
-                inputType={inputTypes._password}
+                inputType={inputTypes.password}
                 name='password'
                 placeholder='Password'
             />

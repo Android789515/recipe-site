@@ -1,5 +1,7 @@
-export default {
-    _text: 'text',
-    _email: 'email',
-    _password: 'password'
+enum inputTypes {
+    text = 'text',
+    email = 'email',
+    password = 'password'
 }
+
+export default inputTypes
