@@ -1,9 +1,12 @@
 @use 'styles/variables';
+@use '../mixins';
 
 $hover-color: #df6e4a;
 $active-color: #ad3d18;
 
 .btn {
+  @include mixins.unstyledButton;
+
   font-family: variables.$font-stack;
   color: #fff;
 

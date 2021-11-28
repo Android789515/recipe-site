@@ -9,4 +9,8 @@ const Image = ({ className, ...props }: ImageProps & wrapperProps) => (
     </div>
 )
 
+Image.defaultProps = {
+    className: ''
+}
+
 export default Image

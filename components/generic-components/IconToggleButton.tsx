@@ -1,6 +1,7 @@
 import React from 'react'
 
 import useToggle from '../../hooks/useToggle'
+import Image from './Image'
 
 interface Props {
     src: string,
@@ -12,7 +13,7 @@ const IconToggleButton: React.FC<Props> = ({ src, alt, children }) => {
 
     return (
         <div>
-            <img src={src} alt={alt} onClick={toggle}/>
+            <Image src={src} alt={alt} onClick={toggle} />
 
             {isToggled && children}
         </div>

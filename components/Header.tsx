@@ -1,7 +1,8 @@
 import React from 'react'
-import Image from 'next/image'
 
 import favicon from '../public/favicon.svg'
+
+import Image from './generic-components/Image'
 
 const Header = ({  }) => {
     return (

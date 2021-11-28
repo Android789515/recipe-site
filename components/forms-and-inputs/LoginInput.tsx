@@ -1,9 +1,9 @@
 import React from 'react'
-import Image from 'next/image'
 
 import styles from '../../styles/forms-and-inputs/LoginInput.module.scss'
 
 import ControlledInput from '../generic-components/ControlledInput'
+import Image from '../generic-components/Image'
 
 interface Props {
     iconSrc: string
