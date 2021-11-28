@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-import useControlledInput from '../../hooks/useControlledInput'
+import useControlledInput from '../../../hooks/useControlledInput'
 
 interface Props {
     className: string,

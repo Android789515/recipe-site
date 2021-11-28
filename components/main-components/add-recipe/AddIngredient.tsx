@@ -5,7 +5,7 @@ import inputStyles from '../../../styles/main-components/add-recipe/recipeInput.
 
 import inputTypes from '../../../types/inputTypes'
 
-import ControlledInput from '../../generic-components/ControlledInput'
+import ControlledInput from '../../generic-components/forms-and-inputs/ControlledInput'
 
 interface Props {
     updateIngredients: Function,

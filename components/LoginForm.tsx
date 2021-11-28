@@ -1,11 +1,11 @@
 import React from 'react'
 
-import inputTypes from '../../types/inputTypes'
+import inputTypes from '../types/inputTypes'
 
 import LoginInput from './LoginInput'
 
-import usernameIcon from '../../public/assets/icons/person.svg'
-import passwordEyeIcon from '../../public/assets/icons/password_eye.svg'
+import usernameIcon from '../public/assets/icons/person.svg'
+import passwordEyeIcon from '../public/assets/icons/password-eye.svg'
 
 interface Props {
 

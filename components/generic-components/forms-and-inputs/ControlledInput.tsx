@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 
-import inputTypes from '../../types/inputTypes'
+import inputTypes from '../../../types/inputTypes'
 
-import useControlledInput from '../../hooks/useControlledInput'
-import { no } from '../../utils/responses'
+import useControlledInput from '../../../hooks/useControlledInput'
+import { no } from '../../../utils/responses'
 
 interface Props {
     className: string,

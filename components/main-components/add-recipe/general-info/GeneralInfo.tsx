@@ -3,12 +3,11 @@ import React from 'react'
 import styles from '../../../../styles/main-components/add-recipe/general-info/GeneralInfo.module.scss'
 import { yes } from '../../../../utils/responses'
 
-import ControlledInput from '../../../generic-components/ControlledInput'
+import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 import NameInput from './NameInput'
 
 const generalInfo = ({  }) => {
     const placeholders = {
-        folderDropdown: 'Choose or create folder',
         difficultyDropdown: 'Difficulty',
         timeDropdown: 'Time'
     }

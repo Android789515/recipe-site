@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../../../styles/main-components/add-recipe/AddRecipeStep.module.scss'
 import inputStyles from '../../../styles/main-components/add-recipe/recipeInput.module.scss'
 
-import ControlledTextArea from '../../generic-components/ControlledTextArea'
+import ControlledTextArea from '../../generic-components/forms-and-inputs/ControlledTextArea'
 
 interface Props {
     shouldResetInputs: boolean

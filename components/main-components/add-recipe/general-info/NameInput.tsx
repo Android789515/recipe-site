@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../../../../styles/main-components/add-recipe/general-info/NameInput.module.scss'
 import { yes } from '../../../../utils/responses'
 
-import ControlledInput from '../../../generic-components/ControlledInput'
+import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 
 const NameInput = ({  }) => {
     const placeholder = 'Type dish name here'
