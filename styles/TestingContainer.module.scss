@@ -1,0 +1,13 @@
+/* For testing components */
+/* TODO remove later */
+.testingContainer {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr) auto minmax(1em, 1fr);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh
+}
+
+.testingContainer > * {
+  grid-column: 2 / -2;
+}

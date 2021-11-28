@@ -10,6 +10,7 @@ const FolderDropdown = ({  }) => {
     // Need to get list of folders
     return (
         <label>
+            Folder
             <select value={option} required onChange={chooseOption}>
                 <option disabled selected>Choose or create folder</option>
 

@@ -1,16 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+
 import styles from '../styles/Home.module.css'
+
+import TestingContainer from '../components/TestingContainer'
+import AddRecipe from '../components/main-components/add-recipe/AddRecipe'
 
 
 const Home: NextPage = () => {
-    const testContainerStyles = {
-        display: 'grid',
-        gridTemplateColumns: 'minmax(1em, 1fr) auto minmax(1em, 1fr)',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh'
-    }
 
     return (
         <div className={styles.container}>
@@ -19,8 +16,9 @@ const Home: NextPage = () => {
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
-            <div style={testContainerStyles} className='test-container'>
-            </div>
+            <TestingContainer>
+                <AddRecipe />
+            </TestingContainer>
         </div>
     )
 }

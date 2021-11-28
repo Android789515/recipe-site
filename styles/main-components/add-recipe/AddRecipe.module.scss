@@ -3,9 +3,15 @@
   z-index: 1;
 
   display: grid;
-  grid-template-columns: minmax(1em, 1fr) auto minmax(1em, 1fr);
+  $sidePadding: 2em;
+  grid-template-columns: minmax($sidePadding, 1fr) auto minmax($sidePadding, 1fr);
 
+  width: 100%;
   min-height: 100vh;
+
+  padding: 2em 0;
+
+  background: #f8f8fb;
 }
 
 .content {
