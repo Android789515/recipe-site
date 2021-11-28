@@ -1,5 +1,5 @@
 @use '../AddRecipe.module';
 
 .label {
-  @include AddRecipe.addRecipeLabel
+  @include AddRecipe.addRecipeLabels
 }

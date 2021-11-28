@@ -10,12 +10,11 @@
   font-size: 1.5rem;
   color: #3e4348;
 
-  padding-left: .25em;
   margin: 0;
 }
 
 .closeBtn {
-  composes: btnIcon from '../../../../styles/generic-components/ButtonIcon.module.scss';
+  composes: btnIcon from '../../../generic-components/ButtonIcon.module.scss';
 
   margin-top: .125em;
 }
