@@ -4,10 +4,10 @@ import styles from '../../../../styles/main-components/add-recipe/general-info/G
 import { yes } from '../../../../utils/responses'
 
 import ControlledInput from '../../../generic-components/ControlledInput'
+import NameInput from './NameInput'
 
 const generalInfo = ({  }) => {
     const placeholders = {
-        nameInput: 'Type dish name here',
         folderDropdown: 'Choose or create folder',
         difficultyDropdown: 'Difficulty',
         timeDropdown: 'Time'
@@ -29,15 +29,7 @@ const generalInfo = ({  }) => {
             Dropdown select with icon - Difficulty (Placeholder)
             Dropdown select with icon - Time (Placeholder)
          */}
-            <label>
-                Name
-                <ControlledInput
-                    className={}
-                    placeholder={placeholders.nameInput}
-                    required={yes}
-                    name={'Name'}
-                />
-            </label>
+            <NameInput />
         </div>
     )
 }
