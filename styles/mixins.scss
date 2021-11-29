@@ -11,6 +11,8 @@
 }
 
 @mixin unstyledInput {
+  outline: none;
+
   padding: 0;
   background: none;
   border: none;

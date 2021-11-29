@@ -1,5 +1,10 @@
+@use '../../variables';
 @use '../../mixins';
 
 .input {
   @include mixins.unstyledInput;
+
+  padding: .5em .125em;
+
+  border-bottom: solid variables.$line-color 2px;
 }
