@@ -15,3 +15,9 @@
   background: none;
   border: none;
 }
+
+@mixin unstyledDropdown {
+  padding: 0;
+  background: none;
+  border: none;
+}

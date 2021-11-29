@@ -21,8 +21,14 @@ a {
 }
 
 input,
-textarea {
+textarea,
+select {
   font: inherit;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance : none;
 }
 
 * {

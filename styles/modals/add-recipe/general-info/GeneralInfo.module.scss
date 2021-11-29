@@ -5,6 +5,7 @@
   display: grid;
   grid-template-columns: 1fr 15em;
   grid-row-gap: .4em;
+  justify-content: start;
   align-items: center;
 
   padding: addRecipeVariables.$widgetPadding;

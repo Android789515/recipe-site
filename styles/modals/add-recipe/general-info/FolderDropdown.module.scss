@@ -1,5 +1,19 @@
 @use '../addRecipeMixins';
+@use '../../../mixins';
 
 .label {
   @include addRecipeMixins.labels
+}
+
+.dropdown {
+  @include mixins.unstyledDropdown;
+  display: block;
+
+  // Have to do to keep dropdown lined up correctly with labels
+  // due to how browsers render select elements
+  margin-left: -3px;
+
+  .option {
+    padding: 0;
+  }
 }

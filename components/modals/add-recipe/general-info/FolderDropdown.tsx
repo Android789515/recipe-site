@@ -13,8 +13,8 @@ const FolderDropdown = ({  }) => {
     return (
         <label className={styles.label}>
             Folder
-            <select value={option} required onChange={chooseOption}>
-                <option disabled>Choose or create folder</option>
+            <select className={styles.dropdown} value={option} required onChange={chooseOption}>
+                <option className={styles.option} disabled>Choose or create folder</option>
 
             </select>
 
