@@ -3,7 +3,7 @@
   z-index: 1;
 
   display: grid;
-  $sidePadding: 2em;
+  $sidePadding: .5em;
   grid-template-columns: minmax($sidePadding, 1fr) auto minmax($sidePadding, 1fr);
 
   width: 100%;
