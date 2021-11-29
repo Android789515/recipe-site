@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 
+import styles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
 import inputTypes from '../../../types/inputTypes'
+import { no } from '../../../utils/responses'
 
 import useControlledInput from '../../../hooks/useControlledInput'
-import { no } from '../../../utils/responses'
 
 interface Props {
     className: string,
@@ -31,7 +32,7 @@ const ControlledInput = (
     return (
         <div>
             <input
-                className={className}
+                className={`${className} ${styles.input}`}
                 name={name}
                 type={type}
                 placeholder={placeholder}

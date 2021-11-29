@@ -18,7 +18,7 @@ const FolderDropdown = ({  }) => {
 
             </select>
 
-            <Image src={dropdownArrow} />
+            <Image className={styles.dropdownIcon} src={dropdownArrow} />
         </label>
     )
 }

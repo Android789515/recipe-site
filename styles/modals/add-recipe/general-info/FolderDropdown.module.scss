@@ -2,7 +2,15 @@
 @use '../../../mixins';
 
 .label {
-  @include addRecipeMixins.labels
+  @include addRecipeMixins.labels;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.dropdown,
+.dropdownIcon {
+  grid-row: 2;
 }
 
 .dropdown {
@@ -16,4 +24,8 @@
   .option {
     padding: 0;
   }
+}
+
+.dropdownIcon {
+  width: max-content;
 }
