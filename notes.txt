@@ -12,3 +12,5 @@ Form bg: #f7f7fb
 
 Both the add ingredient list and step list need to be in a container to keep them aligned.
 Might call it recipe info
+
+font weights: 400, 500, 700
