@@ -1,4 +1,5 @@
 @use '../addRecipeVariables';
+@use '../addRecipeMixins';
 
 .layout {
   display: grid;
@@ -11,4 +12,6 @@
 
 .title {
   grid-column: span 2;
+
+  padding-left: .125em;
 }

@@ -1,0 +1,9 @@
+@mixin titles {
+  padding-left: .35em;
+}
+
+@mixin labels {
+  text-transform: uppercase;
+
+  grid-column: span 2;
+}

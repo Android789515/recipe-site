@@ -17,13 +17,3 @@
 .content {
   grid-column: 2 / -2;
 }
-
-@mixin addRecipeTitles {
-  padding-left: .25em;
-}
-
-@mixin addRecipeLabels {
-  text-transform: uppercase;
-
-  grid-column: span 2;
-}
