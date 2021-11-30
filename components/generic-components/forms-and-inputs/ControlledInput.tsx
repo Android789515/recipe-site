@@ -7,7 +7,7 @@ import { no } from '../../../utils/responses'
 import useControlledInput from '../../../hooks/useControlledInput'
 
 interface Props {
-    className: string,
+    className?: string,
     name: string,
     type: string,
     placeholder: string,
@@ -32,7 +32,7 @@ const ControlledInput = (
     return (
         <div>
             <input
-                className={`${className} ${styles.input}`}
+                className={`${className} ${styles.input}`.trim()}
                 name={name}
                 type={type}
                 placeholder={placeholder}
@@ -48,6 +48,7 @@ const ControlledInput = (
 }
 
 ControlledInput.defaultProps = {
+    className: '',
     type: inputTypes.text,
     required: no,
     shouldResetInputs: false,
