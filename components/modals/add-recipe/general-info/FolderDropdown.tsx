@@ -1,4 +1,5 @@
 import React from 'react'
+import NextImage from 'next/image'
 import Image from '../../../generic-components/Image'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/FolderDropdown.module.scss'
@@ -18,7 +19,11 @@ const FolderDropdown = ({  }) => {
 
             </select>
 
-            <Image className={styles.dropdownIcon} src={dropdownArrow} />
+            <Image
+                className={styles.dropdownIcon}
+                src={dropdownArrow}
+                width={16}
+            />
         </label>
     )
 }

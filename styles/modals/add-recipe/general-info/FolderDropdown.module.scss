@@ -11,11 +11,14 @@
 .dropdown,
 .dropdownIcon {
   grid-row: 2;
+  grid-column: 1;
 }
 
 .dropdown {
   @include mixins.unstyledDropdown;
   display: block;
+
+  cursor: pointer;
 
   // Have to do to keep dropdown lined up correctly with labels
   // due to how browsers render select elements
@@ -27,5 +30,10 @@
 }
 
 .dropdownIcon {
-  width: max-content;
+  // Lets you click the dropdown through the icon
+  pointer-events: none;
+
+  //width: max-content;
+
+  margin-left: auto;
 }
