@@ -4,7 +4,7 @@
 .layout {
   display: grid;
   grid-template-columns: 1fr 15em;
-  grid-row-gap: .4em;
+  grid-row-gap: 1.25em;
   justify-content: start;
   align-items: center;
 
@@ -15,4 +15,5 @@
   grid-column: span 2;
 
   padding-left: .125em;
+  margin-bottom: .75em;
 }

@@ -3,3 +3,7 @@
 .label {
   @include addRecipeMixins.labels
 }
+
+.labelText {
+  @include addRecipeMixins.labelTexts;
+}

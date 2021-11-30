@@ -8,6 +8,10 @@
   grid-template-rows: auto 1fr;
 }
 
+.labelText {
+  @include addRecipeMixins.labelTexts;
+}
+
 .dropdown,
 .dropdownIcon {
   grid-row: 2;

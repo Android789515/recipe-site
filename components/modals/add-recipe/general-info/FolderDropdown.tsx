@@ -13,7 +13,8 @@ const FolderDropdown = ({  }) => {
     // Need to get list of folders
     return (
         <label className={styles.label}>
-            Folder
+            <p className={styles.labelText}>Folder</p>
+
             <select className={styles.dropdown} value={option} required onChange={chooseOption}>
                 <option className={styles.option} disabled>Choose or create folder</option>
 

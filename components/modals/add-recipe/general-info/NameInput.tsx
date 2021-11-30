@@ -9,7 +9,8 @@ const NameInput = ({  }) => {
     const placeholder = 'Type dish name here'
     return (
         <label className={styles.label}>
-            Name
+            <p className={styles.labelText}>Name</p>
+
             <ControlledInput
                 placeholder={placeholder}
                 required={yes}
