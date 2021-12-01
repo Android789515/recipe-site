@@ -6,6 +6,7 @@ import { yes } from '../../../../utils/responses'
 import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 import NameInput from './NameInput'
 import FolderDropdown from './FolderDropdown'
+import RateScale from './rate-scale/RateScale'
 
 const GeneralInfo = ({  }) => {
     const placeholders = {
@@ -32,6 +33,7 @@ const GeneralInfo = ({  }) => {
             <h3 className={styles.title}>General info</h3>
             <NameInput />
             <FolderDropdown />
+            <RateScale />
         </div>
     )
 }

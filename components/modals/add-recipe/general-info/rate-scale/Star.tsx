@@ -6,10 +6,10 @@ import goldStar from '../../../../../public/assets/icons/gold-star.svg'
 import Image from '../../../../generic-components/Image'
 
 interface Props {
-    conditional: boolean
+    isSelected: boolean
 }
 
 // TODO refactor
-const Star = ({ conditional }: Props) => conditional ? <Image src={goldStar} /> : <Image src={greyStar} />
+const Star = ({ isSelected }: Props) => isSelected ? <Image src={goldStar} /> : <Image src={greyStar} />
 
 export default Star
