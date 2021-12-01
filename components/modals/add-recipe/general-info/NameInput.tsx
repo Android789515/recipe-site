@@ -12,6 +12,7 @@ const NameInput = ({  }) => {
             <p className={styles.labelText}>Name</p>
 
             <ControlledInput
+                className={styles.input}
                 placeholder={placeholder}
                 required={yes}
                 name={'Name'}

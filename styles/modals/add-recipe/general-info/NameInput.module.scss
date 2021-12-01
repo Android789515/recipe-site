@@ -7,3 +7,7 @@
 .labelText {
   @include addRecipeMixins.labelTexts;
 }
+
+.input {
+  padding: 0 .125em 0 .125em;
+}
