@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 import { v4 as uuid } from 'uuid'
 
 import Star from './Star'
 
 interface Props {
     rating: number
+    setRating: Dispatch<SetStateAction<number>>
 }
 
-const Stars = ({ rating }: Props) => {
-    const maxRating = [...Array(5).keys()]
+const Stars = ({ rating, setRating }: Props) => {
+    // Makes a max rating of 1-5 instead of 0-4
+    const oneToFiveRating = [...Array(6).keys()].filter(num => num > 0)
 
-    const renderStar = (starNum: number) => <Star key={uuid()} isSelected={rating  > starNum} />
-    const stars = maxRating.map(renderStar)
+    const renderStar = (starNum: number) =>
+        <Star key={uuid()} isSelected={rating >= starNum} onClick={() => setRating(starNum)} />
+    const stars = oneToFiveRating.map(renderStar)
 
     return (
         <div>

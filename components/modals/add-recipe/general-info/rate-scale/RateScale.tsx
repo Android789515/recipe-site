@@ -6,7 +6,7 @@ const RateScale = ({  }) => {
 
     return (
         <div>
-            <Stars rating={rating} />
+            <Stars rating={rating} setRating={setRating} />
         </div>
     )
 }

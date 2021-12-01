@@ -7,9 +7,10 @@ import Image from '../../../../generic-components/Image'
 
 interface Props {
     isSelected: boolean
+    onClick: (event: React.MouseEvent) => void
 }
 
-// TODO refactor
-const Star = ({ isSelected }: Props) => isSelected ? <Image src={goldStar} /> : <Image src={greyStar} />
+const Star = ({ isSelected, onClick }: Props) =>
+    <Image src={isSelected ? goldStar : greyStar} onClick={onClick} />
 
 export default Star
