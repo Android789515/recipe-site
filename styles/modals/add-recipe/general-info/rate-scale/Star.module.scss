@@ -1,0 +1,8 @@
+@use '../../../../mixins';
+
+.star {
+  @include mixins.clickable;
+  grid-row: 1;
+
+  width: max-content;
+}

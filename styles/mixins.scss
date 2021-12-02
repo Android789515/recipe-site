@@ -23,3 +23,7 @@
   background: none;
   border: none;
 }
+
+@mixin clickable {
+  cursor: pointer;
+}
