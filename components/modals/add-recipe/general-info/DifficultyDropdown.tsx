@@ -1,14 +1,19 @@
 import React from 'react'
-import useControlledDropdown from '../../../../hooks/useControlledDropdown'
+
+import styles from '../../../../styles/modals/add-recipe/general-info/DifficultyDropdown.module.scss'
+
+import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
+import Image from '../../../generic-components/Image'
 
 const DifficultyDropdown = ({  }) => {
-    const { option, chooseOption } = useControlledDropdown()
-
     return (
         <label>
-            <select value={option} onChange={chooseOption}>
-                <option disabled>Difficulty</option>
-            </select>
+
+            <ControlledDropdown
+                placeholder={'Difficulty'}
+                isRequired={true}
+                options={undefined}
+            />
         </label>
     )
 }
