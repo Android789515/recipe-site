@@ -1,6 +1,6 @@
 @use '../../mixins';
 
-.folderDropdown {
+.dropdown {
   @include mixins.unstyledDropdown;
   @include mixins.clickable;
 
