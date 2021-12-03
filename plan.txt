@@ -37,7 +37,7 @@ Components
 - Primary button {
     Has hover and active.
 
-    Login button and new recipe button look very different in terms of button content.
+    Login button and new recipe button look very different in terms of button Content.
     The only similarities I can see are the background and pill shape.
 
     For the new recipe button it might be easier to use an icon.

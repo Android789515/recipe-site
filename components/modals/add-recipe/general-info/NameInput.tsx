@@ -1,7 +1,6 @@
 import React from 'react'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/NameInput.module.scss'
-import { yes } from '../../../../utils/responses'
 
 import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 
@@ -14,7 +13,7 @@ const NameInput = ({  }) => {
             <ControlledInput
                 className={styles.input}
                 placeholder={placeholder}
-                required={yes}
+                required={true}
                 name={'Name'}
             />
         </label>

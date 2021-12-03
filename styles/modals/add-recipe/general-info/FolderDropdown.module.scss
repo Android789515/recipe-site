@@ -12,25 +12,10 @@
   @include addRecipeMixins.labelTexts;
 }
 
-.dropdown,
+.folderDropdown,
 .dropdownIcon {
   grid-row: 2;
   grid-column: 1;
-}
-
-.dropdown {
-  @include mixins.unstyledDropdown;
-  display: block;
-
-  cursor: pointer;
-
-  // Have to do to keep dropdown lined up correctly with labels
-  // due to how browsers render select elements
-  margin-left: -3px;
-
-  .option {
-    padding: 0;
-  }
 }
 
 .dropdownIcon {

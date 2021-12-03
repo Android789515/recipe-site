@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 
 import styles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
 import inputTypes from '../../../types/inputTypes'
-import { no } from '../../../utils/responses'
 
 import useControlledInput from '../../../hooks/useControlledInput'
 
@@ -50,7 +49,7 @@ const ControlledInput = (
 ControlledInput.defaultProps = {
     className: '',
     type: inputTypes.text,
-    required: no,
+    required: false,
     shouldResetInputs: false,
     hasIcon: undefined
 }

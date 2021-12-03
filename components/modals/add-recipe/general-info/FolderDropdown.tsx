@@ -1,24 +1,24 @@
 import React from 'react'
-import NextImage from 'next/image'
 import Image from '../../../generic-components/Image'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/FolderDropdown.module.scss'
 import dropdownArrow from '../../../../public/assets/icons/dropdown-arrow.svg'
 
-import useControlledDropdown from '../../../../hooks/useControlledDropdown'
+import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
 
 const FolderDropdown = ({  }) => {
-    const { option, chooseOption } = useControlledDropdown('Choose or create folder')
 
     // Need to get list of folders
     return (
         <label className={styles.label}>
             <p className={styles.labelText}>Folder</p>
 
-            <select className={styles.dropdown} value={option} required onChange={chooseOption}>
-                <option className={styles.option} disabled>Choose or create folder</option>
-
-            </select>
+            <ControlledDropdown
+                customStyles={styles.folderDropdown}
+                placeholder={'Choose or create folder'}
+                isRequired={true}
+                options={undefined}
+            />
 
             <Image
                 className={styles.dropdownIcon}

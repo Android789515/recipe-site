@@ -1,9 +1,7 @@
 import React from 'react'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/GeneralInfo.module.scss'
-import { yes } from '../../../../utils/responses'
 
-import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 import NameInput from './NameInput'
 import FolderDropdown from './FolderDropdown'
 import RateScale from './rate-scale/RateScale'
