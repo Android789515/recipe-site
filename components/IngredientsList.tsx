@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import AddRecipeInfo from './modals/add-recipe/AddRecipeInfo'
-import AddIngredient from './modals/add-recipe/AddIngredient'
+import IngredientForm from './modals/add-recipe/IngredientForm'
 import Ingredient from './Ingredient'
 
 interface Props {
@@ -33,11 +33,6 @@ const IngredientsList = ({  }: Props) => {
             <ul className={`unstyledUl`}>
                 {ingredientEntries}
             </ul>
-
-            <AddRecipeInfo isAccentSection={false} index={ingredients.length + 1}>
-                {/* @ts-ignore */}
-                <AddIngredient updateIngredients={updateIngredients} />
-            </AddRecipeInfo>
         </div>
     )
 }

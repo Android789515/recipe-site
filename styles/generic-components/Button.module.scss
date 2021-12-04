@@ -6,11 +6,10 @@ $active-color: #ad3d18;
 
 .btn {
   @include mixins.unstyledButton;
+  @include mixins.clickable;
 
   font-family: variables.$font-stack;
   color: #fff;
-
-  cursor: pointer;
 
   background: variables.$accent-color;
   border-radius: 50px;

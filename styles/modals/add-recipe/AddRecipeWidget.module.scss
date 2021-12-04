@@ -1,0 +1,18 @@
+@use 'addRecipeVariables';
+@use 'addRecipeMixins';
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-row-gap: 1.25em;
+  justify-content: start;
+  align-items: center;
+
+  padding: addRecipeVariables.$widgetPadding;
+}
+
+.title {
+  grid-column: span 2;
+
+  margin-bottom: .75em;
+}

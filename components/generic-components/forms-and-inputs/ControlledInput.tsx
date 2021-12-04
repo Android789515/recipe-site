@@ -12,21 +12,12 @@ interface Props {
     placeholder: string,
     required: boolean,
     hasIcon: { src: string }
-    shouldResetInputs: boolean
 }
 
 const ControlledInput = (
-    { className, name, type, shouldResetInputs, placeholder, required }: Props) => {
+    { className, name, type, placeholder, required }: Props) => {
 
-    const { text, setText, clearText, submitOnEnter } = useControlledInput()
-
-    const resetInputs = () => {
-        if (shouldResetInputs) {
-            clearText()
-        }
-    }
-
-    useEffect(resetInputs, [shouldResetInputs])
+    const { text, setText, submitOnEnter } = useControlledInput()
 
     return (
         <div>

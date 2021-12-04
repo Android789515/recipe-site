@@ -1,0 +1,8 @@
+@use '../../mixins';
+
+.addIngredientBtn {
+  @include mixins.clickable;
+
+  font-weight: 600;
+  text-transform: uppercase;
+}

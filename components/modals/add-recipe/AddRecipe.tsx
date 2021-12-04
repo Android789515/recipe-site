@@ -3,8 +3,7 @@ import React from 'react'
 import styles from '../../../styles/modals/add-recipe/AddRecipe.module.scss'
 
 import AddRecipeHeader from './AddRecipeHeader/AddRecipeHeader'
-import Widget from '../../generic-components/Widget'
-import GeneralInfo from './general-info/GeneralInfo'
+import AddRecipeWidgets from '../AddRecipeWidgets'
 
 interface Props {
 
@@ -15,7 +14,8 @@ const AddRecipe = ({  }) => {
         <div className={styles.layout}>
             <div className={styles.content}>
                 <AddRecipeHeader />
-                <Widget><GeneralInfo /></Widget>
+
+                <AddRecipeWidgets />
             {/*
                 Title ---- close(x) button
 

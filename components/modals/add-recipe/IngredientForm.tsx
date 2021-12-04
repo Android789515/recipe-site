@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../../styles/modals/add-recipe/AddIngredient.module.scss'
+import styles from '../../../styles/modals/add-recipe/IngredientForm.module.scss'
 import inputStyles from '../../../styles/modals/add-recipe/recipeInput.module.scss'
 
 import inputTypes from '../../../types/inputTypes'
@@ -8,8 +8,7 @@ import inputTypes from '../../../types/inputTypes'
 import ControlledInput from '../../generic-components/forms-and-inputs/ControlledInput'
 
 interface Props {
-    updateIngredients: Function,
-    shouldResetInputs: boolean
+    updateIngredients: Function
 }
 
 interface Ingredient {
@@ -18,11 +17,7 @@ interface Ingredient {
     calories: number
 }
 
-const AddIngredient = ({ updateIngredients, shouldResetInputs }: Props) => {
-
-    const addIngredient = (ingredient: Ingredient) => updateIngredients( (prevIngredients: Ingredient[]) => {
-        return [...prevIngredients, ingredient]
-    })
+const IngredientForm = ({ updateIngredients }: Props) => {
 
     return (
         <div className={styles.inputs}>
@@ -32,7 +27,6 @@ const AddIngredient = ({ updateIngredients, shouldResetInputs }: Props) => {
                 type={inputTypes.text}
                 placeholder='Enter your Ingredient'
                 required
-                shouldResetInputs={shouldResetInputs}
             />
             <ControlledInput
                 className={inputStyles.recipeInput}
@@ -40,10 +34,10 @@ const AddIngredient = ({ updateIngredients, shouldResetInputs }: Props) => {
                 type={inputTypes.text}
                 placeholder='Calories'
                 required={false}
-                shouldResetInputs={shouldResetInputs}
             />
         </div>
     )
 }
 
-export default AddIngredient
+// @ts-ignore
+export default IngredientForm

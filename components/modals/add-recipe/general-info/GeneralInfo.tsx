@@ -13,7 +13,7 @@ const GeneralInfo = ({  }) => {
     }
 
     return (
-        <div className={styles.layout}>
+        <>
         {/*
             Title
 
@@ -28,11 +28,10 @@ const GeneralInfo = ({  }) => {
             Dropdown select with icon - Difficulty (Placeholder)
             Dropdown select with icon - Time (Placeholder)
          */}
-            <h3 className={styles.title}>General info</h3>
             <NameInput />
             <FolderDropdown />
             <RateScale />
-        </div>
+        </>
     )
 }
 
