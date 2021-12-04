@@ -2,7 +2,8 @@
 
 .layout {
   display: grid;
-  grid-template: auto 1fr / 1fr 15em;
+  // TODO remove line below if no issues found
+  //grid-template: auto 1fr / 1fr 15em;
   grid-row-gap: .4em;
   align-items: center;
 }
@@ -32,7 +33,7 @@
   order: 2;
   grid-column: span 2;
 
-  padding: 1em 1.15em;
+  padding: 1.25em 1.4em;
   background: variables.$form-bg;
   border-radius: 5px;
 }

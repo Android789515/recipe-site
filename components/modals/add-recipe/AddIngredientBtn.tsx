@@ -2,6 +2,15 @@ import React from 'react'
 
 import styles from '../../../styles/modals/add-recipe/AddIngredientBtn.module.scss'
 
-const AddIngredientBtn = ({  }) => <p className={styles.addIngredientBtn}>+ Add Ingredient</p>
+interface Props {
+    addIngredientForm: () => void
+}
+
+const AddIngredientBtn = ({ addIngredientForm }: Props) => {
+
+    return (
+        <p className={styles.addIngredientBtn} onClick={addIngredientForm}>+ Add Ingredient</p>
+    )
+}
 
 export default AddIngredientBtn

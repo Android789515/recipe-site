@@ -1,3 +1,4 @@
+@use '../../variables';
 @use '../../mixins';
 
 .addIngredientBtn {
@@ -5,4 +6,8 @@
 
   font-weight: 600;
   text-transform: uppercase;
+
+  color: variables.$accent-color;
+
+  grid-row: 3;
 }

@@ -5,7 +5,8 @@
   grid-template-columns: minmax(1em, 1fr) auto minmax(1em, 1fr);
   justify-content: center;
   align-items: center;
-  min-height: 100vh
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .testingContainer > * {

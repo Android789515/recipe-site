@@ -1,5 +1,7 @@
+@use '../mixins';
+
 .btnIcon {
-  cursor: pointer;
+  @include mixins.clickable;
 
   width: max-content;
 }

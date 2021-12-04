@@ -8,9 +8,11 @@ import Image  from '../../generic-components/Image'
 interface Props {
     index: number
     isAccentSection?: boolean
+    removeSelf: () => void
 }
 
-const AddRecipeInfo: React.FC<Props> = ({ index, isAccentSection, children }) =>
+const AddRecipeInfo: React.FC<Props> =
+    ({ index, isAccentSection, removeSelf, children }) =>
 {
     return (
         <div className={styles.layout}>
@@ -24,6 +26,7 @@ const AddRecipeInfo: React.FC<Props> = ({ index, isAccentSection, children }) =>
                 <Image
                     src={trashIcon}
                     alt='Delete'
+                    onClick={removeSelf}
                 />
             </div>
         </div>

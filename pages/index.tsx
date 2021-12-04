@@ -16,9 +16,7 @@ const Home: NextPage = () => {
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
-            <TestingContainer>
-                <AddRecipe />
-            </TestingContainer>
+            <AddRecipe />
         </div>
     )
 }

@@ -1,4 +1,8 @@
 import React, { useState } from 'react'
+import { v4 as uuid } from 'uuid'
+
+import styles from '../../../styles/modals/add-recipe/AddIngredients.module.scss'
+import { range } from '../../../utils/mathUtils'
 
 import AddRecipeInfo from './AddRecipeInfo'
 import IngredientForm from './IngredientForm'
@@ -13,19 +17,15 @@ const AddIngredients = ({  }) => {
 
     const [ ingredients, updateIngredients ] = useState<Ingredient[]>([])
 
-    const addIngredient = (ingredient: Ingredient) =>
-        updateIngredients( (prevIngredients) => {
-        return [...prevIngredients, ingredient]
-    })
+    const [ ingredientForms, setIngredientForms ] = useState(1)
+    const addIngredientForm = () => setIngredientForms(prevForms => prevForms + 1)
+    const removeIngredientForm = () => setIngredientForms(prevForms => prevForms - 1)
 
-    const removeIngredient = (filterId: string) =>
-        updateIngredients((prevIngredients) => {
-        return prevIngredients.filter(ingredient => ingredient.id !== filterId)
-    })
+    const eachIngredientForm = range(1, ingredientForms)
 
-    const renderIngredientForms = ingredients.map((ingredient, index) => {
+    const renderIngredientForms = eachIngredientForm.map((formNumber) => {
         return (
-            <AddRecipeInfo index={index}>
+            <AddRecipeInfo key={uuid()} index={formNumber} removeSelf={removeIngredientForm}>
                 <IngredientForm updateIngredients={updateIngredients} />
             </AddRecipeInfo>
         )
@@ -33,9 +33,11 @@ const AddIngredients = ({  }) => {
 
     return (
         <>
-            {renderIngredientForms}
+            <div className={styles.ingredientForms}>
+                {renderIngredientForms}
+            </div>
 
-            <AddIngredientBtn />
+            <AddIngredientBtn addIngredientForm={addIngredientForm} />
         </>
     )
 }
