@@ -1,9 +1,9 @@
 import React from 'react'
 
-import styles from '../../../../styles/modals/add-recipe/add-recipe-header/AddRecipeHeader.module.scss'
-import closeBtn from '../../../../public/assets/icons/close-btn.svg'
+import styles from '../../../styles/modals/add-recipe/AddRecipeHeader.module.scss'
+import closeBtn from '../../../public/assets/icons/close-btn.svg'
 
-import Image from '../../../generic-components/Image'
+import Image from '../../generic-components/Image'
 
 const AddRecipeHeader = ({  }) => {
     const closeBtnDimensions = 32

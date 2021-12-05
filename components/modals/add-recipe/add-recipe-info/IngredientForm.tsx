@@ -1,11 +1,11 @@
 import React from 'react'
 
-import styles from '../../../styles/modals/add-recipe/IngredientForm.module.scss'
-import inputStyles from '../../../styles/modals/add-recipe/recipeInput.module.scss'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/IngredientForm.module.scss'
+import inputStyles from '../../../../styles/modals/add-recipe/add-recipe-info/recipeInput.module.scss'
 
-import inputTypes from '../../../types/inputTypes'
+import inputTypes from '../../../../types/inputTypes'
 
-import ControlledInput from '../../generic-components/forms-and-inputs/ControlledInput'
+import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 
 interface Props {
     updateIngredients: Function

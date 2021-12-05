@@ -2,8 +2,8 @@ import React from 'react'
 
 import styles from '../../../styles/modals/add-recipe/AddRecipe.module.scss'
 
-import AddRecipeHeader from './AddRecipeHeader/AddRecipeHeader'
-import AddRecipeWidgets from '../AddRecipeWidgets'
+import AddRecipeHeader from './AddRecipeHeader'
+import AddRecipeWidgets from './AddRecipeWidgets'
 
 interface Props {
 
@@ -16,15 +16,8 @@ const AddRecipe = ({  }) => {
                 <AddRecipeHeader />
 
                 <AddRecipeWidgets />
-            {/*
-                Title ---- close(x) button
 
-                Panel | General info
-                Panel | Ingredients / Steps
-                Panel | Upload gallery
-
-                Cancel ------ Add recipes
-             */}
+            {/* AddRecipeFooter -> Cancel ------ Add recipes */}
             </div>
         </div>
     )

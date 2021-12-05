@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../../../styles/modals/add-recipe/AddIngredientBtn.module.scss'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddIngredientBtn.module.scss'
 
 interface Props {
     addIngredientForm: () => void

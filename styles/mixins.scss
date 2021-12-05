@@ -27,3 +27,7 @@
 @mixin clickable {
   cursor: pointer;
 }
+
+@mixin roundedCorners {
+  border-radius: 15px;
+}

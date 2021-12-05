@@ -1,0 +1,27 @@
+@use '../../../variables';
+@use '../../../mixins';
+
+.layout {
+  @include mixins.roundedCorners;
+
+  grid-column: span 2;
+
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.25em 0;
+  border: dashed variables.$light-gray;
+}
+
+.layout > * {
+  grid-row: 1;
+}
+
+.uploadImagesText {
+}
+
+.title {
+  margin: 0;
+}

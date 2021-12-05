@@ -1,4 +1,4 @@
-@use '../addRecipeMixins';
+@use 'addRecipeMixins';
 
 .layout {
   display: flex;
@@ -17,7 +17,7 @@
 }
 
 .closeBtn {
-  composes: btnIcon from '../../../generic-components/ButtonIcon.module.scss';
+  composes: btnIcon from '../../generic-components/ButtonIcon.module.scss';
 
   margin-top: .125em;
 }

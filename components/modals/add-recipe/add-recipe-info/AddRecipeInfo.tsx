@@ -1,9 +1,9 @@
 import React from 'react'
 
-import styles from '../../../styles/modals/add-recipe/AddRecipeInfo.module.scss'
-import trashIcon from '../../../public/assets/icons/trash.svg'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeInfo.module.scss'
+import trashIcon from '../../../../public/assets/icons/trash.svg'
 
-import Image  from '../../generic-components/Image'
+import Image  from '../../../generic-components/Image'
 
 interface Props {
     index: number

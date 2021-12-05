@@ -1,4 +1,7 @@
+@use '../mixins';
+
 .widget {
+  @include mixins.roundedCorners;
+
   background: #fff;
-  border-radius: 15px;
 }

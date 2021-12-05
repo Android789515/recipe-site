@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import AddRecipeInfo from './modals/add-recipe/AddRecipeInfo'
+import AddRecipeInfo from './modals/add-recipe/add-recipe-info/AddRecipeInfo'
 import RecipeStep from './RecipeStep'
-import AddRecipeStep from './modals/add-recipe/AddRecipeStep'
+import AddRecipeStep from './modals/add-recipe/add-recipe-info/AddRecipeStep'
 
 interface Props {
 

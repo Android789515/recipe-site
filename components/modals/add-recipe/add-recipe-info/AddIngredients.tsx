@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
-import styles from '../../../styles/modals/add-recipe/AddIngredients.module.scss'
-import { range } from '../../../utils/mathUtils'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddIngredients.module.scss'
+import { range } from '../../../../utils/mathUtils'
 
 import AddRecipeInfo from './AddRecipeInfo'
 import IngredientForm from './IngredientForm'

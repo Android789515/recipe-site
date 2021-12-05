@@ -1,4 +1,4 @@
-@use '../../variables';
+@use '../../../variables';
 
 .layout {
   display: grid;
@@ -39,7 +39,7 @@
 }
 
 .deleteIcon {
-  composes: btnIcon from '../../generic-components/ButtonIcon.module.scss';
+  composes: btnIcon from '../../../generic-components/ButtonIcon.module.scss';
 
   order: 1;
   grid-column: 2;
