@@ -22,6 +22,7 @@ const AddIngredients = ({  }) => {
     const removeIngredientForm = () => setIngredientForms(prevForms => prevForms - 1)
 
     const eachIngredientForm = range(1, ingredientForms)
+    console.log(eachIngredientForm)
 
     const renderIngredientForms = eachIngredientForm.map((formNumber) => {
         return (

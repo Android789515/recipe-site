@@ -17,6 +17,10 @@ const AddRecipeWidgets = ({  }) => {
             <AddRecipeWidget title={'Ingredients'}>
                 <AddIngredients />
             </AddRecipeWidget>
+
+            <AddRecipeWidget title={'Image Gallery'}>
+
+            </AddRecipeWidget>
         </div>
     )
 }
