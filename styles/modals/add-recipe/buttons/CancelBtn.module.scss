@@ -1,0 +1,10 @@
+@use '../../../variables';
+@use '../../../colorThemes';
+
+.btn {
+  @include colorThemes.lightGray;
+}
+
+.text {
+  padding: .125em 1em;
+}

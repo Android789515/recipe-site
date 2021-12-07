@@ -1,9 +1,16 @@
 import React from 'react'
 
-const AddRecipeFooter = ({  }) => {
-    return (
-        <footer>
+import styles from '../../../styles/modals/add-recipe/AddRecipeFooter.module.scss'
 
+import AddRecipeBtn from './buttons/AddRecipeBtn'
+import CancelBtn from './buttons/CancelBtn'
+
+const AddRecipeFooter = () => {
+    return (
+        <footer className={styles.layout}>
+            <CancelBtn />
+
+            <AddRecipeBtn />
         </footer>
     )
 }

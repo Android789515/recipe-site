@@ -1,5 +1,6 @@
-@use 'styles/variables';
+@use '../variables';
 @use '../mixins';
+@use '../colorThemes';
 
 $hover-color: #df6e4a;
 $active-color: #ad3d18;
@@ -7,11 +8,12 @@ $active-color: #ad3d18;
 .btn {
   @include mixins.unstyledButton;
   @include mixins.clickable;
+  @include colorThemes.orange;
 
   font-family: variables.$font-stack;
-  color: #fff;
 
-  background: variables.$accent-color;
+  display: inline-block;
+
   border-radius: 50px;
 }
 

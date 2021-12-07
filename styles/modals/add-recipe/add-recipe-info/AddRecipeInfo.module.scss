@@ -1,4 +1,5 @@
 @use '../../../variables';
+@use '../../../colorThemes';
 
 .layout {
   display: grid;
@@ -24,9 +25,7 @@
 }
 
 .indexAccent {
-  color: #fff;
-
-  background: variables.$accent-color;
+  @include colorThemes.orange;
 }
 
 .inputArea {

@@ -4,12 +4,9 @@ import styles from '../../../styles/modals/add-recipe/AddRecipe.module.scss'
 
 import AddRecipeHeader from './AddRecipeHeader'
 import AddRecipeWidgets from './AddRecipeWidgets'
+import AddRecipeFooter from './AddRecipeFooter'
 
-interface Props {
-
-}
-
-const AddRecipe = ({  }) => {
+const AddRecipe = () => {
     return (
         <div className={styles.layout}>
             <div className={styles.content}>
@@ -17,7 +14,7 @@ const AddRecipe = ({  }) => {
 
                 <AddRecipeWidgets />
 
-            {/* AddRecipeFooter -> Cancel ------ Add recipes */}
+                <AddRecipeFooter />
             </div>
         </div>
     )
