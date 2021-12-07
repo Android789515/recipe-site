@@ -7,7 +7,7 @@ import Button from '../../../generic-components/Button'
 const AddRecipeBtn = () => {
     return (
         <Button>
-            <p className={styles.btn}>Add  Recipe</p>
+            <p className={styles.text}>Add  Recipe</p>
         </Button>
     )
 }

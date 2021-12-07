@@ -11,6 +11,7 @@ $active-color: #ad3d18;
   @include colorThemes.orange;
 
   font-family: variables.$font-stack;
+  font-weight: 500;
 
   display: inline-block;
 

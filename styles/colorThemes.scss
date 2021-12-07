@@ -15,9 +15,6 @@
   @include pseudo-class('hover') {
     background: $hover-color;
   }
-  @include pseudo-class('active') {
-    background: $active-color;
-  }
 
   color: #fff;
 
@@ -32,9 +29,6 @@
   }
   @include pseudo-class('hover') {
     background: $hover-color;
-  }
-  @include pseudo-class('active') {
-    background: $active-color;
   }
 
   color: #000;
