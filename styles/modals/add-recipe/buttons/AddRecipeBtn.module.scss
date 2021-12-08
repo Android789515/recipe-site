@@ -1,8 +1,18 @@
 .text {
-  padding: 0 3em;
+  font-size: .9rem;
+
+  padding: 0 2.5em;
+  margin: 0;
 }
 
-@media (min-width: 360px) {
+.spacedText {
+  display: inline-block;
+
+  margin-right: .3em;
+}
+
+$footerBtnsBreakpoint: 350px;
+@media (min-width: $footerBtnsBreakpoint) {
   .text {
     padding: 0 3.5em;
   }
