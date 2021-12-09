@@ -13,7 +13,7 @@ const AddRecipeWidget: React.FC<Props> =
     ({ title, customTitleClass, children }) => {
     return (
         <Widget>
-            <div className={styles.layout}>
+            <div className={styles.paddedLayout}>
                 <h3 className={`${styles.title} ${customTitleClass}`}>{title}</h3>
 
                 {children}

@@ -7,6 +7,10 @@
   grid-row-gap: 1.25em;
   justify-content: start;
   align-items: center;
+}
+
+.paddedLayout {
+  @extend .layout;
 
   padding: addRecipeVariables.$widgetPadding;
 }

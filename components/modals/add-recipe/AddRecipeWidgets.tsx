@@ -20,9 +20,7 @@ const AddRecipeWidgets = ({  }) => {
             <AddRecipeWidget title={'Ingredients'}>
                 <AddIngredients />
 
-                <AddRecipeWidget title={'Steps'}>
-                    <AddSteps />
-                </AddRecipeWidget>
+                <AddSteps />
             </AddRecipeWidget>
 
             <AddRecipeWidget title={'Image Gallery'} customTitleClass={imageGalleryTitleStyle.title}>

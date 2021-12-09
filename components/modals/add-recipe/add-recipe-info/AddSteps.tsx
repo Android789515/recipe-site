@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
+import widgetStyles from '../../../../styles/modals/add-recipe/AddRecipeWidget.module.scss'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddSteps.module.scss'
+
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import StepForm from './StepForm'
+import AddRecipeInfo from './AddRecipeInfo'
 
 const AddSteps = () => {
     type Id = string
@@ -33,29 +37,31 @@ const AddSteps = () => {
         })
     }
 
-    const stepForms = formsData.map(formData => {
-        console.log('updated')
+    const stepForms = formsData.map((formData, index) => {
         return (
-            <StepForm
-                key={uuid()}
-                value={formData.value}
-                focus={activeForm === formData.id}
-                onChange={event => {
-                    setActiveForm(formData.id)
-                    updateFormText(formData.id, event)
-                }}
-            />
+            <AddRecipeInfo key={uuid()} index={index} isAccentSection={true} removeSelf={() => {}}>
+                <StepForm
+                    value={formData.value}
+                    focus={activeForm === formData.id}
+                    onChange={event => {
+                        setActiveForm(formData.id)
+                        updateFormText(formData.id, event)
+                    }}
+                />
+            </AddRecipeInfo>
         )
     })
 
     return (
-        <>
-            <div>
+        <div className={`${styles.subWidget} ${widgetStyles.layout}`}>
+            <h3 className={widgetStyles.title}>Steps</h3>
+
+            <div className={styles.forms}>
                 {stepForms}
             </div>
 
             <AddRecipeInfoBtn info={'Step'} addForm={addForm} />
-        </>
+        </div>
     )
 }
 
