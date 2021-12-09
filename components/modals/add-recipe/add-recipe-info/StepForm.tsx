@@ -6,21 +6,23 @@ import inputStyles from '../../../../styles/modals/add-recipe/add-recipe-info/re
 import ControlledTextArea from '../../../generic-components/forms-and-inputs/ControlledTextArea'
 
 interface Props {
-    shouldResetInputs: boolean
+    value: string
+    focus?: boolean
+    onChange: React.ChangeEventHandler
 }
 
-const AddRecipeStep = ({ shouldResetInputs }: Props) => {
-    // TODO - Figure out what submits this since it's a text area and enter
-    // should make a new line without clearing the text
+const StepForm = ({ value, focus, onChange }: Props) => {
     return (
         <ControlledTextArea
             className={`${styles.textarea} ${inputStyles.recipeInput}`}
             name={'add-recipe-step'}
             placeholder={'Type step description here'}
             required={true}
-            shouldResetTextArea={shouldResetInputs}
+            value={value}
+            focus={focus}
+            onChange={onChange}
         />
     )
 }
 
-export default AddRecipeStep
+export default StepForm

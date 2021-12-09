@@ -1,7 +1,7 @@
 @use '../../../variables';
 @use '../../../mixins';
 
-.addIngredientBtn {
+.text {
   @include mixins.clickable;
 
   font-weight: 600;

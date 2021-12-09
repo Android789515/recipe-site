@@ -6,7 +6,7 @@ import { range } from '../../../../utils/mathUtils'
 
 import AddRecipeInfo from './AddRecipeInfo'
 import IngredientForm from './IngredientForm'
-import AddIngredientBtn from './AddIngredientBtn'
+import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 
 const AddIngredients = ({  }) => {
     interface Ingredient {
@@ -22,7 +22,6 @@ const AddIngredients = ({  }) => {
     const removeIngredientForm = () => setIngredientForms(prevForms => prevForms - 1)
 
     const eachIngredientForm = range(1, ingredientForms)
-    console.log(eachIngredientForm)
 
     const renderIngredientForms = eachIngredientForm.map((formNumber) => {
         return (
@@ -38,7 +37,7 @@ const AddIngredients = ({  }) => {
                 {renderIngredientForms}
             </div>
 
-            <AddIngredientBtn addIngredientForm={addIngredientForm} />
+            <AddRecipeInfoBtn info={'Ingredient'} addForm={addIngredientForm} />
         </>
     )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import AddRecipeInfo from './modals/add-recipe/add-recipe-info/AddRecipeInfo'
 import RecipeStep from './RecipeStep'
-import AddRecipeStep from './modals/add-recipe/add-recipe-info/AddRecipeStep'
+import StepForm from './modals/add-recipe/add-recipe-info/StepForm'
 
 interface Props {
 
@@ -35,7 +35,7 @@ const RecipeStepsList = ({  }: Props) => {
 
             <AddRecipeInfo isAccentSection index={recipeSteps.length + 1}>
                 {/* @ts-ignore */}
-                <AddRecipeStep />
+                <StepForm />
             </AddRecipeInfo>
         </div>
     )

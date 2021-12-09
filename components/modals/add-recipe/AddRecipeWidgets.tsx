@@ -8,6 +8,7 @@ import GeneralInfo from './general-info/GeneralInfo'
 import AddIngredients from './add-recipe-info/AddIngredients'
 import AddRecipeWidget from './AddRecipeWidget'
 import ImageGallery from './image-gallery/ImageGallery'
+import AddSteps from './add-recipe-info/AddSteps'
 
 const AddRecipeWidgets = ({  }) => {
     return (
@@ -18,6 +19,10 @@ const AddRecipeWidgets = ({  }) => {
 
             <AddRecipeWidget title={'Ingredients'}>
                 <AddIngredients />
+
+                <AddRecipeWidget title={'Steps'}>
+                    <AddSteps />
+                </AddRecipeWidget>
             </AddRecipeWidget>
 
             <AddRecipeWidget title={'Image Gallery'} customTitleClass={imageGalleryTitleStyle.title}>

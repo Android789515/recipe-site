@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import { ChangeEventHandler, useState } from 'react'
 
-const useControlledInput = (initialText = '') => {
-    const [ text, updateText ] = useState(initialText)
+const useControlledInput = (text = '', updateText: (text: string) => void) => {
 
     interface InputText {
         target: {
@@ -11,17 +10,7 @@ const useControlledInput = (initialText = '') => {
     const setText = ({ target: { value } }: InputText) => updateText(value)
     const clearText = () => updateText('')
 
-    interface KeyPressed {
-        key: string
-    }
-    const submitKey = 'Enter'
-    const submitOnEnter = ({ key }: KeyPressed) => {
-        if (key === submitKey) {
-            clearText()
-        }
-    }
-
-    return { text, setText, clearText, submitOnEnter }
+    return { text, setText, clearText }
 }
 
 export default useControlledInput

@@ -1,27 +1,31 @@
-import React, { useEffect } from 'react'
-
-import useControlledInput from '../../../hooks/useControlledInput'
+import React, { useEffect, useRef } from 'react'
 
 interface Props {
     className: string,
     name: string,
     placeholder: string,
     required: boolean,
-    shouldResetTextArea: boolean
+    value: string,
+    focus?: boolean
+    onChange: React.ChangeEventHandler
 }
 
 const ControlledArea = (
-    { className, name, shouldResetTextArea, placeholder, required }: Props) => {
+    { className, name, placeholder, required, value, focus, onChange }: Props) => {
 
-    const { text, setText, clearText } = useControlledInput()
+    const textAreaRef = useRef<HTMLTextAreaElement>(null)
 
-    const resetTextArea = () => {
-        if (shouldResetTextArea) {
-            clearText()
+    useEffect(() => {
+        if (focus && textAreaRef.current) {
+            textAreaRef.current.focus()
         }
-    }
+    }, [focus])
 
-    useEffect(resetTextArea, [shouldResetTextArea])
+    const moveCursorToEnd = (event: React.FocusEvent) => {
+        const currentTarget = event.currentTarget as HTMLTextAreaElement
+        const endOfText = currentTarget.value.length
+        currentTarget.setSelectionRange(endOfText, endOfText)
+    }
 
     return (
         <textarea
@@ -29,8 +33,10 @@ const ControlledArea = (
             name={name}
             placeholder={placeholder}
             required={required}
-            value={text}
-            onChange={setText}
+            value={value}
+            ref={textAreaRef}
+            onChange={onChange}
+            onFocus={moveCursorToEnd}
         />
     )
 }
