@@ -24,7 +24,7 @@ const AddSteps = () => {
             return [...prevFormsData, { id: uuid(), value: '' }]
         })
     }
-    const removeForm = (filterId: string) => {
+    const removeForm = (filterId: Id) => {
         updateFormsData(prevFormsData => {
             return prevFormsData.filter(formData => formData.id !== filterId)
         })

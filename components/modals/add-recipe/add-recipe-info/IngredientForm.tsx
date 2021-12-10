@@ -7,7 +7,14 @@ import inputTypes from '../../../../types/inputTypes'
 
 import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 
-const IngredientForm = () => {
+interface Props {
+    nameValue: string
+    caloriesValue: number
+    nameOnChange: React.ChangeEventHandler
+    caloriesOnChange: React.ChangeEventHandler
+}
+
+const IngredientForm = ({ nameValue, nameOnChange, caloriesValue, caloriesOnChange }: Props) => {
 
     return (
         <div className={styles.inputs}>
@@ -17,17 +24,20 @@ const IngredientForm = () => {
                 type={inputTypes.text}
                 placeholder='Enter your Ingredient'
                 required
+                value={nameValue}
+                onChange={nameOnChange}
             />
             <ControlledInput
                 className={inputStyles.recipeInput}
                 name='calories'
-                type={inputTypes.text}
+                type={inputTypes.number}
                 placeholder='Calories'
                 required={false}
+                value={String(caloriesValue)}
+                onChange={caloriesOnChange}
             />
         </div>
     )
 }
 
-// @ts-ignore
 export default IngredientForm
