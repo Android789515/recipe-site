@@ -1,9 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import styles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
 import inputTypes from '../../../types/inputTypes'
-
-import useControlledInput from '../../../hooks/useControlledInput'
 
 interface Props {
     className?: string,
@@ -11,13 +9,13 @@ interface Props {
     type: string,
     placeholder: string,
     required: boolean,
+    value: string
     hasIcon: { src: string }
+    onChange: React.ChangeEventHandler
 }
 
 const ControlledInput = (
-    { className, name, type, placeholder, required }: Props) => {
-
-    const { text, setText, submitOnEnter } = useControlledInput()
+    { className, name, type, placeholder, required, value, onChange }: Props) => {
 
     return (
         <div>
@@ -27,9 +25,8 @@ const ControlledInput = (
                 type={type}
                 placeholder={placeholder}
                 required={required}
-                value={text}
-                onChange={setText}
-                onKeyDown={submitOnEnter}
+                value={value}
+                onChange={onChange}
             />
 
 
