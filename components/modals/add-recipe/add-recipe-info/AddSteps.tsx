@@ -24,6 +24,11 @@ const AddSteps = () => {
             return [...prevFormsData, { id: uuid(), value: '' }]
         })
     }
+    const removeForm = (filterId: string) => {
+        updateFormsData(prevFormsData => {
+            return prevFormsData.filter(formData => formData.id !== filterId)
+        })
+    }
     const updateFormText = (id: string, event: React.ChangeEvent) => {
         const { value } = event.target as HTMLTextAreaElement
         // console.log(id, value, event.target)
@@ -40,7 +45,12 @@ const AddSteps = () => {
     const stepForms = formsData.map((formData, index) => {
         index = index + 1 // Start counting from one
         return (
-            <AddRecipeInfo key={uuid()} index={index} isAccentSection={true} removeSelf={() => {}}>
+            <AddRecipeInfo
+                key={uuid()}
+                index={index}
+                isAccentSection={true}
+                removeSelf={() => removeForm(formData.id)}
+            >
                 <StepForm
                     value={formData.value}
                     focus={activeForm === formData.id}
