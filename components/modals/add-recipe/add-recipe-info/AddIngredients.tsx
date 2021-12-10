@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
-import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddIngredients.module.scss'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
 import { range } from '../../../../utils/mathUtils'
 
 import AddRecipeInfo from './AddRecipeInfo'
@@ -26,14 +26,14 @@ const AddIngredients = ({  }) => {
     const renderIngredientForms = eachIngredientForm.map((formNumber) => {
         return (
             <AddRecipeInfo key={uuid()} index={formNumber} removeSelf={removeIngredientForm}>
-                <IngredientForm updateIngredients={updateIngredients} />
+                <IngredientForm />
             </AddRecipeInfo>
         )
     })
 
     return (
         <>
-            <div className={styles.ingredientForms}>
+            <div className={styles.forms}>
                 {renderIngredientForms}
             </div>
 

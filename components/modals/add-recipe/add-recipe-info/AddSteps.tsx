@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { v4 as uuid } from 'uuid'
 
 import widgetStyles from '../../../../styles/modals/add-recipe/AddRecipeWidget.module.scss'
-import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddSteps.module.scss'
+import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
 
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import StepForm from './StepForm'
@@ -38,6 +38,7 @@ const AddSteps = () => {
     }
 
     const stepForms = formsData.map((formData, index) => {
+        index = index + 1 // Start counting from one
         return (
             <AddRecipeInfo key={uuid()} index={index} isAccentSection={true} removeSelf={() => {}}>
                 <StepForm

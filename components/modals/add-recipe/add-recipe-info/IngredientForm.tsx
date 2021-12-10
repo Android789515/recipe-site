@@ -7,17 +7,7 @@ import inputTypes from '../../../../types/inputTypes'
 
 import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 
-interface Props {
-    updateIngredients: Function
-}
-
-interface Ingredient {
-    entryId: string
-    name: string,
-    calories: number
-}
-
-const IngredientForm = ({ updateIngredients }: Props) => {
+const IngredientForm = () => {
 
     return (
         <div className={styles.inputs}>
