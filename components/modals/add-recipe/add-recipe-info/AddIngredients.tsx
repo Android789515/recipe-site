@@ -62,6 +62,7 @@ const AddIngredients = ({  }) => {
         index = index + 1 // Start counting from one
         return (
             <AddRecipeInfo
+                key={uuid()}
                 index={index}
                 removeSelf={() => removeIngredient(ingredient.id)}
             >
