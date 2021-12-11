@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from '../../../generic-components/Image'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/FolderDropdown.module.scss'
@@ -7,6 +7,12 @@ import dropdownArrow from '../../../../public/assets/icons/dropdown-arrow.svg'
 import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
 
 const FolderDropdown = ({  }) => {
+    const [ folder, setFolder ] = useState('')
+
+    const chooseFolder = (event: React.ChangeEvent) => {
+        const { value: folderSelected } = event.target as HTMLOptionElement
+        setFolder(folderSelected)
+    }
 
     // Need to get list of folders
     return (
@@ -18,6 +24,8 @@ const FolderDropdown = ({  }) => {
                 placeholder={'Choose or create folder'}
                 isRequired={true}
                 options={undefined}
+                value={folder}
+                onChange={chooseFolder}
             />
 
             <Image

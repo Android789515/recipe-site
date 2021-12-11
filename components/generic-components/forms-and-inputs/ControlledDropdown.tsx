@@ -2,17 +2,16 @@ import React, { cloneElement, isValidElement, ReactElement } from 'react'
 
 import styles from '../../../styles/generic-components/forms-and-inputs/ControlledDropdown.module.scss'
 
-import useControlledDropdown from '../../../hooks/useControlledDropdown'
-
 interface Props {
     placeholder?: string
     isRequired: boolean
     options: ReactElement<HTMLOptionElement>[] | undefined
     customStyles?: string
+    value: string
+    onChange: React.ChangeEventHandler
 }
 
-const ControlledDropdown = ({ placeholder, isRequired, options, customStyles }: Props) => {
-    const { option, chooseOption } = useControlledDropdown(placeholder)
+const ControlledDropdown = ({ placeholder, isRequired, options, customStyles, value, onChange }: Props) => {
 
     const renderOptions = () => {
         return options!.map(option => {
@@ -25,9 +24,9 @@ const ControlledDropdown = ({ placeholder, isRequired, options, customStyles }: 
     return (
         <select
             className={`${styles.dropdown} ${customStyles}`.trim()}
-            value={option}
+            value={value || placeholder}
             required={isRequired}
-            onChange={chooseOption}
+            onChange={onChange}
         >
             {placeholder && (
                 <option className={styles.option} disabled>
