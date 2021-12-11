@@ -10,11 +10,19 @@ import ControlledInput from '../../../generic-components/forms-and-inputs/Contro
 interface Props {
     nameValue: string
     caloriesValue: number
+    isActiveForm: boolean
+    activeInput: string
     nameOnChange: React.ChangeEventHandler
     caloriesOnChange: React.ChangeEventHandler
 }
 
-const IngredientForm = ({ nameValue, nameOnChange, caloriesValue, caloriesOnChange }: Props) => {
+const IngredientForm =
+    ({ nameValue, nameOnChange, caloriesValue, caloriesOnChange, isActiveForm, activeInput }: Props) => {
+
+    const inputs = {
+        name: 'name',
+        calories: 'calories'
+    }
 
     return (
         <div className={styles.inputs}>
@@ -24,6 +32,7 @@ const IngredientForm = ({ nameValue, nameOnChange, caloriesValue, caloriesOnChan
                 type={inputTypes.text}
                 placeholder='Enter your Ingredient'
                 required
+                focus={isActiveForm && activeInput === inputs.name}
                 value={nameValue}
                 onChange={nameOnChange}
             />
@@ -33,6 +42,7 @@ const IngredientForm = ({ nameValue, nameOnChange, caloriesValue, caloriesOnChan
                 type={inputTypes.number}
                 placeholder='Calories'
                 required={false}
+                focus={isActiveForm && activeInput === inputs.calories}
                 value={String(caloriesValue)}
                 onChange={caloriesOnChange}
             />

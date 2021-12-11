@@ -10,7 +10,7 @@ interface Props {
     onChange: React.ChangeEventHandler
 }
 
-const ControlledArea = (
+const ControlledTextArea = (
     { className, name, placeholder, required, value, focus, onChange }: Props) => {
 
     const textAreaRef = useRef<HTMLTextAreaElement>(null)
@@ -41,8 +41,8 @@ const ControlledArea = (
     )
 }
 
-ControlledArea.defaultProps = {
+ControlledTextArea.defaultProps = {
     shouldResetTextArea: false
 }
 
-export default ControlledArea
+export default ControlledTextArea

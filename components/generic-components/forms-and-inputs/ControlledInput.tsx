@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import styles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
 import inputTypes from '../../../types/inputTypes'
@@ -11,11 +11,20 @@ interface Props {
     required: boolean,
     value: string
     hasIcon: { src: string }
+    focus: boolean
     onChange: React.ChangeEventHandler
 }
 
 const ControlledInput = (
-    { className, name, type, placeholder, required, value, onChange }: Props) => {
+    { className, name, type, placeholder, required, focus, value, onChange }: Props) => {
+
+    const inputRef = useRef<HTMLInputElement>(null)
+
+    useEffect(() => {
+        if (focus && inputRef.current) {
+            inputRef.current.focus()
+        }
+    }, [focus])
 
     return (
         <div>
@@ -26,10 +35,9 @@ const ControlledInput = (
                 placeholder={placeholder}
                 required={required}
                 value={value}
+                ref={inputRef}
                 onChange={onChange}
             />
-
-
         </div>
     )
 }

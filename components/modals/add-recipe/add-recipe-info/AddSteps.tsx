@@ -31,7 +31,7 @@ const AddSteps = () => {
     }
     const updateFormText = (id: string, event: React.ChangeEvent) => {
         const { value } = event.target as HTMLTextAreaElement
-        // console.log(id, value, event.target)
+
         updateFormsData(prevFormsData => {
             return prevFormsData.map(form => {
                 if (form.id === id) {

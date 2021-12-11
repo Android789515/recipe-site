@@ -16,7 +16,6 @@ const AddIngredients = ({  }) => {
     }
 
     const [ ingredients, updateIngredients ] = useState<Ingredient[]>([])
-    const [ activeForm, setActiveForm ] = useState<Id>()
 
     const addIngredient = () => {
         updateIngredients(prevIngredients => {
@@ -29,9 +28,18 @@ const AddIngredients = ({  }) => {
         })
     }
 
+    const [ activeForm, setActiveForm ] = useState<Id>('')
+    const [ activeInput, setActiveInput ] = useState('')
+    const inputs = {
+        name: 'name',
+        calories: 'calories'
+    }
+
     const updateName = (ingredientId: Id, event: React.ChangeEvent) => {
         const { value: name } = event.target as HTMLInputElement
 
+        setActiveForm(ingredientId)
+        setActiveInput(inputs.name)
         updateIngredients(prevIngredients => {
             return prevIngredients.map(ingredient => {
                 if (ingredient.id === ingredientId) {
@@ -47,6 +55,8 @@ const AddIngredients = ({  }) => {
         const { value: calories } = event.target as HTMLInputElement
         if (!Number(calories) && Number(calories) !== 0) return
 
+        setActiveForm(ingredientId)
+        setActiveInput(inputs.calories)
         updateIngredients(prevIngredients => {
             return prevIngredients.map(ingredient => {
                 if (ingredient.id === ingredientId) {
@@ -67,6 +77,8 @@ const AddIngredients = ({  }) => {
                 removeSelf={() => removeIngredient(ingredient.id)}
             >
                 <IngredientForm
+                    isActiveForm={activeForm === ingredient.id}
+                    activeInput={activeInput}
                     nameValue={ingredient.name}
                     caloriesValue={ingredient.calories}
                     nameOnChange={event => updateName(ingredient.id, event)}
