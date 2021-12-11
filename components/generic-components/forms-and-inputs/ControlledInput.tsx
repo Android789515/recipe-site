@@ -9,7 +9,7 @@ interface Props {
     type: string
     inputMode?: inputModes
     pattern?: string
-    placeholder: string
+    placeholder?: string
     required: boolean
     value: string
     hasIcon: { src: string }

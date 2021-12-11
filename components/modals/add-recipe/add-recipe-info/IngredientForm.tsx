@@ -9,7 +9,7 @@ import ControlledInput from '../../../generic-components/forms-and-inputs/Contro
 
 interface Props {
     nameValue: string
-    caloriesValue: number
+    caloriesValue: string
     isActiveForm: boolean
     activeInput: string
     nameOnChange: React.ChangeEventHandler
@@ -45,7 +45,7 @@ const IngredientForm =
                 placeholder='Calories'
                 required={false}
                 focus={isActiveForm && activeInput === inputs.calories}
-                value={String(caloriesValue)}
+                value={caloriesValue}
                 onChange={caloriesOnChange}
             />
         </div>
