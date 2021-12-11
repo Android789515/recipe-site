@@ -39,7 +39,9 @@ const IngredientForm =
             <ControlledInput
                 className={inputStyles.recipeInput}
                 name='calories'
-                type={inputTypes.number}
+                type={inputTypes.text}
+                inputMode={'numeric'}
+                pattern={'[0-9]*'}
                 placeholder='Calories'
                 required={false}
                 focus={isActiveForm && activeInput === inputs.calories}

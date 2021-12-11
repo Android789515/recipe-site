@@ -4,19 +4,23 @@ import styles from '../../../styles/generic-components/forms-and-inputs/Controll
 import inputTypes from '../../../types/inputTypes'
 
 interface Props {
-    className?: string,
-    name: string,
-    type: string,
-    placeholder: string,
-    required: boolean,
+    className?: string
+    name: string
+    type: string
+    inputMode?: inputModes
+    pattern?: string
+    placeholder: string
+    required: boolean
     value: string
     hasIcon: { src: string }
     focus?: boolean
     onChange: React.ChangeEventHandler
 }
 
+type inputModes = 'search' | 'text' | 'email' | 'tel' | 'url' | 'none' | 'numeric' | 'decimal' | undefined
+
 const ControlledInput = (
-    { className, name, type, placeholder, required, focus, value, onChange }: Props) => {
+    { className, name, type, inputMode, pattern, placeholder, required, focus, value, onChange }: Props) => {
 
     const inputRef = useRef<HTMLInputElement>(null)
 
@@ -32,6 +36,8 @@ const ControlledInput = (
                 className={`${className} ${styles.input}`.trim()}
                 name={name}
                 type={type}
+                inputMode={inputMode}
+                pattern={pattern}
                 placeholder={placeholder}
                 required={required}
                 value={value}
