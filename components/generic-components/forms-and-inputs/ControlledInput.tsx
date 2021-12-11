@@ -11,7 +11,7 @@ interface Props {
     required: boolean,
     value: string
     hasIcon: { src: string }
-    focus: boolean
+    focus?: boolean
     onChange: React.ChangeEventHandler
 }
 

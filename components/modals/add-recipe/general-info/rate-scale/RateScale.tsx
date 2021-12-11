@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Stars from './Stars'
 import Rating from './Rating'
 
-const RateScale = ({  }) => {
+const RateScale = () => {
     const [ rating, setRating ] = useState(0)
 
     return (

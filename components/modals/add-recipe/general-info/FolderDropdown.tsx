@@ -6,7 +6,7 @@ import dropdownArrow from '../../../../public/assets/icons/dropdown-arrow.svg'
 
 import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
 
-const FolderDropdown = ({  }) => {
+const FolderDropdown = () => {
     const [ folder, setFolder ] = useState('')
 
     const chooseFolder = (event: React.ChangeEvent) => {

@@ -7,11 +7,7 @@ import LoginInput from './LoginInput'
 import usernameIcon from '../public/assets/icons/person.svg'
 import passwordEyeIcon from '../public/assets/icons/password-eye.svg'
 
-interface Props {
-
-}
-
-const LoginForm = (props: Props) => {
+const LoginForm = () => {
     return (
         // TODO add action url
         <form name='login' action='' method='post'>

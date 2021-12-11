@@ -23,6 +23,8 @@ const LoginInput = ({ iconSrc, inputType, name, placeholder }: Props) => {
                 name={name}
                 placeholder={placeholder}
                 required
+                value={''}
+                onChange={() => {}}
             />
         </div>
     )

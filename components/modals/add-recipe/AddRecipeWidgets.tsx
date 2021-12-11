@@ -10,7 +10,7 @@ import AddRecipeWidget from './AddRecipeWidget'
 import ImageGallery from './image-gallery/ImageGallery'
 import AddSteps from './add-recipe-info/AddSteps'
 
-const AddRecipeWidgets = ({  }) => {
+const AddRecipeWidgets = () => {
     return (
         <div className={styles.layout}>
             <AddRecipeWidget title={'General info'} customTitleClass={generalInfoTitleStyle.title}>

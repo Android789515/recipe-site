@@ -6,7 +6,7 @@ import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import AddRecipeInfo from './AddRecipeInfo'
 import IngredientForm from './IngredientForm'
 
-const AddIngredients = ({  }) => {
+const AddIngredients = () => {
     type Id = string
 
     interface Ingredient {

@@ -5,7 +5,7 @@ import styles from '../../../../styles/modals/add-recipe/general-info/Difficulty
 import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
 import Image from '../../../generic-components/Image'
 
-const DifficultyDropdown = ({  }) => {
+const DifficultyDropdown = () => {
     const [ difficulty, changeDifficulty ] = useState('')
 
     const setDifficulty = (event: React.ChangeEvent) => {

@@ -4,7 +4,7 @@ import styles from '../../../../styles/modals/add-recipe/image-gallery/ImageGall
 
 import Image from '../../../generic-components/Image'
 
-const ImageGallery = ({  }) => {
+const ImageGallery = () => {
     return (
         <div className={styles.layout}>
             <Image src={'/'} width={0} height={0} alt={'Upload icon'} />

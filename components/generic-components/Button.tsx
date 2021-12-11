@@ -3,7 +3,6 @@ import React from 'react'
 import styles from '../../styles/generic-components/Button.module.scss'
 
 interface Props {
-    // Must be a hexcode
     customClass?: string
 }
 
