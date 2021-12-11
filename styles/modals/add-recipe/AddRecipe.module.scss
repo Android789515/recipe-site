@@ -3,8 +3,8 @@
   z-index: 1;
 
   display: grid;
-  $sidePadding: 1em;
-  grid-template-columns: minmax($sidePadding, 1fr) minmax(288px, 405px) minmax($sidePadding, 1fr);
+  $sidePadding: 1.25em;
+  grid-template-columns: minmax($sidePadding, 1fr) minmax(278px, 405px) minmax($sidePadding, 1fr);
 
   overflow-y: auto;
 
