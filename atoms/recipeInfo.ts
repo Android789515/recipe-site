@@ -1,5 +1,22 @@
 import { atom } from 'recoil'
 
+type Id = string
+
+interface Ingredient {
+    id: Id
+    name: string,
+    calories: string
+}
+
+interface Step {
+    id: Id
+    textContent: string
+}
+
+interface Image {
+    src: string
+}
+
 const recipeInfo = atom({
     key: 'recipeInfo',
     default: {
@@ -11,8 +28,8 @@ const recipeInfo = atom({
             time: '',
             totalCalories: 0
         },
-        ingredients: [],
-        steps: [],
+        ingredients: Array<Ingredient>(),
+        steps: Array<Step>(),
         images: []
     }
 })

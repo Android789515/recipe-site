@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
+import { useRecoilState } from 'recoil'
 
 import widgetStyles from '../../../../styles/modals/add-recipe/AddRecipeWidget.module.scss'
 import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
+import recipeInfo from '../../../../atoms/recipeInfo'
 
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import StepForm from './StepForm'
@@ -11,38 +13,38 @@ import AddRecipeInfo from './AddRecipeInfo'
 const AddSteps = () => {
     type Id = string
 
-    interface FormData {
+    interface Step {
         id: Id
-        value: string
+        textContent: string
     }
 
-    const [ formsData, updateFormsData ] = useState<FormData[]>([])
+    const [ steps, updateSteps ] = useState<Step[]>([])
     const [ activeForm, setActiveForm ] = useState<Id>()
 
     const addForm = () => {
-        updateFormsData(prevFormsData => {
-            return [...prevFormsData, { id: uuid(), value: '' }]
+        updateSteps(prevFormsData => {
+            return [...prevFormsData, { id: uuid(), textContent: '' }]
         })
     }
     const removeForm = (filterId: Id) => {
-        updateFormsData(prevFormsData => {
+        updateSteps(prevFormsData => {
             return prevFormsData.filter(formData => formData.id !== filterId)
         })
     }
     const updateFormText = (id: string, event: React.ChangeEvent) => {
         const { value } = event.target as HTMLTextAreaElement
 
-        updateFormsData(prevFormsData => {
+        updateSteps(prevFormsData => {
             return prevFormsData.map(form => {
                 if (form.id === id) {
-                    return { ...form, value }
+                    return { ...form, textContent: value }
                 }
                 return form
             })
         })
     }
 
-    const stepForms = formsData.map((formData, index) => {
+    const stepForms = steps.map((formData, index) => {
         index = index + 1 // Start counting from one
         return (
             <AddRecipeInfo
@@ -52,7 +54,7 @@ const AddSteps = () => {
                 removeSelf={() => removeForm(formData.id)}
             >
                 <StepForm
-                    value={formData.value}
+                    value={formData.textContent}
                     focus={activeForm === formData.id}
                     onChange={event => {
                         setActiveForm(formData.id)
@@ -62,6 +64,12 @@ const AddSteps = () => {
             </AddRecipeInfo>
         )
     })
+
+    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
+
+    useEffect(() => {
+        updateRecipeData({ ...recipeData, steps })
+    }, [steps])
 
     return (
         <div className={`${styles.subWidget} ${widgetStyles.layout}`}>

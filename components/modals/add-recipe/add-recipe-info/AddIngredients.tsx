@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
+import { useRecoilState } from 'recoil'
 
 import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
+import recipeInfo from '../../../../atoms/recipeInfo'
+
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import AddRecipeInfo from './AddRecipeInfo'
 import IngredientForm from './IngredientForm'
@@ -87,6 +90,12 @@ const AddIngredients = () => {
             </AddRecipeInfo>
         )
     })
+
+    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
+
+    useEffect(() => {
+        updateRecipeData({ ...recipeData, ingredients })
+    }, [ingredients])
 
     return (
         <>
