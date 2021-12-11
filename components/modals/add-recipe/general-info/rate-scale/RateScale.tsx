@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useRecoilState } from 'recoil'
+
+import recipeInfo from '../../../../../atoms/recipeInfo'
 
 import Stars from './Stars'
 import Rating from './Rating'
 
 const RateScale = () => {
-    const [ rating, setRating ] = useState(0)
+    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
+    const { rating } = recipeData.generalInfo
+
+    const setRating = (rating: number) => {
+        updateRecipeData({ ...recipeData, generalInfo: { ...recipeData.generalInfo, rating } })
+    }
 
     return (
         <>
