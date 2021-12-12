@@ -62,7 +62,7 @@ Components
 
 - Step description form {
     Resizable text area;
-    Goes into a list of steps
+    Goes into a list of stepsData
 }
 
 Note: I don't see any submit buttons for the 2 above forms

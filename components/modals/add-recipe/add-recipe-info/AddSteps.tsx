@@ -4,21 +4,14 @@ import { useRecoilState } from 'recoil'
 
 import widgetStyles from '../../../../styles/modals/add-recipe/AddRecipeWidget.module.scss'
 import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
-import recipeInfo from '../../../../atoms/recipeInfo'
+import { Id, stepsData } from '../../../../atoms/recipeInfo'
 
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import StepForm from './StepForm'
 import AddRecipeInfo from './AddRecipeInfo'
 
 const AddSteps = () => {
-    type Id = string
-
-    interface Step {
-        id: Id
-        textContent: string
-    }
-
-    const [ steps, updateSteps ] = useState<Step[]>([])
+    const [ steps, updateSteps ] = useRecoilState(stepsData)
     const [ activeForm, setActiveForm ] = useState<Id>()
 
     const addForm = () => {

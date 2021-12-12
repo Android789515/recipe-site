@@ -2,15 +2,19 @@ import React from 'react'
 import { useRecoilState } from 'recoil'
 
 import styles from '../../../../styles/modals/add-recipe/buttons/AddRecipeBtn.module.scss'
-import recipeInfo from '../../../../atoms/recipeInfo'
+import { generalInfoData, ingredientsData, stepsData } from '../../../../atoms/recipeInfo'
 
 import Button from '../../../generic-components/Button'
 
 const AddRecipeBtn = () => {
-    const [ info ] = useRecoilState(recipeInfo)
+    const [ generalRecipeInfo ] = useRecoilState(generalInfoData)
+    const [ recipeIngredients ] = useRecoilState(ingredientsData)
+    const [ recipeSteps ] = useRecoilState(stepsData)
 
     const submitRecipeInfo = () => {
-        console.log(info)
+        console.log('General info: ', generalRecipeInfo)
+        console.log('Ingredients: ', recipeIngredients)
+        console.log('Steps: ', recipeSteps)
     }
 
     return (

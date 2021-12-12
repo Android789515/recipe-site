@@ -2,16 +2,15 @@ import React from 'react'
 import { useRecoilState } from 'recoil'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/NameInput.module.scss'
-import recipeInfo from '../../../../atoms/recipeInfo'
+import { generalInfoData } from '../../../../atoms/recipeInfo'
 
 import ControlledInput from '../../../generic-components/forms-and-inputs/ControlledInput'
 
 const NameInput = () => {
-    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
-    const { name } = recipeData.generalInfo
+    const [ { name }, updateGeneralInfo ] = useRecoilState(generalInfoData)
 
     const updateName = (name: string) => {
-        updateRecipeData({ ...recipeData, generalInfo: { ...recipeData.generalInfo, name } })
+        updateGeneralInfo(prevInfo => ({ ...prevInfo, name }))
     }
 
     const setName = (event: React.ChangeEvent) => {

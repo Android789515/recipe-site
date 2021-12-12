@@ -3,22 +3,16 @@ import { v4 as uuid } from 'uuid'
 import { useRecoilState } from 'recoil'
 
 import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
-import recipeInfo from '../../../../atoms/recipeInfo'
+import { Id, ingredientsData } from '../../../../atoms/recipeInfo'
 
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import AddRecipeInfo from './AddRecipeInfo'
 import IngredientForm from './IngredientForm'
 
 const AddIngredients = () => {
-    type Id = string
 
-    interface Ingredient {
-        id: Id
-        name: string,
-        calories: number
-    }
-
-    const [ ingredients, updateIngredients ] = useState<Ingredient[]>([])
+    // const [ ingredientsData, updateIngredients ] = useState<Ingredient[]>([])
+    const [ ingredients, updateIngredients ] = useRecoilState(ingredientsData)
 
     const addIngredient = () => {
         updateIngredients(prevIngredients => {

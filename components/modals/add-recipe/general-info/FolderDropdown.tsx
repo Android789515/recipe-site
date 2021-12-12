@@ -4,16 +4,15 @@ import Image from '../../../generic-components/Image'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/FolderDropdown.module.scss'
 import dropdownArrow from '../../../../public/assets/icons/dropdown-arrow.svg'
-import recipeInfo from '../../../../atoms/recipeInfo'
+import { generalInfoData } from '../../../../atoms/recipeInfo'
 
 import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
 
 const FolderDropdown = () => {
-    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
-    const { folder } = recipeData.generalInfo
+    const [ { folder }, updateGeneralInfo ] = useRecoilState(generalInfoData)
 
     const setFolder = (folder: string) => {
-        updateRecipeData({ ...recipeData, generalInfo: { ...recipeData.generalInfo, folder } })
+        updateGeneralInfo(prevInfo => ({ ...prevInfo, folder }))
     }
 
     const chooseFolder = (event: React.ChangeEvent) => {

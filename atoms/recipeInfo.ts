@@ -1,11 +1,11 @@
 import { atom } from 'recoil'
 
-type Id = string
+export type Id = string
 
 interface Ingredient {
     id: Id
     name: string,
-    calories: string
+    calories: number
 }
 
 interface Step {
@@ -17,21 +17,26 @@ interface Image {
     src: string
 }
 
-const recipeInfo = atom({
-    key: 'recipeInfo',
+const generalInfoData = atom({
+    key: 'generalInfoData',
     default: {
-        generalInfo: {
-            name: '',
-            folder: '',
-            rating: 0,
-            difficulty: '',
-            time: '',
-            totalCalories: 0
-        },
-        ingredients: Array<Ingredient>(),
-        steps: Array<Step>(),
-        images: []
+        name: '',
+        folder: '',
+        rating: 0,
+        difficulty: '',
+        time: '',
+        totalCalories: 0
     }
 })
 
-export default recipeInfo
+const ingredientsData = atom({
+    key: 'ingredientsData',
+    default: Array<Ingredient>()
+})
+
+const stepsData = atom({
+    key: 'stepsData',
+    default: Array<Step>()
+})
+
+export { generalInfoData, ingredientsData, stepsData }
