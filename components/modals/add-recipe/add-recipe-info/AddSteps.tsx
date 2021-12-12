@@ -65,12 +65,6 @@ const AddSteps = () => {
         )
     })
 
-    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
-
-    useEffect(() => {
-        updateRecipeData({ ...recipeData, steps })
-    }, [steps])
-
     return (
         <div className={`${styles.subWidget} ${widgetStyles.layout}`}>
             <h3 className={widgetStyles.title}>Steps</h3>

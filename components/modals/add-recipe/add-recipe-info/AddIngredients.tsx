@@ -91,12 +91,6 @@ const AddIngredients = () => {
         )
     })
 
-    const [ recipeData, updateRecipeData ] = useRecoilState(recipeInfo)
-
-    useEffect(() => {
-        updateRecipeData({ ...recipeData, ingredients })
-    }, [ingredients])
-
     return (
         <>
             <div className={styles.forms}>
