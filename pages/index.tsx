@@ -3,10 +3,6 @@ import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
 
-import TestingContainer from '../components/TestingContainer'
-import AddRecipe from '../components/modals/add-recipe/AddRecipe'
-
-
 const Home: NextPage = () => {
 
     return (
@@ -16,7 +12,13 @@ const Home: NextPage = () => {
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
-            <AddRecipe />
+        {/*
+            Hero section
+
+            Categories section
+
+            Footer
+         */}
         </div>
     )
 }
