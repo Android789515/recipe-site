@@ -1,17 +1,22 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
+
+import HeroSection from '../components/homepage/hero-section/HeroSection'
 
 const Home: NextPage = () => {
 
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <title>Recipe Site</title>
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
+            <body>
+                <HeroSection />
+            </body>
         {/*
             Hero section
 
