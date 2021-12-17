@@ -14,9 +14,9 @@ const Home: NextPage = () => {
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
-            <body>
+            <div>
                 <HeroSection />
-            </body>
+            </div>
         {/*
             Hero section
 

@@ -1,3 +1,14 @@
 .btn {
+  composes: btn from '../../generic-components/Button.module.scss';
+
+  background: none;
+}
+
+.btn:focus,
+.btn:hover {
+  background: none;
+}
+
+.btn:active {
   background: none;
 }
