@@ -1,14 +1,24 @@
-.btn {
+@use '../../mixins';
+
+.loginBtn {
   composes: btn from '../../generic-components/Button.module.scss';
 
   background: none;
 }
 
-.btn:focus,
-.btn:hover {
+.loginBtn:focus,
+.loginBtn:hover {
   background: none;
 }
 
-.btn:active {
+.loginBtn:active {
   background: none;
+}
+
+.loginText {
+  @include mixins.dropShadowText;
+  font-weight: 300;
+  font-size: 1rem;
+
+  margin: 0;
 }

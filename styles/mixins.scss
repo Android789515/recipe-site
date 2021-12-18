@@ -31,3 +31,7 @@
 @mixin roundedCorners {
   border-radius: 15px;
 }
+
+@mixin dropShadowText {
+  filter: drop-shadow(1px 1px 8px #000);
+}

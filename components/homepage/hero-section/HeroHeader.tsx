@@ -1,5 +1,6 @@
 import React from 'react'
 
+import styles from '../../../styles/homepage/hero-section/HeroHeader.module.scss'
 import logo from '../../../public/logo.svg'
 
 import Image from '../../generic-components/Image'
@@ -8,8 +9,8 @@ import HeroHeaderSignupBtn from './HeroHeaderSignupBtn'
 
 const HeroHeader = () => {
     return (
-        <header>
-            <Image src={logo} />
+        <header className={styles.heroHeader}>
+            <Image src={logo} width={30} />
 
             <div>
                 <HeroHeaderSignupBtn />

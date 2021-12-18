@@ -7,7 +7,7 @@ import HeroBody from './HeroBody'
 
 const HeroSection = () => {
     return (
-        <section className={styles.section}>
+        <section className={styles.heroSection}>
             <HeroHeader />
 
             <HeroBody />
