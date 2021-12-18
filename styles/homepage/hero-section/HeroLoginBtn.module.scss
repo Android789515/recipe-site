@@ -18,8 +18,9 @@
 .loginText {
   @include mixins.dropShadowText;
 
-  font-size: .95rem;
+  font-size: .85rem;
   font-weight: 400;
+  letter-spacing: .65px;
 
   margin: 0;
 }

@@ -1,7 +1,7 @@
 @use '../../mixins';
 
 .heroBody {
-  margin: 3em .5em;
+  margin: 3.5em 0;
 }
 
 .heroTitle {
@@ -12,5 +12,6 @@
   line-height: 1.25;
   color: #fff;
 
-  margin-bottom: 1.95rem;
+  padding: 0 .3em;
+  margin-bottom: 2.15rem;
 }
