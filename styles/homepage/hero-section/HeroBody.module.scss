@@ -1,0 +1,13 @@
+@use '../../mixins';
+
+.heroBody {
+  margin: 3em .5em;
+}
+
+.heroTitle {
+  @include mixins.dropShadowText;
+
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: #fff;
+}

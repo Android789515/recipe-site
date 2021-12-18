@@ -1,12 +1,13 @@
 import React from 'react'
 
+import styles from '../../../styles/homepage/hero-section/HeroSignupBtn.module.scss'
 
 import Button from '../../generic-components/Button'
 
 const HeroSignupBtn = () => {
     return (
-        <Button customClass={''}>
-            <p>Sign up</p>
+        <Button customClass={styles.signupBtn}>
+            <p className={styles.signupText}>Sign up</p>
         </Button>
     )
 }

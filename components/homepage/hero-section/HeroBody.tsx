@@ -1,17 +1,18 @@
 import React from 'react'
-import Button from '../../generic-components/Button'
+
+import styles from '../../../styles/homepage/hero-section/HeroBody.module.scss'
+
+import HeroSignupBtn from './HeroSignupBtn'
 
 const HeroBody = () => {
     return (
-        <main>
-            <h1>
+        <main className={styles.heroBody}>
+            <h1 className={styles.heroTitle}>
                 Discover millions of recipes
                 exclusive in finleap
             </h1>
 
-            <Button>
-                <p>Sign up</p>
-            </Button>
+            <HeroSignupBtn />
         </main>
     )
 }
