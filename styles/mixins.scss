@@ -33,5 +33,5 @@
 }
 
 @mixin dropShadowText {
-  filter: drop-shadow(1px 1px 8px #000);
+  text-shadow: 1px 1px 15px #000;
 }
