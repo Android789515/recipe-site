@@ -9,7 +9,7 @@ import ControlledInput from '../../../generic-components/forms-and-inputs/Contro
 
 interface Props {
     nameValue: string
-    caloriesValue: number
+    caloriesValue: string
     isActiveForm: boolean
     activeInput: string
     nameOnChange: React.ChangeEventHandler

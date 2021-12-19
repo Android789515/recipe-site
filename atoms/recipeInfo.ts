@@ -5,7 +5,7 @@ export type Id = string
 interface Ingredient {
     id: Id
     name: string,
-    calories: number
+    calories: string
 }
 
 interface Step {

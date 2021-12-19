@@ -16,7 +16,7 @@ const AddIngredients = () => {
 
     const addIngredient = () => {
         updateIngredients(prevIngredients => {
-            return [...prevIngredients, { id: uuid(), name: '', calories: 0 }]
+            return [...prevIngredients, { id: uuid(), name: '', calories: '' }]
         })
     }
     const removeIngredient = (filterId: Id) => {
@@ -57,7 +57,7 @@ const AddIngredients = () => {
         updateIngredients(prevIngredients => {
             return prevIngredients.map(ingredient => {
                 if (ingredient.id === ingredientId) {
-                    return { ...ingredient, calories: Number(calories) }
+                    return { ...ingredient, calories: calories }
                 }
 
                 return ingredient
