@@ -4,6 +4,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
 import HeroSection from '../components/homepage/hero-section/HeroSection'
+import AddRecipe from '../components/modals/add-recipe/AddRecipe'
 
 const Home: NextPage = () => {
 
