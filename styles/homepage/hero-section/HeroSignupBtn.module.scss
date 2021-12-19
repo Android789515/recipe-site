@@ -10,3 +10,14 @@
   padding: .95em 0;
   margin: 0;
 }
+
+$firstBtnBreakpoint: 370px;
+@media (min-width: $firstBtnBreakpoint) {
+  .signupBtn {
+    width: initial;
+  }
+
+  .signupText {
+    padding: 1em 4.25em;
+  }
+}
