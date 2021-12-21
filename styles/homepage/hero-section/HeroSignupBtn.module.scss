@@ -1,3 +1,5 @@
+@use 'HeroSection.module';
+
 .signupBtn {
   width: 100%;
 }
@@ -11,8 +13,7 @@
   margin: 0;
 }
 
-$firstBtnBreakpoint: 370px;
-@media (min-width: $firstBtnBreakpoint) {
+@media (min-width: HeroSection.$firstSectionBreakpoint) {
   .signupBtn {
     width: initial;
   }

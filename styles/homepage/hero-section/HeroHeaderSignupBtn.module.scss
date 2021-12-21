@@ -1,6 +1,32 @@
+@use '../../mixins';
+@use 'HeroSection.module';
+
 .signupBtn {
   display: none;
 
   background: none;
   border: solid 1px;
+}
+
+.signupBtn:focus,
+.signupBtn:hover,
+.signupBtn:active {
+  background: none;
+}
+
+.signupText {
+  @include mixins.dropShadowSmallText;
+  font-weight: 600;
+
+  margin: 0;
+}
+
+@media (min-width: HeroSection.$firstSectionBreakpoint) {
+  .signupBtn {
+    display: inline-block;
+  }
+
+  .signupText {
+    padding: .5em 1em;
+  }
 }

@@ -32,6 +32,10 @@
   border-radius: 15px;
 }
 
-@mixin dropShadowText {
+@mixin dropShadowLargeText {
   text-shadow: 1px 1px 10px #000;
+}
+
+@mixin dropShadowSmallText {
+  text-shadow: 1px 1px 1px #000;
 }

@@ -1,4 +1,5 @@
 @use '../../mixins';
+@use 'HeroSection.module';
 
 .loginBtn {
   composes: btn from '../../generic-components/Button.module.scss';
@@ -16,11 +17,17 @@
 }
 
 .loginText {
-  @include mixins.dropShadowText;
+  @include mixins.dropShadowSmallText;
 
   font-size: .85rem;
   font-weight: 400;
   letter-spacing: .65px;
 
   margin: 0;
+}
+
+@media (min-width: HeroSection.$firstSectionBreakpoint) {
+  .loginBtn {
+    margin-left: 1em;
+  }
 }

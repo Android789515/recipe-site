@@ -12,7 +12,7 @@ const HeroHeader = () => {
         <header className={styles.heroHeader}>
             <Image src={logo} width={30} />
 
-            <div>
+            <div className={styles.btns}>
                 <HeroHeaderSignupBtn />
                 <HeroLoginBtn />
             </div>
