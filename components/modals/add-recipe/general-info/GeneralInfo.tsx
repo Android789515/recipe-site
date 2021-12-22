@@ -11,6 +11,7 @@ const GeneralInfo = () => {
             <NameInput />
             <FolderDropdown />
             <RateScale />
+
         </>
     )
 }
