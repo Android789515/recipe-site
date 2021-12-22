@@ -26,11 +26,11 @@ const ControlledDropdown = ({ dropdownName, placeholder, isRequired, options, cu
     }
 
     return (
-        <label className={styles.label}>
+        <label className={`${styles.label} ${customStyles}`.trim()}>
             {dropdownName && <p className={styles.labelText}>{dropdownName}</p>}
 
             <select
-                className={`${styles.dropdown}`.trim()}
+                className={styles.dropdown}
                 value={value || placeholder}
                 required={isRequired}
                 onChange={onChange}

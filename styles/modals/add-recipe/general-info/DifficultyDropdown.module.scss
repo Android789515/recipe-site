@@ -1,0 +1,17 @@
+.dropdownContainer {
+  grid-column: span 2;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-columns: max-content auto;
+  grid-column-gap: .75em;
+  align-items: end;
+}
+
+.dropdownContainer > * {
+  grid-row: 1;
+}
+
+.dropdown {
+  width: 100%;
+}

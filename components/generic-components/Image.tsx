@@ -5,7 +5,7 @@ interface wrapperProps { className: string }
 
 const Image = ({ className, ...props }: ImageProps & wrapperProps) => (
     <div className={className}>
-        <NextImage {...props}/>
+        <NextImage {...props} />
     </div>
 )
 
