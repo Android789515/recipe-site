@@ -24,7 +24,7 @@ const generalInfoData = atom({
         folder: '',
         rating: 0,
         difficulty: '',
-        time: 0,
+        time: '',
         totalCalories: 0
     }
 })

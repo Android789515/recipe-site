@@ -1,8 +1,19 @@
 @use '../../variables';
 @use '../../mixins';
+@use '../../generic-components/widgetMixins';
 
 .input {
   @include mixins.unstyledInput;
 
   width: 100%;
+
+  padding: 0 .125em 0 .125em;
+}
+
+.label {
+  @include widgetMixins.labels;
+}
+
+.labelText {
+  @include widgetMixins.labelTexts;
 }

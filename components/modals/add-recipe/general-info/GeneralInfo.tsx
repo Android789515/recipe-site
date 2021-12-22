@@ -4,6 +4,7 @@ import NameInput from './NameInput'
 import FolderDropdown from './FolderDropdown'
 import RateScale from './rate-scale/RateScale'
 import DifficultyDropdown from './DifficultyDropdown'
+import TimeInput from './TimeInput'
 
 const GeneralInfo = () => {
 
@@ -14,6 +15,7 @@ const GeneralInfo = () => {
             <RateScale />
 
             <DifficultyDropdown />
+            <TimeInput />
         </>
     )
 }

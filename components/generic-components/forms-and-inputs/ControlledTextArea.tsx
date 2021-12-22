@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 
+import inputStyles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
+
 interface Props {
     className: string,
     name: string,
@@ -28,16 +30,18 @@ const ControlledTextArea = (
     }
 
     return (
-        <textarea
-            className={className}
-            name={name}
-            placeholder={placeholder}
-            required={required}
-            value={value}
-            ref={textAreaRef}
-            onChange={onChange}
-            onFocus={moveCursorToEnd}
-        />
+        <label className={inputStyles.label}>
+            <textarea
+                className={className}
+                name={name}
+                placeholder={placeholder}
+                required={required}
+                value={value}
+                ref={textAreaRef}
+                onChange={onChange}
+                onFocus={moveCursorToEnd}
+            />
+        </label>
     )
 }
 

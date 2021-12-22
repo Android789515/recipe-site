@@ -4,8 +4,9 @@ import styles from '../../../styles/generic-components/forms-and-inputs/Controll
 import inputTypes from '../../../types/inputTypes'
 
 interface Props {
-    className?: string
+    customStyles?: string
     name: string
+    showName?: boolean
     type: string
     inputMode?: inputModes
     pattern?: string
@@ -20,7 +21,7 @@ interface Props {
 type inputModes = 'search' | 'text' | 'email' | 'tel' | 'url' | 'none' | 'numeric' | 'decimal' | undefined
 
 const ControlledInput = (
-    { className, name, type, inputMode, pattern, placeholder, required, focus, value, onChange }: Props) => {
+    { customStyles, name, showName, type, inputMode, pattern, placeholder, required, focus, value, onChange }: Props) => {
 
     const inputRef = useRef<HTMLInputElement>(null)
 
@@ -31,20 +32,25 @@ const ControlledInput = (
     }, [focus])
 
     return (
-        <div>
-            <input
-                className={`${className} ${styles.input}`.trim()}
-                name={name}
-                type={type}
-                inputMode={inputMode}
-                pattern={pattern}
-                placeholder={placeholder}
-                required={required}
-                value={value}
-                ref={inputRef}
-                onChange={onChange}
-            />
-        </div>
+
+        <label className={styles.label}>
+            {showName &&  <p className={styles.labelText}>{name}</p>}
+
+            <div>
+                <input
+                    className={`${styles.input} ${customStyles}`.trim()}
+                    name={name}
+                    type={type}
+                    inputMode={inputMode}
+                    pattern={pattern}
+                    placeholder={placeholder}
+                    required={required}
+                    value={value}
+                    ref={inputRef}
+                    onChange={onChange}
+                />
+            </div>
+        </label>
     )
 }
 

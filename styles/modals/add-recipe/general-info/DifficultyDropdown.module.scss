@@ -5,7 +5,7 @@
   grid-template-rows: auto;
   grid-auto-columns: max-content auto;
   grid-column-gap: .75em;
-  align-items: end;
+  align-items: center;
 }
 
 .dropdownContainer > * {
@@ -14,4 +14,6 @@
 
 .dropdown {
   width: 100%;
+
+  padding-bottom: .1em;
 }
