@@ -4,6 +4,8 @@
 .loginBtn {
   composes: btn from '../../generic-components/Button.module.scss';
 
+  font-size: inherit;
+
   background: none;
 }
 
@@ -24,10 +26,4 @@
   letter-spacing: .65px;
 
   margin: 0;
-}
-
-@media (min-width: HeroSection.$firstSectionBreakpoint) {
-  .loginBtn {
-    margin-left: 1em;
-  }
 }

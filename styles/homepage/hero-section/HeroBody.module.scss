@@ -14,25 +14,56 @@
   color: #fff;
 
   padding: 0 .3em;
-  margin-bottom: 2.15rem;
+  margin-bottom: .96em;
 }
 
-$firstTitleBreakpoint: 338px;
-$secondTitleBreakpoint: 362px;
-@media (min-width: $firstTitleBreakpoint) {
+// Before first section breakpoint
+$mobile-firstTitleGrowth: 338px;
+$mobile-secondTitleGrowth: 362px;
+@media (min-width: $mobile-firstTitleGrowth) {
   .heroTitle {
     font-size: 2rem;
   }
 }
 
-@media (min-width: $secondTitleBreakpoint) {
+@media (min-width: $mobile-secondTitleGrowth) {
   .heroTitle {
     font-size: 2.2rem;
   }
 }
 
-@media (min-width: HeroSection.$firstSectionBreakpoint) {
+@media (min-width: HeroSection.$exitMobileBreakpoint) {
   .heroTitle {
     font-size: 2rem;
+
+    margin-bottom: 2em;
+  }
+}
+
+// After first section breakpoint
+$firstTitleGrowth: 392px;
+$secondTitleGrowth: 426px;
+$thirdTitleGrowth: 456px;
+@media (min-width: $firstTitleGrowth) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+}
+
+@media (min-width: $secondTitleGrowth) {
+  .heroTitle {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: $thirdTitleGrowth) {
+  .heroTitle {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: HeroSection.$heroTitleResizeBreakpoint) {
+  .heroTitle {
+    max-width: 75%;
   }
 }

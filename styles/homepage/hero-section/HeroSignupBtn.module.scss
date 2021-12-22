@@ -9,16 +9,6 @@
   font-weight: 500;
   letter-spacing: .25px;
 
-  padding: .95em 0;
+  padding: 1em 0;
   margin: 0;
-}
-
-@media (min-width: HeroSection.$firstSectionBreakpoint) {
-  .signupBtn {
-    width: initial;
-  }
-
-  .signupText {
-    padding: 1em 4.25em;
-  }
 }

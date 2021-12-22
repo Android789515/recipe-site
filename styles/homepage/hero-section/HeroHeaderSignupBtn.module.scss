@@ -2,6 +2,8 @@
 @use 'HeroSection.module';
 
 .signupBtn {
+  font-size: inherit;
+
   display: none;
 
   background: none;
@@ -19,14 +21,4 @@
   font-weight: 600;
 
   margin: 0;
-}
-
-@media (min-width: HeroSection.$firstSectionBreakpoint) {
-  .signupBtn {
-    display: inline-block;
-  }
-
-  .signupText {
-    padding: .5em 1em;
-  }
 }
