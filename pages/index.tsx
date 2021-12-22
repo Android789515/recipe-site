@@ -4,7 +4,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 
 import HeroSection from '../components/homepage/hero-section/HeroSection'
-import AddRecipe from '../components/modals/add-recipe/AddRecipe'
+import AddRecipeModal from '../components/modals/add-recipe/AddRecipeModal'
 
 const Home: NextPage = () => {
 
@@ -18,6 +18,8 @@ const Home: NextPage = () => {
             <div>
                 <HeroSection />
             </div>
+
+            <AddRecipeModal />
         {/*
             Hero section
 

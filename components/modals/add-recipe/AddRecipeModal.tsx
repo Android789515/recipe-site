@@ -6,7 +6,7 @@ import AddRecipeHeader from './AddRecipeHeader'
 import AddRecipeWidgets from './AddRecipeWidgets'
 import AddRecipeFooter from './AddRecipeFooter'
 
-const AddRecipe = () => {
+const AddRecipeModal = () => {
     return (
         <div className={styles.layout}>
             <div className={styles.content}>
@@ -20,4 +20,4 @@ const AddRecipe = () => {
     )
 }
 
-export default AddRecipe
+export default AddRecipeModal
