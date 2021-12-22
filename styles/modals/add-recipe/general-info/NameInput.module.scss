@@ -1,11 +1,11 @@
-@use '../addRecipeMixins';
+@use '../../../generic-components/widgetMixins';
 
 .label {
-  @include addRecipeMixins.labels
+  @include widgetMixins.labels
 }
 
 .labelText {
-  @include addRecipeMixins.labelTexts;
+  @include widgetMixins.labelTexts;
 }
 
 .input {

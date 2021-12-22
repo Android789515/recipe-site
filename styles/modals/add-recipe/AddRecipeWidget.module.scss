@@ -1,5 +1,5 @@
 @use 'addRecipeVariables';
-@use 'addRecipeMixins';
+@use 'styles/generic-components/widgetMixins';
 
 .layout {
   display: grid;

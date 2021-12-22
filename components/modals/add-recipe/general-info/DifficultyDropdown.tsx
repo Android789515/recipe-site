@@ -17,6 +17,7 @@ const DifficultyDropdown = () => {
         <label>
 
             <ControlledDropdown
+
                 placeholder={'Difficulty'}
                 isRequired={true}
                 options={undefined}

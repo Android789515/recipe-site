@@ -1,4 +1,23 @@
+@use '../../variables';
 @use '../../mixins';
+@use '../../generic-components/widgetMixins';
+
+.label {
+  @include widgetMixins.labels;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.labelText {
+  @include widgetMixins.labelTexts;
+}
+
+.dropdown,
+.dropdownIcon {
+  grid-row: 2;
+  grid-column: 1;
+}
 
 .dropdown {
   @include mixins.unstyledDropdown;
@@ -13,4 +32,11 @@
   .option {
     padding: 0;
   }
+}
+
+.dropdownIcon {
+  // Lets you click the dropdown through the icon
+  pointer-events: none;
+
+  margin-left: auto;
 }
