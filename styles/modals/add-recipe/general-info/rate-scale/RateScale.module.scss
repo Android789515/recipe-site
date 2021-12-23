@@ -1,6 +1,20 @@
+@use '../../../../variables';
+
 .rateScale {
   grid-column: span 2;
 
   display: grid;
-  grid-template-columns: .5fr minmax(45%, 50%);
+  grid-template-columns: auto auto;
+}
+
+.rateInterface {
+  display: flex;
+  align-items: center;
+}
+
+.rate {
+  font-weight: 500;
+  color: variables.$light-gray;
+
+  margin: 0 0 .3em .75em;
 }

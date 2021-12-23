@@ -16,7 +16,10 @@ const RateScale = () => {
 
     return (
         <div className={styles.rateScale}>
-            <Stars rating={rating} setRating={setRating} />
+            <div className={styles.rateInterface}>
+                <Stars rating={rating} setRating={setRating} />
+                <span className={styles.rate}>Rate</span>
+            </div>
 
             <Rating rating={rating} />
         </div>
