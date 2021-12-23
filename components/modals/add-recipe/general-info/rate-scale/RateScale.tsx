@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
+import styles from '../../../../../styles/modals/add-recipe/general-info/rate-scale/RateScale.module.scss'
 import { generalInfoData } from '../../../../../atoms/recipeInfo'
 
 import Stars from './Stars'
@@ -14,11 +15,11 @@ const RateScale = () => {
     }
 
     return (
-        <>
+        <div className={styles.rateScale}>
             <Stars rating={rating} setRating={setRating} />
 
             <Rating rating={rating} />
-        </>
+        </div>
     )
 }
 

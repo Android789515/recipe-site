@@ -1,0 +1,6 @@
+.rateScale {
+  grid-column: span 2;
+
+  display: grid;
+  grid-template-columns: .5fr minmax(45%, 50%);
+}
