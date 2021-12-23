@@ -2,9 +2,6 @@
 @use '../mixins';
 @use '../colorThemes';
 
-$hover-color: #df6e4a;
-$active-color: #ad3d18;
-
 .btn {
   @include mixins.unstyledButton;
   @include mixins.clickable;
@@ -16,15 +13,6 @@ $active-color: #ad3d18;
   display: inline-block;
 
   border-radius: 50px;
-}
-
-.btn:focus,
-.btn:hover {
-  background: $hover-color;
-}
-
-.btn:active {
-  background: $active-color;
 }
 
 .genericBtnText {
