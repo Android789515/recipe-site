@@ -1,0 +1,17 @@
+.totalCaloriesContainer {
+  grid-column: span 2;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-columns: max-content auto;
+  grid-column-gap: .75em;
+  align-items: end;
+}
+
+.totalCaloriesContainer > * {
+  grid-row: 1;
+}
+
+.totalCalories {
+  margin: 0;
+}

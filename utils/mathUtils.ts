@@ -5,3 +5,11 @@ export const range = (start: number, end: number) => {
 
     return numbersInRange.filter(removeNumbersOutsideRange)
 }
+
+export const sum = (numbers: number[]) => {
+    if (numbers.length > 0) {
+        return numbers.reduce((total, number) => total + number)
+    }
+
+    return 0
+}
