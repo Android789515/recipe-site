@@ -32,7 +32,7 @@ const ControlledTextArea = (
     return (
         <label className={inputStyles.label}>
             <textarea
-                className={className}
+                className={`${inputStyles.input} ${className}`}
                 name={name}
                 placeholder={placeholder}
                 required={required}

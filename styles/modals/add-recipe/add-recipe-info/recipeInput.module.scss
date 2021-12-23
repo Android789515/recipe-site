@@ -2,10 +2,11 @@
 @use '../../../mixins';
 
 .recipeInput {
-  @include mixins.unstyledInput;
-
   font-size: 1.125rem;
   color: variables.$light-gray;
 
   display: block;
+
+  padding-left: 0;
+  padding-right: 0;
 }
