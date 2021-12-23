@@ -5,9 +5,15 @@
 .input {
   @include mixins.unstyledInput;
 
+  color: variables.$light-gray;
+
   width: 100%;
 
   padding: 0 .125em 0 .125em;
+}
+
+.input::placeholder {
+  opacity: 1;
 }
 
 .label {

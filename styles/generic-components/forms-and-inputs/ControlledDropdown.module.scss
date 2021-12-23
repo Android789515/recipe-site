@@ -23,6 +23,8 @@
   @include mixins.unstyledDropdown;
   @include mixins.clickable;
 
+  color: variables.$light-gray;
+
   display: block;
 
   // Have to do to keep dropdown lined up correctly with labels
