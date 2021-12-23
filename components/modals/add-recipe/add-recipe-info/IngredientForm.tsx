@@ -27,7 +27,7 @@ const IngredientForm =
     return (
         <div className={styles.inputs}>
             <ControlledInput
-                customInputStyles={inputStyles.recipeInput}
+                customStyles={inputStyles.recipeInput}
                 name='ingredient-name'
                 type={inputTypes.text}
                 placeholder='Enter your Ingredient'
@@ -37,7 +37,7 @@ const IngredientForm =
                 onChange={nameOnChange}
             />
             <ControlledInput
-                customInputStyles={inputStyles.recipeInput}
+                customStyles={inputStyles.recipeInput}
                 name='calories'
                 type={inputTypes.text}
                 inputMode={'numeric'}

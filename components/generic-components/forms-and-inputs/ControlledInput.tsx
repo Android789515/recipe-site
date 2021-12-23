@@ -4,8 +4,7 @@ import styles from '../../../styles/generic-components/forms-and-inputs/Controll
 import inputTypes from '../../../types/inputTypes'
 
 interface Props {
-    customLabelStyles?: string
-    customInputStyles?: string
+    customStyles?: string
     name: string
     showName?: boolean
     type: string
@@ -23,8 +22,7 @@ type inputModes = 'search' | 'text' | 'email' | 'tel' | 'url' | 'none' | 'numeri
 
 const ControlledInput = (
     {
-        customLabelStyles,
-        customInputStyles,
+        customStyles,
         name,
         showName,
         type,
@@ -47,12 +45,12 @@ const ControlledInput = (
 
     return (
 
-        <label className={`${styles.label} ${customLabelStyles}`}>
+        <label className={styles.label}>
             {showName &&  <p className={styles.labelText}>{name}</p>}
 
             <div>
                 <input
-                    className={`${styles.input} ${customInputStyles}`.trim()}
+                    className={`${styles.input} ${customStyles}`.trim()}
                     name={name}
                     type={type}
                     inputMode={inputMode}

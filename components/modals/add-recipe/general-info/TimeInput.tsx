@@ -27,7 +27,6 @@ const TimeInput = () => {
             <NextImage src={timeIcon} height={32} />
 
             <ControlledInput
-                customLabelStyles={styles.timeInputLabel}
                 name={'time'}
                 placeholder={'Time'}
                 type={inputTypes.text}
