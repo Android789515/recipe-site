@@ -18,8 +18,6 @@ const Home: NextPage = () => {
             <div>
                 <HeroSection />
             </div>
-
-            <AddRecipeModal />
         {/*
             Hero section
 
