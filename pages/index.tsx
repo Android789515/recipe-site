@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/homepage/Home.module.scss'
 
 import HeroSection from '../components/homepage/hero-section/HeroSection'
 import AddRecipeModal from '../components/modals/add-recipe/AddRecipeModal'
+import CategoriesSection from '../components/homepage/categories-section/CategoriesSection'
 
 const Home: NextPage = () => {
 
@@ -15,8 +16,10 @@ const Home: NextPage = () => {
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
-            <div>
+            <div className={styles.layout}>
                 <HeroSection />
+
+                <CategoriesSection />
             </div>
         {/*
             Hero section

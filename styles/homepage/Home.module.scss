@@ -1,0 +1,11 @@
+.layout > * {
+  display: grid;
+  grid-template-rows: max-content auto;
+  grid-template-columns: minmax(1.5em, 1fr) auto minmax(1.5em, 1fr);
+
+  padding: 1.25em 0;
+}
+
+.layout > * > * {
+  grid-column: 2 / -2
+}
