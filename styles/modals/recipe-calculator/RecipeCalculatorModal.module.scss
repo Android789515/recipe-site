@@ -3,7 +3,6 @@
 .recipeCalculator {
   position: absolute;
   top: 24.25em;
-  right: 0;
 
   display: grid;
   justify-content: center;
@@ -17,13 +16,13 @@
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: .92rem;
   font-weight: 600;
 
   margin-top: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 .searchField {
-  font-size: .98rem;
+  font-size: .88rem;
 }
