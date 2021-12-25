@@ -7,7 +7,7 @@ import listViewIcon from '../../../public/assets/icons/listView.svg'
 
 const CategoryViewBtns = () => {
     return (
-        <div>
+        <div className={styles.categoryViewBtns}>
             <NextImage src={gridViewIcon} />
             <NextImage src={listViewIcon} />
         </div>

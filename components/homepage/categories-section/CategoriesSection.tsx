@@ -11,10 +11,7 @@ const CategoriesSection = () => {
         <section className={styles.layout}>
             <CategoriesSectionHeader />
         {/*
-            Header with title and grid/list view buttons
-
             container with the categories - need to pull from somewhere
-
          */}
         </section>
     )

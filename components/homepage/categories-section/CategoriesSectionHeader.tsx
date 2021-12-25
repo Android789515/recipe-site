@@ -8,7 +8,7 @@ const CategoriesSectionHeader = () => {
     return (
         <header className={styles.layout}>
              {/* Section title */}
-             <h3>Categories</h3>
+             <h3 className={styles.title}>Categories</h3>
 
             {/* Grid/list view buttons */}
             <CategoryViewBtns />

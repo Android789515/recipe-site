@@ -1,0 +1,12 @@
+@use '../../mixins';
+
+.categoryViewBtns {
+  display: grid;
+  grid-column-gap: 1.5em;
+}
+
+.categoryViewBtns > * {
+  @include mixins.clickable;
+
+  grid-row: 1;
+}
