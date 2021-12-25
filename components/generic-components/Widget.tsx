@@ -2,9 +2,13 @@ import React from 'react'
 
 import styles from '../../styles/generic-components/Widget.module.scss'
 
-const Widget: React.FC = ({ children }) => {
+interface Props {
+    customStyles?: string
+}
+
+const Widget: React.FC<Props> = ({ customStyles, children }) => {
     return (
-        <div className={styles.widget}>
+        <div className={`${styles.widget} ${customStyles}`}>
             {children}
         </div>
     )

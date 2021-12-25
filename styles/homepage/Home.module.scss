@@ -1,4 +1,4 @@
-.layout > * {
+.layout {
   display: grid;
   grid-template-rows: max-content auto;
   $sideSpacing: 1.5em;
@@ -7,6 +7,6 @@
   padding: 1.25em 0;
 }
 
-.layout > * > * {
+.layout > * {
   grid-column: 2 / -2
 }

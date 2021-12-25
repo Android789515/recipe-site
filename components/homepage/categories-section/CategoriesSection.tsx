@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
+import homeStyles from '../../../styles/homepage/Home.module.scss'
 import styles from '../../../styles/homepage/categories-section/CategoriesSection.module.scss'
 import { isCategoryViewList } from '../../../atoms/categoryView'
 import testImg from '../../../public/assets/img/mexican.png'
@@ -30,7 +31,7 @@ const CategoriesSection = () => {
     ]
 
     return (
-        <section className={styles.layout}>
+        <section className={`${styles.layout} ${homeStyles.layout}`}>
             <CategoriesSectionHeader />
 
             <div className={styles.categories}>
