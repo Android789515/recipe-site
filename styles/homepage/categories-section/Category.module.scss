@@ -1,0 +1,45 @@
+@use '../../mixins';
+
+.categoryLayout {
+  background-size: cover;
+  background-position: center;
+}
+
+.category {
+  @include mixins.dropShadowLargeText;
+
+  font-size: 1.1rem;
+  color: #fff;
+
+  padding: 3em 1em;
+}
+
+.categoryTitle {
+  font-weight: 600;
+  font-size: 1.8rem;
+
+  margin-bottom: .95em;
+}
+
+.categoryBody {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.recipesBtn {
+  padding: .3em 1em;
+  background: #9dcabe;
+}
+
+.recipesBtn:focus,
+.recipesBtn:hover {
+  background: #8fb8ac;
+}
+
+.recipesBtn:active {
+  background: #85aba0;
+}
+
+.recipeCount {
+  margin: 0;
+}

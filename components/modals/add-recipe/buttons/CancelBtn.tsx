@@ -6,7 +6,7 @@ import Button from '../../../generic-components/Button'
 
 const CancelBtn = () => {
     return (
-        <Button customClass={styles.btn}>
+        <Button customStyles={styles.btn}>
             <p className={styles.text}>Cancel</p>
         </Button>
     )

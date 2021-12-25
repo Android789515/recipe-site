@@ -3,13 +3,13 @@ import React from 'react'
 import styles from '../../styles/generic-components/Button.module.scss'
 
 interface Props {
-    customClass?: string
+    customStyles?: string
 }
 
 const Button: React.FC<Props> =
-    ({ customClass, children }) => {
+    ({ customStyles, children }) => {
     return (
-        <button type='button' className={`${styles.btn} ${customClass}`}>{children}</button>
+        <button type='button' className={`${styles.btn} ${customStyles}`}>{children}</button>
     )
 }
 

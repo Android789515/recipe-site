@@ -6,7 +6,7 @@ import Button from '../../generic-components/Button'
 
 const HeroLoginBtn = () => {
     return (
-        <Button customClass={styles.loginBtn}>
+        <Button customStyles={styles.loginBtn}>
             <p className={styles.loginText}>Login</p>
         </Button>
     )
