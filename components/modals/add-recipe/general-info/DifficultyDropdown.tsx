@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useRecoilState } from 'recoil'
 import NextImage from 'next/image'
 
 import styles from '../../../../styles/modals/add-recipe/general-info/DifficultyDropdown.module.scss'
 import difficultyIcon from '../../../../public/assets/icons/difficulty.svg'
+import { generalInfoData } from '../../../../atoms/recipeInfo'
+import { capitalize } from '../../../../utils/stringUtils'
 
 import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
 
@@ -13,11 +16,11 @@ const DifficultyDropdown = () => {
         hard = 'hard'
     }
 
-    const [ difficulty, changeDifficulty ] = useState('')
+    const [ { difficulty }, updateGeneralInfo ] = useRecoilState(generalInfoData)
 
     const setDifficulty = (event: React.ChangeEvent) => {
-        const { value: newDifficulty } = event.target as HTMLOptionElement
-        changeDifficulty(newDifficulty)
+        const { value: difficulty } = event.target as HTMLOptionElement
+        updateGeneralInfo(prevInfo => ({ ...prevInfo, difficulty }))
     }
 
     return (
@@ -31,9 +34,17 @@ const DifficultyDropdown = () => {
                 value={difficulty}
                 onChange={setDifficulty}
             >
-                <option value={'Easy'}>Easy</option>
-                <option value={'Medium'}>Medium</option>
-                <option value={'Hard'}>Hard</option>
+                <option value={difficulties.easy}>
+                    {capitalize(difficulties.easy)}
+                </option>
+
+                <option value={difficulties.medium}>
+                    {capitalize(difficulties.medium)}
+                </option>
+
+                <option value={difficulties.hard}>
+                    {capitalize(difficulties.hard)}
+                </option>
             </ControlledDropdown>
         </div>
     )
