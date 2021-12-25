@@ -28,10 +28,13 @@ const DifficultyDropdown = () => {
                 customStyles={styles.dropdown}
                 placeholder={'Difficulty'}
                 isRequired={true}
-                options={undefined}
                 value={difficulty}
                 onChange={setDifficulty}
-            />
+            >
+                <option value={'Easy'}>Easy</option>
+                <option value={'Medium'}>Medium</option>
+                <option value={'Hard'}>Hard</option>
+            </ControlledDropdown>
         </div>
     )
 }

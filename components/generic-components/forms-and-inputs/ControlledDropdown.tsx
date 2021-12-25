@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement, ReactElement } from 'react'
+import React, { cloneElement, isValidElement, Children } from 'react'
 
 import styles from '../../../styles/generic-components/forms-and-inputs/ControlledDropdown.module.scss'
 import dropdownArrow from '../../../public/assets/icons/dropdown-arrow.svg'
@@ -9,16 +9,24 @@ interface Props {
     dropdownName?: string
     placeholder?: string
     isRequired: boolean
-    options: ReactElement<HTMLOptionElement>[] | undefined
     customStyles?: string
     value: string
     onChange: React.ChangeEventHandler
 }
 
-const ControlledDropdown = ({ dropdownName, placeholder, isRequired, options, customStyles, value, onChange }: Props) => {
+const ControlledDropdown: React.FC<Props> =
+    ({
+         dropdownName,
+         placeholder,
+         isRequired,
+         children: options,
+         customStyles,
+         value,
+         onChange
+    }) => {
 
     const renderOptions = () => {
-        return options!.map(option => {
+        return options && Children.toArray(options).map(option => {
             if (isValidElement(option)) {
                 return cloneElement(option, { className: styles.option })
             }
@@ -41,7 +49,7 @@ const ControlledDropdown = ({ dropdownName, placeholder, isRequired, options, cu
                     </option>
                 )}
 
-                {options && renderOptions()}
+                {renderOptions()}
             </select>
 
             <Image
