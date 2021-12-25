@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil'
 import { generalInfoData } from '../../../../atoms/recipeInfo'
 
 import ControlledDropdown from '../../../generic-components/forms-and-inputs/ControlledDropdown'
+import ControlledInputDropdown from '../../../generic-components/forms-and-inputs/ControlledInputDropdown'
 
 const FolderDropdown = () => {
     const [ { folder }, updateGeneralInfo ] = useRecoilState(generalInfoData)
@@ -19,7 +20,7 @@ const FolderDropdown = () => {
 
     // Need to get list of folders
     return (
-        <ControlledDropdown
+        <ControlledInputDropdown
             dropdownName={'Folder'}
             placeholder={'Choose or create folder'}
             isRequired={true}
