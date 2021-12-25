@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { v4 as uuid } from 'uuid'
 import { useRecoilState } from 'recoil'
 
 import styles from '../../../../styles/modals/add-recipe/add-recipe-info/AddRecipeForms.module.scss'
-import { Id, ingredientsData } from '../../../../atoms/recipeInfo'
+import { Id, ingredientsData, generalInfoData } from '../../../../atoms/recipeInfo'
+import { sum } from '../../../../utils/mathUtils'
 
 import AddRecipeInfoBtn from './AddRecipeInfoBtn'
 import AddRecipeInfo from './AddRecipeInfo'
@@ -11,7 +12,7 @@ import IngredientForm from './IngredientForm'
 
 const AddIngredients = () => {
 
-    // const [ ingredientsData, updateIngredients ] = useState<Ingredient[]>([])
+
     const [ ingredients, updateIngredients ] = useRecoilState(ingredientsData)
 
     const addIngredient = () => {
@@ -84,6 +85,15 @@ const AddIngredients = () => {
             </AddRecipeInfo>
         )
     })
+
+    const [ irrelevant, updateGeneralInfo ] = useRecoilState(generalInfoData)
+    const calculateTotalCalories = () => {
+        const calories = ingredients.map(ingredient => Number(ingredient.calories))
+        const totalCalories = sum(calories)
+        updateGeneralInfo(prevInfo => ({ ...prevInfo, totalCalories }))
+    }
+
+    useEffect(calculateTotalCalories, [ingredients])
 
     return (
         <>
