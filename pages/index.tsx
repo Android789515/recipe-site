@@ -24,8 +24,6 @@ const Home: NextPage = () => {
 
                 <CategoriesSection />
             </div>
-
-            <AddRecipeModal />
         {/*
             Hero section
 

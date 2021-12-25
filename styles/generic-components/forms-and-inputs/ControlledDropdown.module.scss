@@ -27,13 +27,15 @@
 
   display: block;
 
-  // Have to do to keep dropdown lined up correctly with labels
-  // due to how browsers render select elements
-  margin-left: -3px;
-
   .option {
     padding: 0;
   }
+}
+
+.dropdown select {
+  // Have to do to keep dropdown lined up correctly with labels
+  // due to how browsers render select elements
+  margin-left: -3px;
 }
 
 .dropdownIcon {

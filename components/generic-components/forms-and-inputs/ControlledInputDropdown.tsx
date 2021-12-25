@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement, ReactElement } from 'react'
+import React, { cloneElement, isValidElement, Children } from 'react'
 import { v4 as uuid } from 'uuid'
 
 import inputStyles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
@@ -12,23 +12,29 @@ interface Props {
     dropdownName?: string
     placeholder?: string
     isRequired: boolean
-    options: ReactElement<HTMLOptionElement>[] | undefined
     customStyles?: string
     value: string
     onChange: React.ChangeEventHandler
 }
 
-const ControlledInputDropdown = ({ dropdownName, placeholder, isRequired, options, customStyles, value, onChange }: Props) => {
+const ControlledInputDropdown: React.FC<Props> =
+    ({
+         dropdownName,
+         placeholder,
+         isRequired,
+         customStyles,
+         value,
+         children: options,
+         onChange
+    }) => {
 
     const renderOptions = () => {
-        return options!.map(option => {
+        return options && Children.toArray(options).map(option => {
             if (isValidElement(option)) {
                 return cloneElement(option, { className: dropdownStyles.option })
             }
         })
     }
-
-    const dropdownID = uuid()
 
     return (
         <label className={`${dropdownStyles.label} ${customStyles}`.trim()}>
@@ -45,7 +51,7 @@ const ControlledInputDropdown = ({ dropdownName, placeholder, isRequired, option
             />
 
             <datalist id={dropdownName}>
-                {options && renderOptions()}
+                {renderOptions()}
             </datalist>
 
             <Image
