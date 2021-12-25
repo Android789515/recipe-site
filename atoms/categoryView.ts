@@ -1,12 +1,8 @@
 import { atom } from 'recoil'
 
-enum categoryViewOptions {
-    list = 'list',
-    grid = 'grid'
-}
-const categoryViewState = atom({
-    key: 'categoryView',
-    default: categoryViewOptions.grid
+const isCategoryViewList = atom({
+    key: 'categoryListView',
+    default: false
 })
 
-export { categoryViewOptions, categoryViewState }
+export { isCategoryViewList }

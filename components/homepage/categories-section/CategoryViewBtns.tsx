@@ -5,17 +5,17 @@ import NextImage from 'next/image'
 import styles from '../../../styles/homepage/categories-section/CategoryViewBtns.module.scss'
 import gridViewIcon from '../../../public/assets/icons/gridView.svg'
 import listViewIcon from '../../../public/assets/icons/listView.svg'
-import { categoryViewOptions, categoryViewState } from '../../../atoms/categoryView'
+import { isCategoryViewList } from '../../../atoms/categoryView'
 
 const CategoryViewBtns = () => {
-    const [ irrelevant, updateCategoryView ] = useRecoilState(categoryViewState)
+    const [ irrelevant, updateCategoryView ] = useRecoilState(isCategoryViewList)
 
     const setCategoryListView = () => {
-        updateCategoryView(categoryViewOptions.list)
+        updateCategoryView(true)
     }
 
     const setCategoryGridView = () => {
-        updateCategoryView(categoryViewOptions.grid)
+        updateCategoryView(false)
     }
 
     return (
