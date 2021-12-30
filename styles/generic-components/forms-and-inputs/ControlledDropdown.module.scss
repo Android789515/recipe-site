@@ -21,7 +21,6 @@
 
 .dropdown {
   @include mixins.unstyledInput;
-  @include mixins.clickable;
 
   color: variables.$light-gray;
 
