@@ -25,6 +25,13 @@ $showRecipeCalculator: 700px;
   }
 }
 
+@media (min-width: variables.$exitMobileBreakpoint) {
+  .recipeCalculator {
+    top: 54vh;
+    left: auto;
+  }
+}
+
 $heroLayoutHiccup: 392px;
 
 @media (width: $heroLayoutHiccup) {

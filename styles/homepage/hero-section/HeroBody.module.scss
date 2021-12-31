@@ -1,3 +1,4 @@
+@use '../../variables';
 @use '../../mixins';
 @use 'HeroSection.module';
 
@@ -32,7 +33,7 @@ $mobile-secondTitleGrowth: 362px;
   }
 }
 
-@media (min-width: HeroSection.$exitMobileBreakpoint) {
+@media (min-width: variables.$exitMobileBreakpoint) {
   .heroTitle {
     font-size: 2rem;
 

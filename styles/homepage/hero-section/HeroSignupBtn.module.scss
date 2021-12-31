@@ -1,4 +1,4 @@
-@use 'HeroSection.module';
+@use '../../variables';
 
 .signupBtn {
   width: 100%;
@@ -11,4 +11,16 @@
 
   padding: 1em 0;
   margin: 0;
+}
+
+@media (min-width: variables.$exitMobileBreakpoint) {
+  .signupBtn {
+    width: initial;
+
+    padding: 1em 2em;
+  }
+
+  .signupText {
+    padding: 0;
+  }
 }

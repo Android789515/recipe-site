@@ -1,3 +1,5 @@
+$heroTitleResizeBreakpoint: 566px;
+
 .heroSection {
   //height: 41vh; on large screen
   min-height: 67vh;
@@ -6,6 +8,3 @@
   background-size: cover;
   background-position: center;
 }
-
-$exitMobileBreakpoint: 456px;
-$heroTitleResizeBreakpoint: 566px;
