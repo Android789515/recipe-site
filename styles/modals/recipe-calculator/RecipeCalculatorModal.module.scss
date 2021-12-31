@@ -1,3 +1,4 @@
+@use 'sass:list';
 @use '../../variables';
 
 .recipeCalculator {
@@ -5,28 +6,53 @@
 
   position: absolute;
   top: 50vh;
+  left: 1.5em;
+  right: 1.5em;
 
-  margin: 0 1.5em;
+  // Change after mobile breakpoint
+  //max-width: 269.55px;
+
+  margin: 0 auto;
   padding: 1.85em 1.1em 2.5em 1.1em;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-height: 700px) {
+$showRecipeCalculator: 700px;
+
+@media (min-height: $showRecipeCalculator) {
   .recipeCalculator {
     display: grid;
-    justify-content: center;
     align-items: center;
+  }
+}
+
+$heroLayoutHiccups: [392px];
+
+@media (width: list.nth($heroLayoutHiccups, 1)) {
+  .recipeCalculator {
+    top: 53vh;
   }
 }
 
 .title {
   font-size: .92rem;
   font-weight: 600;
+  text-align: center;
+
+  grid-column: span 2;
 
   margin-top: 0;
   margin-bottom: 2em;
+}
+
+$heroTitle-firstGrowth: 360px;
+
+@media (min-width: $heroTitle-firstGrowth) {
+  .title {
+    font-size: 1rem;
+  }
 }
 
 .searchField {
