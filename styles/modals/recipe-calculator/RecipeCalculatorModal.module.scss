@@ -9,11 +9,9 @@
   left: 1.5em;
   right: 1.5em;
 
-  // Change after mobile breakpoint
-  //max-width: 269.55px;
-
   margin: 0 auto;
-  padding: 1.85em 1.1em 2.5em 1.1em;
+  $sideSpace: 1.1em;
+  padding: 1.85em $sideSpace 2.5em $sideSpace;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 15px -1px rgba(0, 0, 0, 0.1);
@@ -24,7 +22,6 @@ $showRecipeCalculator: 700px;
 @media (min-height: $showRecipeCalculator) {
   .recipeCalculator {
     display: grid;
-    align-items: center;
   }
 }
 
@@ -36,22 +33,15 @@ $heroLayoutHiccup: 392px;
   }
 }
 
-
-
 .title {
   font-size: .92rem;
   font-weight: 600;
-  text-align: center;
-
-  grid-column: span 2;
 
   margin-top: 0;
   margin-bottom: 2em;
 }
 
 .searchFieldLayout {
-  grid-column: span 2;
-
   display: flex;
   align-items: center;
 }
