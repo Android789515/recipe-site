@@ -1,14 +1,7 @@
 @use '../../variables';
 
 .layout {
-  padding: 2.5em 0;
 }
 
 .categories {
-}
-
-@media (min-width: variables.$exitMobileBreakpoint) {
-  .layout {
-    padding: 4em 0;
-  }
 }

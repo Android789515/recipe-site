@@ -14,7 +14,7 @@
   .signupBtn {
     display: inline-block;
 
-    padding: .5em 1.75em;
+    padding: .6em 2.3em;
   }
 }
 
@@ -26,6 +26,7 @@
 
 .signupText {
   @include mixins.dropShadowSmallText;
+  font-size: 1rem;
   font-weight: 700;
 
   margin: 0;

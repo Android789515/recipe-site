@@ -1,9 +1,11 @@
+@use '../../variables';
+
 .layout {
   display: flex;
   justify-content: space-between;
 
   // TODO - Finalize margin
-  margin-bottom: 1.5em;
+  margin: 1.5em 0;
 }
 
 .title {
@@ -11,4 +13,18 @@
   font-weight: 600;
 
   margin: 0;
+}
+
+@media (min-width: variables.$exitMobileBreakpoint) {
+  .layout {
+    justify-content: flex-start;
+
+    margin: 4em 0;
+  }
+
+  .title {
+    font-size: 1.3rem;
+
+    margin-right: 2.6em;
+  }
 }

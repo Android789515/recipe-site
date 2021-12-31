@@ -1,5 +1,5 @@
+@use '../../variables';
 @use '../../mixins';
-@use 'HeroSection.module';
 
 .loginBtn {
   composes: btn from '../../generic-components/Button.module.scss';
@@ -26,4 +26,16 @@
   letter-spacing: .65px;
 
   margin: 0;
+}
+
+@media (min-width: variables.$exitMobileBreakpoint) {
+  .loginBtn {
+    margin-left: 2.3em;
+  }
+
+  .loginText {
+    @include mixins.dropShadowLargeText;
+
+    font-size: .98rem;
+  }
 }

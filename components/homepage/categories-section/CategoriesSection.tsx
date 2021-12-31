@@ -4,7 +4,6 @@ import { useRecoilState } from 'recoil'
 import homeStyles from '../../../styles/homepage/Home.module.scss'
 import styles from '../../../styles/homepage/categories-section/CategoriesSection.module.scss'
 import { isCategoryViewList } from '../../../atoms/categoryView'
-import testImg from '../../../public/assets/img/mexican.png'
 
 import CategoriesSectionHeader from './CategoriesSectionHeader'
 import CategoriesAsList from './CategoriesAsList'
