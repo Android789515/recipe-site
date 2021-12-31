@@ -56,6 +56,7 @@ const ControlledDropdown: React.FC<Props> =
                 className={styles.dropdownIcon}
                 src={dropdownArrow}
                 width={16}
+                alt=''
             />
         </label>
     )

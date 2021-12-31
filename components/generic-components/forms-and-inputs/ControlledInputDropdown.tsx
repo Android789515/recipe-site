@@ -1,4 +1,4 @@
-import React, { cloneElement, isValidElement, Children } from 'react'
+import React, { cloneElement, isValidElement, Children, useRef } from 'react'
 import { v4 as uuid } from 'uuid'
 
 import inputStyles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
@@ -36,6 +36,15 @@ const ControlledInputDropdown: React.FC<Props> =
         })
     }
 
+
+    const inputRef = useRef<HTMLInputElement>(null)
+
+    const openDropdownMenu = () => {
+        if (inputRef.current) {
+            inputRef.current.click()
+        }
+    }
+
     return (
         <label className={`${dropdownStyles.label} ${customStyles}`.trim()}>
             {dropdownName && <p className={dropdownStyles.labelText}>{dropdownName}</p>}
@@ -48,6 +57,7 @@ const ControlledInputDropdown: React.FC<Props> =
                 onChange={onChange}
                 list={dropdownName}
                 placeholder={placeholder}
+                ref={inputRef}
             />
 
             <datalist id={dropdownName}>
@@ -58,6 +68,8 @@ const ControlledInputDropdown: React.FC<Props> =
                 className={dropdownStyles.dropdownIcon}
                 src={dropdownArrow}
                 width={16}
+                alt=''
+                onClick={openDropdownMenu}
             />
         </label>
     )
