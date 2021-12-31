@@ -28,11 +28,11 @@ $showRecipeCalculator: 700px;
   }
 }
 
-$heroLayoutHiccups: [392px];
+$heroLayoutHiccup: 392px;
 
-@media (width: list.nth($heroLayoutHiccups, 1)) {
+@media (width: $heroLayoutHiccup) {
   .recipeCalculator {
-    top: 53vh;
+    top: 51vh;
   }
 }
 
@@ -48,10 +48,17 @@ $heroLayoutHiccups: [392px];
 }
 
 $heroTitle-firstGrowth: 360px;
+$heroTitle-secondGrowth: 400px;
 
 @media (min-width: $heroTitle-firstGrowth) {
   .title {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: $heroTitle-secondGrowth) {
+  .title {
+    font-size: 1.23rem;
   }
 }
 
