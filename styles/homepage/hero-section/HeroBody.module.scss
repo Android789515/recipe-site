@@ -43,8 +43,8 @@ $mobile-secondTitleGrowth: 362px;
 
 // After first section breakpoint
 $firstTitleGrowth: 392px;
-$secondTitleGrowth: 426px;
-$thirdTitleGrowth: 456px;
+$secondTitleGrowth: 474px;
+$thirdTitleGrowth: 504px;
 @media (min-width: $firstTitleGrowth) {
   .heroTitle {
     font-size: 2.2rem;

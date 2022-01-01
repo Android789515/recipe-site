@@ -2,7 +2,7 @@
 @use '../../variables';
 
 .recipeCalculator {
-  display: none;
+  display: grid;
 
   position: absolute;
   top: 50vh;
@@ -19,9 +19,9 @@
 
 $showRecipeCalculator: 700px;
 
-@media (min-height: $showRecipeCalculator) {
+@media (max-width: variables.$exitMobileBreakpoint) and (max-height: $showRecipeCalculator) {
   .recipeCalculator {
-    display: grid;
+    display: none;
   }
 }
 
@@ -29,6 +29,7 @@ $showRecipeCalculator: 700px;
   .recipeCalculator {
     top: 54vh;
     left: auto;
+    right: 4em;
   }
 }
 
