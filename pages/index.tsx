@@ -4,9 +4,9 @@ import Head from 'next/head'
 import styles from '../styles/homepage/Home.module.scss'
 
 import HeroSection from '../components/homepage/hero-section/HeroSection'
-import AddRecipeModal from '../components/modals/add-recipe/AddRecipeModal'
 import CategoriesSection from '../components/homepage/categories-section/CategoriesSection'
 import RecipeCalculatorModal from '../components/modals/recipe-calculator/RecipeCalculatorModal'
+import AddRecipeModal from '../components/modals/add-recipe/AddRecipeModal'
 
 const Home: NextPage = () => {
 
@@ -24,13 +24,6 @@ const Home: NextPage = () => {
 
                 <CategoriesSection />
             </div>
-        {/*
-            Hero section
-
-            Categories section
-
-            Footer
-         */}
         </div>
     )
 }

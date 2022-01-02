@@ -9,7 +9,7 @@ const HeroBody = () => {
         <main className={styles.heroBody}>
             <h1 className={styles.heroTitle}>
                 Discover millions of recipes
-                exclusive in finleap
+                exclusive in RecipeMe
             </h1>
 
             <HeroSignupBtn />

@@ -27,7 +27,7 @@ const RecipeCalculatorModal = () => {
                     customStyles={styles.searchField}
                     value={recipeName}
                     isRequired={true}
-                    placeholder={'Search or type a recipe name'}
+                    placeholder='Search or type a recipe name'
                     onChange={updateRecipeSearchField}
                 />
             </div>

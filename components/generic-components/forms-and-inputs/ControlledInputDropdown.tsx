@@ -1,5 +1,4 @@
 import React, { cloneElement, isValidElement, Children, useRef } from 'react'
-import { v4 as uuid } from 'uuid'
 
 import inputStyles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
 import dropdownStyles from '../../../styles/generic-components/forms-and-inputs/ControlledDropdown.module.scss'
@@ -36,7 +35,6 @@ const ControlledInputDropdown: React.FC<Props> =
         })
     }
 
-
     const inputRef = useRef<HTMLInputElement>(null)
 
     const openDropdownMenu = () => {
@@ -60,6 +58,7 @@ const ControlledInputDropdown: React.FC<Props> =
                 ref={inputRef}
             />
 
+            {/* Connects to input */}
             <datalist id={dropdownName}>
                 {renderOptions()}
             </datalist>
