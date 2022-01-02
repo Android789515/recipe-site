@@ -13,7 +13,7 @@
   grid-column: 2 / -2
 }
 
-@media (min-width: variables.$exitMobileBreakpoint) {
+@media (min-width: 680px) {
   .layout {
     $sideSpacing: 4em;
     grid-template-columns: $sideSpacing auto $sideSpacing;

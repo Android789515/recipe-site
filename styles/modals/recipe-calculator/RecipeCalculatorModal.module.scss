@@ -17,11 +17,24 @@
   box-shadow: 0 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-$showRecipeCalculator: 700px;
+$showRecipeCalculatorMobile: 700px;
+$showRecipeCalculator: 779px;
 
-@media (max-width: variables.$exitMobileBreakpoint) and (max-height: $showRecipeCalculator) {
+@media (max-width: variables.$exitMobileBreakpoint) and (max-height: $showRecipeCalculatorMobile) {
   .recipeCalculator {
     display: none;
+  }
+}
+
+@media (min-width: variables.$exitMobileBreakpoint) and (max-height: $showRecipeCalculator) {
+  .recipeCalculator {
+    display: none;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 392px) {
+  .recipeCalculator {
+    top: 51vh;
   }
 }
 
@@ -33,11 +46,9 @@ $showRecipeCalculator: 700px;
   }
 }
 
-$heroLayoutHiccup: 392px;
-
-@media (width: $heroLayoutHiccup) {
+@media (min-width: 504px) and (max-width: 608px) {
   .recipeCalculator {
-    top: 51vh;
+    top: 56vh
   }
 }
 
