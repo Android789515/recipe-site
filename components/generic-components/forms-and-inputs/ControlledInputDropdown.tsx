@@ -2,6 +2,7 @@ import React, { cloneElement, isValidElement, Children, useRef } from 'react'
 
 import inputStyles from '../../../styles/generic-components/forms-and-inputs/ControlledInput.module.scss'
 import dropdownStyles from '../../../styles/generic-components/forms-and-inputs/ControlledDropdown.module.scss'
+import styles from '../../../styles/generic-components/forms-and-inputs/ControlledInputDropdown.module.scss'
 import dropdownArrow from '../../../public/assets/icons/dropdown-arrow.svg'
 
 import Image from '../Image'
@@ -48,7 +49,7 @@ const ControlledInputDropdown: React.FC<Props> =
             {dropdownName && <p className={dropdownStyles.labelText}>{dropdownName}</p>}
 
             <input
-                className={`${inputStyles.input} ${dropdownStyles.dropdown}`}
+                className={`${styles.inputDropdown} ${inputStyles.input} ${dropdownStyles.dropdown}`}
                 value={value}
                 type={inputTypes.text}
                 required={isRequired}
