@@ -5,7 +5,7 @@
   display: grid;
 
   position: absolute;
-  top: 50vh;
+  top: 45vh;
   left: 1.5em;
   right: 1.5em;
 
@@ -32,15 +32,21 @@ $showRecipeCalculator: 779px;
   }
 }
 
-@media (min-width: 360px) and (max-width: 392px) {
+@media (min-width: 338px) and (max-width: 362px) {
   .recipeCalculator {
-    top: 51vh;
+    top: 46vh;
+  }
+}
+
+@media (min-width: 362px) and (max-width: 392px) {
+  .recipeCalculator {
+    top: 47.2vh;
   }
 }
 
 @media (min-width: variables.$exitMobileBreakpoint) {
   .recipeCalculator {
-    top: 54vh;
+    top: 49vh;
     left: auto;
     right: 4em;
   }
@@ -48,7 +54,7 @@ $showRecipeCalculator: 779px;
 
 @media (min-width: 504px) and (max-width: 608px) {
   .recipeCalculator {
-    top: 56vh
+    top: 51.5vh
   }
 }
 
