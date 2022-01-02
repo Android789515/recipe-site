@@ -5,7 +5,7 @@
   display: grid;
 
   position: absolute;
-  top: 45vh;
+  top: 46vh;
   left: 1.5em;
   right: 1.5em;
 
@@ -29,12 +29,6 @@ $showRecipeCalculator: 779px;
 @media (min-width: variables.$exitMobileBreakpoint) and (max-height: $showRecipeCalculator) {
   .recipeCalculator {
     display: none;
-  }
-}
-
-@media (min-width: 338px) and (max-width: 362px) {
-  .recipeCalculator {
-    top: 46vh;
   }
 }
 

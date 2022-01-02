@@ -3,31 +3,22 @@
 @use 'HeroSection.module';
 
 .heroBody {
-  margin: 3.5em 0;
+  margin: 3.25em 0;
 }
 
 .heroTitle {
   @include mixins.dropShadowLargeText;
 
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1.25;
   color: #fff;
 
-  padding: 0 .3em;
   margin-bottom: .96em;
 }
 
-// Before first section breakpoint
-$mobile-firstTitleGrowth: 338px;
-$mobile-secondTitleGrowth: 362px;
-@media (min-width: $mobile-firstTitleGrowth) {
-  .heroTitle {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: $mobile-secondTitleGrowth) {
+$mobile-TitleGrowth: 362px;
+@media (min-width: $mobile-TitleGrowth) {
   .heroTitle {
     font-size: 2.2rem;
   }
@@ -41,7 +32,7 @@ $mobile-secondTitleGrowth: 362px;
   }
 }
 
-// After first section breakpoint
+// After mobile breakpoint
 $firstTitleGrowth: 392px;
 $secondTitleGrowth: 474px;
 $thirdTitleGrowth: 504px;
