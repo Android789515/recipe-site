@@ -9,24 +9,15 @@
   left: 1.5em;
   right: 1.5em;
 
-  margin: 0 auto;
-  $sideSpace: 1.1em;
-  padding: 1.85em $sideSpace 2.5em $sideSpace;
+  padding: 1.85em 1.1em;
   background: #fff;
   border-radius: 7px;
   box-shadow: 0 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-$hideRecipeCalculatorMobile: 700px;
-$hideRecipeCalculator: 779px;
+$hideRecipeCalculator: 794px;
 
-@media (max-width: variables.$exitMobileBreakpoint) and (max-height: $hideRecipeCalculatorMobile) {
-  .recipeCalculator {
-    display: none;
-  }
-}
-
-@media (min-width: variables.$exitMobileBreakpoint) and (max-height: $hideRecipeCalculator) {
+@media (max-width: 660px) and (max-height: $hideRecipeCalculator) {
   .recipeCalculator {
     display: none;
   }
@@ -34,7 +25,7 @@ $hideRecipeCalculator: 779px;
 
 @media (min-width: 362px) and (max-width: 392px) {
   .recipeCalculator {
-    top: 47.2vh;
+    top: 48vh;
   }
 }
 
@@ -42,13 +33,32 @@ $hideRecipeCalculator: 779px;
   .recipeCalculator {
     top: 49vh;
     left: auto;
-    right: 4em;
+  }
+}
+
+@media (min-width: 474px) and (max-width: 504px) {
+  .recipeCalculator {
+    top: 51vh;
   }
 }
 
 @media (min-width: 504px) and (max-width: 608px) {
   .recipeCalculator {
-    top: 51.5vh
+    top: 52vh
+  }
+}
+
+@media (min-width: 695px) {
+  .recipeCalculator {
+    right: 4em;
+
+    padding: 2.5em 2em;
+  }
+}
+
+@media (min-width: 1000px) {
+  .recipeCalculator {
+    width: 40vw;
   }
 }
 
