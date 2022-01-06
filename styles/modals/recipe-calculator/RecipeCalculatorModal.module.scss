@@ -48,11 +48,23 @@ $hideRecipeCalculator: 794px;
   }
 }
 
-@media (min-width: 695px) {
+@media (min-width: variables.$majorLargeScreenBreakpoint) {
   .recipeCalculator {
     right: 4em;
 
     padding: 2.5em 2em;
+  }
+}
+
+@media (min-width: variables.$majorLargeScreenBreakpoint2) and (max-width: 914px) {
+  .recipeCalculator {
+    top: 62vh
+  }
+}
+
+@media (min-width: 914px) {
+  .recipeCalculator {
+    top: 55vh
   }
 }
 
