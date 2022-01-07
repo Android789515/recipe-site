@@ -1,7 +1,10 @@
 @use '../../variables';
 
 .signupBtn {
+  composes: btn from '../../generic-components/Button.module.scss';
+
   width: 100%;
+  max-width: 340px;
 }
 
 .signupText {

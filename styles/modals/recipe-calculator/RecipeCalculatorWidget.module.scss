@@ -118,7 +118,7 @@ $modalText-secondGrowth: 400px;
   }
 }
 
-@media (min-width: $modalText-secondGrowth) {
+@media (min-width: 504px) {
   .title {
     font-size: 1.23rem;
 
