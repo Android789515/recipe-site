@@ -1,14 +1,14 @@
 import React from 'react'
 import { useRecoilState } from 'recoil'
 
-import styles from '../../../styles/modals/recipe-calculator/RecipeCalculatorModal.module.scss'
+import styles from '../../../styles/modals/recipe-calculator/RecipeCalculatorWidget.module.scss'
 import { recipeCalculatorState } from '../../../atoms/recipeCalculator'
 import recipeIcon from '../../../public/assets/icons/calories-plus.svg'
 
 import Image from '../../generic-components/Image'
 import ControlledInputDropdown from '../../generic-components/forms-and-inputs/ControlledInputDropdown'
 
-const RecipeCalculatorModal = () => {
+const RecipeCalculatorWidget = () => {
     const [ { recipeName }, updateRecipeCalculatorData ] = useRecoilState(recipeCalculatorState)
 
     const updateRecipeSearchField = (event: React.ChangeEvent) => {
@@ -35,4 +35,4 @@ const RecipeCalculatorModal = () => {
     )
 }
 
-export default RecipeCalculatorModal
+export default RecipeCalculatorWidget
