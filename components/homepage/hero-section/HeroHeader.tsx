@@ -10,7 +10,7 @@ import HeroHeaderSignupBtn from './HeroHeaderSignupBtn'
 const HeroHeader = () => {
     return (
         <header className={styles.heroHeader}>
-            <Image src={logo} width={30} />
+            <Image className={styles.icon} src={logo} alt='' />
 
             <div className={styles.btns}>
                 <HeroHeaderSignupBtn />

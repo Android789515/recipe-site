@@ -1,7 +1,25 @@
+@use 'sass:list';
+@use '../Home.module';
 @use 'HeroSection.module';
 
 .heroHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.icon {
+  width: 30px;
+}
+
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 2)) {
+  .icon {
+    width: 36px;
+  }
+}
+
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
+  .icon {
+    width: 42px;
+  }
 }
