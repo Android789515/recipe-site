@@ -1,3 +1,4 @@
+@use 'sass:list';
 @use '../../variables';
 @use '../../mixins';
 
@@ -75,5 +76,23 @@ $heroTitleResizeBreakpoint: 680px;
 @media (min-width: variables.$majorLargeScreenBreakpoint3) {
   .heroTitle {
     font-size: 3rem;
+  }
+}
+
+$heroTitleBreakpoints: (1270px, 1666px);
+
+@media (min-width: list.nth($heroTitleBreakpoints, 1)) {
+  .heroTitle {
+    font-size: 3.5rem;
+
+    max-width: 65%;
+  }
+}
+
+@media (min-width: list.nth($heroTitleBreakpoints, 2)) {
+  .heroTitle {
+    font-size: 4rem;
+
+    max-width: 55%;
   }
 }

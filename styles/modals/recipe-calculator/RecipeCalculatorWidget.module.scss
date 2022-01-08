@@ -5,11 +5,11 @@
   display: grid;
 
   position: absolute;
-  top: 46vh;
+  top: 23em;
   left: 1.5em;
   right: 1.5em;
 
-  max-width: 609.6px;
+  max-width: 475px;
 
   padding: 1.85em 1.1em;
   background: #fff;
@@ -18,6 +18,7 @@
 }
 
 $hideRecipeCalculator: 794px;
+$recipeCalculatorBreakpoints: (914px, 1000px, 1270px, 1666px);
 
 @media (max-width: 660px) and (max-height: $hideRecipeCalculator) {
   .recipeCalculator {
@@ -25,54 +26,64 @@ $hideRecipeCalculator: 794px;
   }
 }
 
-@media (min-width: 362px) and (max-width: 392px) {
-  .recipeCalculator {
-    top: 48vh;
-  }
-}
-
 @media (min-width: variables.$exitMobileBreakpoint) {
   .recipeCalculator {
-    top: 49vh;
+    top: 25em;
     left: auto;
-  }
-}
-
-@media (min-width: 474px) and (max-width: 504px) {
-  .recipeCalculator {
-    top: 51vh;
   }
 }
 
 @media (min-width: 504px) and (max-width: 608px) {
   .recipeCalculator {
-    top: 52vh
+    top: 26em;
   }
 }
 
 @media (min-width: variables.$majorLargeScreenBreakpoint) {
   .recipeCalculator {
     right: 4em;
+  }
+}
 
+@media (min-width: 780px) {
+  .recipeCalculator {
     padding: 2.5em 2em;
   }
 }
 
 @media (min-width: variables.$majorLargeScreenBreakpoint2) and (max-width: 914px) {
   .recipeCalculator {
-    top: 62vh
+    top: 31em;
   }
 }
 
 @media (min-width: 914px) {
   .recipeCalculator {
-    top: 55vh
+    top: 27.1em;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: variables.$majorLargeScreenBreakpoint3) {
+  .recipeCalculator {
+    top: 28em;
+  }
+}
+
+@media (min-width: list.nth($recipeCalculatorBreakpoints, 2)) {
   .recipeCalculator {
     width: 40vw;
+  }
+}
+
+@media (min-width: list.nth($recipeCalculatorBreakpoints, 3)) {
+  .recipeCalculator {
+    top: 30.1em;
+  }
+}
+
+@media (min-width: list.nth($recipeCalculatorBreakpoints, 4)) {
+  .recipeCalculator {
+    top: 32.3em;
   }
 }
 

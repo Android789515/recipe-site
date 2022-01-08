@@ -9,7 +9,9 @@ const Signup: NextPage = () => {
                 <link rel='icon' type='image/svg+xml' href='/favicon.svg'/>
             </Head>
 
-            <p>Some text</p>
+            <div>
+
+            </div>
         </div>
     )
 }

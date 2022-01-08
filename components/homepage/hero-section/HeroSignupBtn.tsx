@@ -1,6 +1,5 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 import styles from '../../../styles/homepage/hero-section/HeroSignupBtn.module.scss'
 
@@ -10,7 +9,7 @@ const HeroSignupBtn = () => {
     const router = useRouter()
 
     const showSignupPage = () => {
-        router.push('/signup')
+        router.push('/Signup')
     }
 
     return (
