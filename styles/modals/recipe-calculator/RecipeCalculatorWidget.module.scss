@@ -17,7 +17,7 @@
   box-shadow: 0 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-$recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
+$recipeCalculatorBreakpoints: (57.125em, 62.5em);
 
 @media (min-width: Home.$exitMobileBreakpoint) {
   .recipeCalculator {
@@ -26,7 +26,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
   }
 }
 
-@media (min-width: 504px) and (max-width: 559px) {
+@media (min-width: 31.5em) and (max-width: 34.9375em) {
   .recipeCalculator {
     top: 26em;
   }
@@ -38,7 +38,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
   }
 }
 
-@media (min-width: 780px) {
+@media (min-width: 48.75em) {
   .recipeCalculator {
     padding: 2.5em 2em;
   }
@@ -56,7 +56,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
   }
 }
 
-@media (min-width: list.nth($recipeCalculatorBreakpoints, 3)) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
   .recipeCalculator {
     top: 36.6em;
   }
@@ -85,8 +85,8 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
   width: 100%;
 }
 
-$modalText-firstGrowth: 360px;
-$modalText-secondGrowth: 400px;
+$modalText-firstGrowth: 22.5em;
+$modalText-secondGrowth: 45.625em;
 
 @media (min-width: $modalText-firstGrowth) {
   .title {
@@ -104,7 +104,7 @@ $modalText-secondGrowth: 400px;
   }
 }
 
-@media (min-width: 730px) {
+@media (min-width: $modalText-secondGrowth) {
   .title {
     font-size: 1.23rem;
 
