@@ -34,6 +34,10 @@
 }
 
 @media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
+  .signupBtn {
+    padding: .7em 3.1em;
+  }
+
   .signupText {
     font-size: 1.2rem;
   }
