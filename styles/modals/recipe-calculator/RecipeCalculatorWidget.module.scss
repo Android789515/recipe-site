@@ -17,14 +17,7 @@
   box-shadow: 0 2px 15px -1px rgba(0, 0, 0, 0.1);
 }
 
-$hideRecipeCalculator: 794px;
 $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
-
-@media (max-width: 660px) and (max-height: $hideRecipeCalculator) {
-  .recipeCalculator {
-    //display: none;
-  }
-}
 
 @media (min-width: variables.$exitMobileBreakpoint) {
   .recipeCalculator {
