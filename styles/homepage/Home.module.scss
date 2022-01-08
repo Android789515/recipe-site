@@ -1,7 +1,7 @@
 @use '../variables';
 
-$exitMobileBreakpoint: 456px;
-$largeScreenBreakpoints: (695px, 860px, 972px, 1270px, 1666px);
+$exitMobileBreakpoint: 28.5em;
+$largeScreenBreakpoints: (43.4375em, 53.75em, 60.75em, 79.375em, 104.125em);
 
 .layout {
   display: grid;
@@ -16,7 +16,7 @@ $largeScreenBreakpoints: (695px, 860px, 972px, 1270px, 1666px);
   grid-column: 2 / -2
 }
 
-@media (min-width: 680px) {
+@media (min-width: 42.5em) {
   .layout {
     $sideSpacing: 4em;
     grid-template-columns: $sideSpacing auto $sideSpacing;
