@@ -1,3 +1,4 @@
+@use 'sass:list';
 @use '../../mixins';
 @use '../Home.module';
 
@@ -30,4 +31,10 @@
   font-weight: 700;
 
   margin: 0;
+}
+
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
+  .signupText {
+    font-size: 1.2rem;
+  }
 }
