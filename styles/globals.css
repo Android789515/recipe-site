@@ -34,3 +34,9 @@ select {
 * {
   box-sizing: border-box;
 }
+
+*::selection {
+  text-shadow: none;
+
+  background-color: #1a73e8;
+}
