@@ -32,9 +32,9 @@
 }
 
 // After mobile breakpoint
-$firstTitleGrowth: 392px;
-$secondTitleGrowth: 474px;
-$thirdTitleGrowth: 504px;
+$firstTitleGrowth: 24.5em;
+$secondTitleGrowth: 29.625em;
+$thirdTitleGrowth: 31.5em;
 @media (min-width: $firstTitleGrowth) {
   .heroTitle {
     font-size: 2.2rem;
@@ -53,7 +53,7 @@ $thirdTitleGrowth: 504px;
   }
 }
 
-$heroTitleResizeBreakpoint: 680px;
+$heroTitleResizeBreakpoint: 42.5em;
 @media (min-width: $heroTitleResizeBreakpoint) {
   .heroTitle {
     max-width: 75%;
@@ -72,9 +72,7 @@ $heroTitleResizeBreakpoint: 680px;
   }
 }
 
-$heroTitleBreakpoints: (1270px, 1666px);
-
-@media (min-width: list.nth($heroTitleBreakpoints, 1)) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 4)) {
   .heroTitle {
     font-size: 3.5rem;
 
@@ -82,7 +80,7 @@ $heroTitleBreakpoints: (1270px, 1666px);
   }
 }
 
-@media (min-width: list.nth($heroTitleBreakpoints, 2)) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
   .heroTitle {
     font-size: 4rem;
 

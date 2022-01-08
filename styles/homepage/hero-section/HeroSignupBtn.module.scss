@@ -1,3 +1,4 @@
+@use 'sass:list';
 @use '../Home.module';
 
 .signupBtn {
@@ -30,7 +31,7 @@
   }
 }
 
-@media (min-width: 1666px) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
   .signupBtn {
     padding: 1.5em 5.75em;
   }
