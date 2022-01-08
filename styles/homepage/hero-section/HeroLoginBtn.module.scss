@@ -1,5 +1,5 @@
-@use '../../variables';
 @use '../../mixins';
+@use '../Home.module';
 
 .loginBtn {
   composes: btn from '../../generic-components/Button.module.scss';
@@ -28,7 +28,7 @@
   margin: 0;
 }
 
-@media (min-width: variables.$exitMobileBreakpoint) {
+@media (min-width: Home.$exitMobileBreakpoint) {
   .loginBtn {
     margin-left: 2.3em;
   }

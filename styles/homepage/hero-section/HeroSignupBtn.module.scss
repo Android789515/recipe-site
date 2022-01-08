@@ -1,4 +1,4 @@
-@use '../../variables';
+@use '../Home.module';
 
 .signupBtn {
   composes: btn from '../../generic-components/Button.module.scss';
@@ -17,7 +17,7 @@
   margin: 0;
 }
 
-@media (min-width: variables.$exitMobileBreakpoint) {
+@media (min-width: Home.$exitMobileBreakpoint) {
   .signupBtn {
     width: initial;
 

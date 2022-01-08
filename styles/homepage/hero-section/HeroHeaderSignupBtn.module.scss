@@ -1,5 +1,5 @@
-@use '../../variables';
 @use '../../mixins';
+@use '../Home.module';
 
 .signupBtn {
   font-size: inherit;
@@ -10,7 +10,7 @@
   border: solid 1px;
 }
 
-@media (min-width: variables.$exitMobileBreakpoint) {
+@media (min-width: Home.$exitMobileBreakpoint) {
   .signupBtn {
     display: inline-block;
 

@@ -1,4 +1,5 @@
-@use '../../variables';
+@use 'sass:list';
+@use '../Home.module';
 
 .heroSection {
   height: 30em;
@@ -8,13 +9,13 @@
   background-position: center;
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint2) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 2)) {
   .heroSection {
     height: 36.5em;
   }
 }
 
-@media (min-width: 1666px) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
   .heroSection {
     height: 42.6em;
   }

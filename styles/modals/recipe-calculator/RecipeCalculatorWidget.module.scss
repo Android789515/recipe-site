@@ -1,5 +1,5 @@
 @use 'sass:list';
-@use '../../variables';
+@use '../../homepage/Home.module';
 
 .recipeCalculator {
   display: grid;
@@ -19,7 +19,7 @@
 
 $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
 
-@media (min-width: variables.$exitMobileBreakpoint) {
+@media (min-width: Home.$exitMobileBreakpoint) {
   .recipeCalculator {
     top: 25em;
     left: auto;
@@ -32,7 +32,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
   }
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 1)) {
   .recipeCalculator {
     right: 4em;
   }
@@ -44,7 +44,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
   }
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint2) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 2)) {
   .recipeCalculator {
     top: 30.5em;
   }

@@ -1,12 +1,12 @@
 @use 'sass:list';
-@use '../../variables';
 @use '../../mixins';
+@use '../Home.module';
 
 .heroBody {
   margin: 3.25em 0;
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint2) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 2)) {
   .heroBody {
     margin: 6em 0;
   }
@@ -23,7 +23,7 @@
   margin-bottom: .96em;
 }
 
-@media (min-width: variables.$exitMobileBreakpoint) {
+@media (min-width: Home.$exitMobileBreakpoint) {
   .heroTitle {
     font-size: 2rem;
 
@@ -60,13 +60,13 @@ $heroTitleResizeBreakpoint: 680px;
   }
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint2) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 2)) {
   .heroTitle {
     font-size: 2.8rem;
   }
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint3) {
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 3)) {
   .heroTitle {
     font-size: 3rem;
   }

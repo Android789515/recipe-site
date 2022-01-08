@@ -1,5 +1,8 @@
 @use '../variables';
 
+$exitMobileBreakpoint: 456px;
+$largeScreenBreakpoints: (695px, 860px, 972px, 1270px, 1666px);
+
 .layout {
   display: grid;
   grid-template-rows: max-content auto;
