@@ -33,7 +33,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1270px, 1666px);
   }
 }
 
-@media (min-width: 504px) and (max-width: 608px) {
+@media (min-width: 504px) and (max-width: 559px) {
   .recipeCalculator {
     top: 26em;
   }
@@ -51,39 +51,15 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1270px, 1666px);
   }
 }
 
-@media (min-width: variables.$majorLargeScreenBreakpoint2) and (max-width: 914px) {
+@media (min-width: variables.$majorLargeScreenBreakpoint2) {
   .recipeCalculator {
-    top: 31em;
-  }
-}
-
-@media (min-width: 914px) {
-  .recipeCalculator {
-    top: 27.1em;
-  }
-}
-
-@media (min-width: variables.$majorLargeScreenBreakpoint3) {
-  .recipeCalculator {
-    top: 28em;
+    top: 30.5em;
   }
 }
 
 @media (min-width: list.nth($recipeCalculatorBreakpoints, 2)) {
   .recipeCalculator {
     width: 40vw;
-  }
-}
-
-@media (min-width: list.nth($recipeCalculatorBreakpoints, 3)) {
-  .recipeCalculator {
-    top: 30.1em;
-  }
-}
-
-@media (min-width: list.nth($recipeCalculatorBreakpoints, 4)) {
-  .recipeCalculator {
-    top: 32.3em;
   }
 }
 
@@ -129,7 +105,7 @@ $modalText-secondGrowth: 400px;
   }
 }
 
-@media (min-width: 504px) {
+@media (min-width: 730px) {
   .title {
     font-size: 1.23rem;
 

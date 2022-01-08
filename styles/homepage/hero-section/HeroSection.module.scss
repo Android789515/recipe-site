@@ -1,7 +1,15 @@
+@use '../../variables';
+
 .heroSection {
   height: 30em;
 
   background-image: url('../../../public/assets/img/hero.png');
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 860px) {
+  .heroSection {
+    height: 36.5em;
+  }
 }
