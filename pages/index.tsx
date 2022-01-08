@@ -24,6 +24,8 @@ const Home: NextPage = () => {
 
                 <CategoriesSection />
             </div>
+
+            <AddRecipeModal />
         </div>
     )
 }

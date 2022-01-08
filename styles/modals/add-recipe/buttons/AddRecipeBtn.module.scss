@@ -11,7 +11,7 @@
   margin-right: .3em;
 }
 
-$footerBtnsBreakpoint: 350px;
+$footerBtnsBreakpoint: 21.875em;
 @media (min-width: $footerBtnsBreakpoint) {
   .text {
     padding: 0 3.5em;
