@@ -18,7 +18,7 @@
 }
 
 $hideRecipeCalculator: 794px;
-$recipeCalculatorBreakpoints: (914px, 1000px, 1270px, 1666px);
+$recipeCalculatorBreakpoints: (914px, 1000px, 1666px);
 
 @media (max-width: 660px) and (max-height: $hideRecipeCalculator) {
   .recipeCalculator {
@@ -60,6 +60,12 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1270px, 1666px);
 @media (min-width: list.nth($recipeCalculatorBreakpoints, 2)) {
   .recipeCalculator {
     width: 40vw;
+  }
+}
+
+@media (min-width: list.nth($recipeCalculatorBreakpoints, 3)) {
+  .recipeCalculator {
+    top: 36.6em;
   }
 }
 

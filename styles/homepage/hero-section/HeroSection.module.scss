@@ -8,8 +8,14 @@
   background-position: center;
 }
 
-@media (min-width: 860px) {
+@media (min-width: variables.$majorLargeScreenBreakpoint2) {
   .heroSection {
     height: 36.5em;
+  }
+}
+
+@media (min-width: 1666px) {
+  .heroSection {
+    height: 42.6em;
   }
 }

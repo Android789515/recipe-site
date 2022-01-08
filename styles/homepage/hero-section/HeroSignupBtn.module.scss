@@ -27,7 +27,15 @@
   .signupText {
     font-size: 1rem;
     font-weight: 600;
+  }
+}
 
-    padding: 0;
+@media (min-width: 1666px) {
+  .signupBtn {
+    padding: 1.5em 5.75em;
+  }
+
+  .signupText {
+    font-size: 1.2rem;
   }
 }
