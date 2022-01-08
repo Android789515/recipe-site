@@ -22,7 +22,7 @@ $recipeCalculatorBreakpoints: (914px, 1000px, 1270px, 1666px);
 
 @media (max-width: 660px) and (max-height: $hideRecipeCalculator) {
   .recipeCalculator {
-    display: none;
+    //display: none;
   }
 }
 

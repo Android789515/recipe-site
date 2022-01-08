@@ -23,13 +23,6 @@
   margin-bottom: .96em;
 }
 
-$mobile-TitleGrowth: 362px;
-@media (min-width: $mobile-TitleGrowth) {
-  .heroTitle {
-    font-size: 2.2rem;
-  }
-}
-
 @media (min-width: variables.$exitMobileBreakpoint) {
   .heroTitle {
     font-size: 2rem;
