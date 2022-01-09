@@ -1,9 +1,5 @@
 @use '../../mixins';
-
-.categoryLayout {
-  background-size: cover;
-  background-position: center;
-}
+@use '../Home.module';
 
 .category {
   @include mixins.dropShadowLargeText;
@@ -12,6 +8,11 @@
   color: #fff;
 
   padding: 3em 1em;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: Home.$exitMobileBreakpoint) {
 }
 
 .categoryTitle {
@@ -24,6 +25,9 @@
 .categoryBody {
   margin-top: 0;
   margin-bottom: 2em;
+}
+
+@media (min-width: Home.$exitMobileBreakpoint) {
 }
 
 .recipesBtn {

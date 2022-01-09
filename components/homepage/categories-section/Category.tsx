@@ -23,7 +23,7 @@ const Category = ({ img, title, body, recipeCount }: Props) => {
     useEffect(setBackgroundImg, [])
 
     return (
-        <div className={`${styles.categoryLayout} ${styles.category}`} ref={categoryRef}>
+        <div className={styles.category} ref={categoryRef}>
             <h3 className={styles.categoryTitle}>{title}</h3>
 
             <p className={styles.categoryBody}>{body}</p>
