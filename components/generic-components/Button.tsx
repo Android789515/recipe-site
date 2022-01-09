@@ -4,7 +4,7 @@ import styles from '../../styles/generic-components/Button.module.scss'
 
 interface Props {
     customStyles?: string
-    onClick: () => void
+    onClick?: () => void
 }
 
 const Button: React.FC<Props> =
