@@ -1,12 +1,10 @@
 import { NextPage } from 'next'
-import Head from 'next/head'
+import SiteHead from '../components/generic-components/SiteHead'
 
 const Login: NextPage = () => {
     return (
         <div>
-            <Head>
-
-            </Head>
+            <SiteHead />
 
             <div>
 

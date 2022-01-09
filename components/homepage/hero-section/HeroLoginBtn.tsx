@@ -9,7 +9,7 @@ const HeroLoginBtn = () => {
     const router = useRouter()
 
     const showLoginPage = () => {
-        router.push('/Login')
+        router.push('/login')
     }
 
     return (

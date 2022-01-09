@@ -9,7 +9,7 @@ const HeroHeaderSignupBtn = () => {
     const router = useRouter()
 
     const showSignupPage = () => {
-        router.push('/Signup')
+        router.push('/signup')
     }
 
     return (
