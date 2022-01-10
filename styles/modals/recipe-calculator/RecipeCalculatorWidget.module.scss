@@ -9,7 +9,7 @@
   left: 1.5em;
   right: 1.5em;
 
-  max-width: 475px;
+  max-width: 650px;
 
   padding: 1.85em 1.1em;
   background: #fff;
@@ -53,6 +53,12 @@ $recipeCalculatorBreakpoints: (57.125em, 62.5em);
 @media (min-width: list.nth($recipeCalculatorBreakpoints, 2)) {
   .recipeCalculator {
     width: 40vw;
+  }
+}
+
+@media (min-width: list.nth(Home.$largeScreenBreakpoints, 4)) {
+  .recipeCalculator {
+    padding: 3.5em 2.5em;
   }
 }
 
