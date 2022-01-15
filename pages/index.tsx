@@ -6,6 +6,7 @@ import styles from '../styles/homepage/Home.module.scss'
 import HeroSection from '../components/homepage/hero-section/HeroSection'
 import CategoriesSection from '../components/homepage/categories-section/CategoriesSection'
 import RecipeCalculatorWidget from '../components/modals/recipe-calculator/RecipeCalculatorWidget'
+import AddRecipeModal from "../components/modals/add-recipe/AddRecipeModal";
 
 const Home: NextPage = () => {
 

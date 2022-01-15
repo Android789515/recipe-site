@@ -1,9 +1,15 @@
 @use '../../variables';
+@use '../Home.module';
 
 .layout {
 }
 
 .categories {
   display: grid;
-  grid-template: 1fr / repeat(3, 1fr);
+}
+
+@media (min-width: Home.$exitMobileBreakpoint) {
+  .categories {
+    grid-template: 1fr / repeat(3, 1fr);
+  }
 }
