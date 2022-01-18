@@ -37,6 +37,7 @@
   height: 100%;
 }
 
-.noBorder {
+// Increases specificity to override the border on ControlledInputs
+label.noBorder {
   border: 0;
 }

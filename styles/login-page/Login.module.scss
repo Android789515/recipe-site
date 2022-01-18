@@ -1,3 +1,9 @@
 .layout {
   display: flex;
+  flex-direction: column;
+}
+
+// Selects image inside of the NextJS wrapper
+.splash img {
+  object-fit: cover;
 }

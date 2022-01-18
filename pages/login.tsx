@@ -1,7 +1,7 @@
 import { NextPage } from 'next'
 
 import styles from '../styles/login-page/Login.module.scss'
-import splash from '../public/assets/img/mexican.png'
+import splash from '../public/assets/img/hero.png'
 
 import SiteHead from '../components/generic-components/SiteHead'
 import Image from '../components/generic-components/Image'
@@ -15,7 +15,7 @@ const Login: NextPage = () => {
 
             <div className={styles.layout}>
                 {/* Main image */}
-                <Image src={splash} alt=''/>
+                <Image className={styles.splash} src={splash} />
 
                 {/* Forms */}
                 <LoginForm />

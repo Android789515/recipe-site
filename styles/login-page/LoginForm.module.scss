@@ -1,0 +1,20 @@
+@use '../variables';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: .75em 2em;
+}
+
+.heading {
+
+}
+
+.footerText {
+
+  .signupLink {
+    color: variables.$accent-color;
+  }
+}
