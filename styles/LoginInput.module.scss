@@ -10,7 +10,11 @@
 
   padding: .75em .25em;
 
-  border-bottom: solid variables.$line-color 2px;
+  border-bottom: solid variables.$line-color 1px;
+}
+
+.inputSection > * {
+  grid-row: 1;
 }
 
 .inputSection:not(.inputSection:last-child) {
@@ -31,4 +35,8 @@
   display: inline-block;
 
   height: 100%;
+}
+
+.noBorder {
+  border: 0;
 }

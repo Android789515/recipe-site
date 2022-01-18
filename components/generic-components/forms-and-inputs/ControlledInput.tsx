@@ -5,6 +5,7 @@ import inputTypes from '../../../types/inputTypes'
 
 interface Props {
     customStyles?: string
+    labelStyles?: string
     name: string
     showName?: boolean
     type: string
@@ -23,6 +24,7 @@ type inputModes = 'search' | 'text' | 'email' | 'tel' | 'url' | 'none' | 'numeri
 const ControlledInput = (
     {
         customStyles,
+        labelStyles,
         name,
         showName,
         type,
@@ -45,7 +47,7 @@ const ControlledInput = (
 
     return (
 
-        <label className={styles.label}>
+        <label className={`${styles.label} ${labelStyles}`}>
             {showName &&  <p className={styles.labelText}>{name}</p>}
 
             <div>

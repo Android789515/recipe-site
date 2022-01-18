@@ -1,9 +1,9 @@
 import React from 'react'
 
-import styles from '../styles/LoginInput.module.scss'
+import styles from '../../styles/LoginInput.module.scss'
 
-import ControlledInput from './generic-components/forms-and-inputs/ControlledInput'
-import Image from './generic-components/Image'
+import ControlledInput from '../generic-components/forms-and-inputs/ControlledInput'
+import Image from '../generic-components/Image'
 
 interface Props {
     iconSrc: string
@@ -18,6 +18,7 @@ const LoginInput = ({ iconSrc, inputType, name, placeholder }: Props) => {
             <Image className={styles.icon} src={iconSrc} width='30px' height='28px' alt='placeholder icon'/>
 
             <ControlledInput
+                labelStyles={styles.noBorder}
                 customStyles={styles.input}
                 type={inputType}
                 name={name}

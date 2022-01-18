@@ -1,13 +1,13 @@
 import React from 'react'
 
-import inputTypes from '../types/inputTypes'
+import inputTypes from '../../types/inputTypes'
 
 import LoginInput from './LoginInput'
 
-import usernameIcon from '../public/assets/icons/person.svg'
-import passwordEyeIcon from '../public/assets/icons/password-eye.svg'
+import usernameIcon from '../../public/assets/icons/person.svg'
+import passwordEyeIcon from '../../public/assets/icons/password-eye.svg'
 
-const LoginForm = () => {
+const LoginInputs = () => {
     return (
         // TODO add action url
         <form name='login' action='' method='post'>
@@ -19,7 +19,7 @@ const LoginForm = () => {
             />
 
             <LoginInput
-                iconSrc={'/placeholder'}
+                iconSrc={usernameIcon}
                 inputType={inputTypes.password}
                 name='password'
                 placeholder='Password'
@@ -28,4 +28,4 @@ const LoginForm = () => {
     )
 }
 
-export default LoginForm
+export default LoginInputs
