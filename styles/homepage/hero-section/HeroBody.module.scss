@@ -13,10 +13,10 @@
 }
 
 .heroTitle {
+  @include mixins.thinHeading;
   @include mixins.dropShadowLargeText;
 
   font-size: 2rem;
-  font-weight: 600;
   line-height: 1.25;
   color: #fff;
 

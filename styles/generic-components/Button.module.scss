@@ -14,13 +14,3 @@
 
   border-radius: 50px;
 }
-
-.genericBtnText {
-  $scale: 1;
-  font-size: $scale * 0.95rem;
-  font-weight: 600;
-  text-transform: uppercase;
-
-  padding: $scale * 1.125em $scale * 4.75em;
-  margin: 0;
-}

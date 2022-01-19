@@ -1,4 +1,5 @@
 @use '../variables';
+@use '../mixins';
 
 .layout {
   display: flex;
@@ -8,8 +9,32 @@
   padding: .75em 2em;
 }
 
-.heading {
+.logo {
+  margin-bottom: .85em;
+}
 
+.heading {
+  @include mixins.thinHeading;
+
+  font-size: 1.7rem;
+}
+
+.forms {
+  margin-bottom: 2.5em;
+}
+
+.loginBtn {
+  width: 100%;
+}
+
+.loginText {
+  $scale: 1;
+  font-size: $scale * 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  padding: $scale * 1.125em $scale * 4.75em;
+  margin: 0;
 }
 
 .footerText {

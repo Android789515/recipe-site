@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use '../../mixins';
 @use '../../homepage/Home.module';
 
 .recipeCalculator {
@@ -69,8 +70,8 @@ $recipeCalculatorBreakpoints: (57.125em, 62.5em);
 }
 
 .title {
+  @include mixins.thinHeading;
   font-size: .92rem;
-  font-weight: 600;
 
   margin-top: 0;
   margin-bottom: 2em;

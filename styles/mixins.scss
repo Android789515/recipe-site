@@ -39,3 +39,7 @@
 @mixin dropShadowSmallText {
   text-shadow: 1px 1px 1px #000;
 }
+
+@mixin thinHeading {
+  font-weight: 600;
+}

@@ -1,14 +1,13 @@
-@use 'variables';
-@use 'mixins';
+@use '../../variables';
+@use '../../mixins';
 
 .inputSection {
   display: grid;
   grid-template-rows: 2em;
   grid-template-columns: max-content auto;
-  grid-column-gap: 2em;
   align-items: center;
 
-  padding: .75em .25em;
+  padding: .75em 0;
 
   border-bottom: solid variables.$line-color 1px;
 }
@@ -22,13 +21,11 @@
 }
 
 .icon {
-
+  margin-right: 2em;
 }
 
 .input {
   @include mixins.unstyledInput;
-
-  color: variables.$dark-gray;
 
   outline: none;
 

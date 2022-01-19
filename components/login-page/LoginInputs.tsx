@@ -1,28 +1,30 @@
-import React from 'react'
-
 import inputTypes from '../../types/inputTypes'
 
-import LoginInput from './LoginInput'
-
 import usernameIcon from '../../public/assets/icons/person.svg'
-import passwordEyeIcon from '../../public/assets/icons/password-eye.svg'
 
-const LoginInputs = () => {
+import AuthInput from '../generic-components/forms-and-inputs/AuthInput'
+
+interface Props {
+    formStyles: string
+}
+
+const LoginInputs = ({ formStyles }: Props) => {
     return (
         // TODO add action url
-        <form name='login' action='' method='post'>
-            <LoginInput
+        <form name='login' action='' method='post' className={formStyles}>
+            <AuthInput
                 iconSrc={usernameIcon}
                 inputType={inputTypes.text}
                 name='username-or-email'
                 placeholder='Username or email'
             />
 
-            <LoginInput
+            <AuthInput
                 iconSrc={usernameIcon}
                 inputType={inputTypes.password}
                 name='password'
                 placeholder='Password'
+                isDataSensitive={true}
             />
         </form>
     )

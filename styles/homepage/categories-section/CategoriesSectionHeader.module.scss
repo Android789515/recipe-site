@@ -1,3 +1,4 @@
+@use '../../mixins';
 @use '../Home.module';
 
 .layout {
@@ -8,8 +9,8 @@
 }
 
 .title {
+  @include mixins.thinHeading;
   font-size: 1.05rem;
-  font-weight: 600;
 
   margin: 0;
 }
