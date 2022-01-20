@@ -12,9 +12,23 @@ interface Props {
     name: string
     placeholder: string
     isDataSensitive?: boolean
+    value: string
+    onChange: React.ChangeEventHandler
+    isPasswordShown?: boolean
+    showOrHidePassword?: () => void
 }
 
-const AuthInput = ({ iconSrc, inputType, name, placeholder, isDataSensitive }: Props) => {
+const AuthInput = ({
+    iconSrc,
+    inputType,
+    name,
+    placeholder,
+    isDataSensitive,
+    value,
+    onChange,
+    isPasswordShown,
+    showOrHidePassword
+}: Props) => {
     return (
         <div className={styles.inputSection}>
             <Image className={styles.icon} src={iconSrc} width='30px' height='28px' alt='placeholder icon'/>
@@ -26,11 +40,18 @@ const AuthInput = ({ iconSrc, inputType, name, placeholder, isDataSensitive }: P
                 name={name}
                 placeholder={placeholder}
                 required
-                value={''}
-                onChange={() => {}}
+                value={value}
+                onChange={onChange}
             />
 
-            {isDataSensitive && <Image src={passwordEyeIcon} />}
+            {
+                isDataSensitive &&
+                <Image
+                    className={styles.passwordEyeIcon}
+                    src={passwordEyeIcon}
+                    onClick={showOrHidePassword}
+                />
+            }
         </div>
     )
 }

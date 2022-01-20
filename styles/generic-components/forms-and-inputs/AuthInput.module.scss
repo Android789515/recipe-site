@@ -38,3 +38,7 @@
 label.noBorder {
   border: 0;
 }
+
+.passwordEyeIcon {
+  @include mixins.clickable;
+}

@@ -16,6 +16,10 @@
   opacity: 1;
 }
 
+.input::selection {
+  color: #fff;
+}
+
 .label {
   @include widgetMixins.labels;
 }
