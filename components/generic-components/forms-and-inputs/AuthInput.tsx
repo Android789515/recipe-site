@@ -31,7 +31,7 @@ const AuthInput = ({
 }: Props) => {
     return (
         <div className={styles.inputSection}>
-            <Image className={styles.icon} src={iconSrc} width='30px' height='28px' alt='placeholder icon'/>
+            <Image className={styles.icon} src={iconSrc} alt='placeholder icon'/>
 
             <ControlledInput
                 labelStyles={styles.noBorder}
