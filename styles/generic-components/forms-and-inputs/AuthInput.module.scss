@@ -9,7 +9,7 @@
 
   padding: .75em 0;
 
-  border-bottom: solid variables.$line-color 1px;
+  border-bottom: solid variables.$line-color 2px;
 }
 
 .inputSection > * {
@@ -26,6 +26,8 @@
 
 .input {
   @include mixins.unstyledInput;
+
+  font-size: .85rem;
 
   outline: none;
 

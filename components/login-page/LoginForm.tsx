@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 
 import styles from '../../styles/login-page/LoginForm.module.scss'
@@ -6,7 +7,7 @@ import logo from '../../public/favicon.svg'
 import Image from '../generic-components/Image'
 import Button from '../generic-components/Button'
 import LoginInputs from './LoginInputs'
-import React from 'react'
+import ExtraLoginDetails from './ExtraLoginDetails'
 
 const LoginForm = () => {
     return (
@@ -16,11 +17,11 @@ const LoginForm = () => {
             <h1 className={styles.heading}>Login</h1>
 
             <LoginInputs formStyles={styles.forms} />
-            {/* Big login button */}
+
             <Button customStyles={styles.loginBtn}>
                 <p className={styles.loginText}>Login</p>
             </Button>
-            {/* Remember checkbox (left) - Forgot psswd link (right) */}
+            <ExtraLoginDetails />
 
             {/* Text will be on one line */}
             <p className={styles.footerText}>

@@ -20,11 +20,15 @@
 }
 
 .forms {
+  width: 100%;
+
   margin-bottom: 2.5em;
 }
 
 .loginBtn {
   width: 100%;
+
+  margin-bottom: 1em;
 }
 
 .loginText {
@@ -38,6 +42,8 @@
 }
 
 .footerText {
+  font-size: .84rem;
+  font-weight: 500;
 
   .signupLink {
     color: variables.$accent-color;
