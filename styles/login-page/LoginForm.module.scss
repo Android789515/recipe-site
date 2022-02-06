@@ -9,6 +9,17 @@
   padding: .75em 1.75em;
 }
 
+@media (min-width: 800px) {
+  .layout {
+    justify-content: center;
+
+    width: 100%;
+    max-width: 50vw;
+
+    padding: 0 15%;
+  }
+}
+
 .logo {
   margin-bottom: .85em;
 }
@@ -37,7 +48,7 @@
   font-weight: 600;
   text-transform: uppercase;
 
-  padding: $scale * 1.125em $scale * 4.75em;
+  padding: $scale * 1.25em $scale * 4.75em;
   margin: 0;
 }
 

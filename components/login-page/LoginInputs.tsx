@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import inputTypes from '../../types/inputTypes'
 
 import usernameIcon from '../../public/assets/icons/person.svg'
+import lockIcon from '../../public/assets/icons/password-lock.svg'
 
 import AuthInput from '../generic-components/forms-and-inputs/AuthInput'
 
@@ -41,7 +42,7 @@ const LoginInputs = ({ formStyles }: Props) => {
 
             <AuthInput
                 // TODO - switch to password lock icon once it's received
-                iconSrc={usernameIcon}
+                iconSrc={lockIcon}
                 inputType={isPasswordShown ? inputTypes.text : inputTypes.password}
                 name='password'
                 placeholder='Password'

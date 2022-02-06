@@ -3,7 +3,30 @@
   flex-direction: column;
 }
 
-// Selects image inside of the NextJS wrapper
+.splash {
+  height: 30vh;
+}
+
+// Selects elements inside of the NextJS wrapper
+.splash span {
+  // Overrides the NextJS styling.
+  height: 100% !important;
+}
+
 .splash img {
   object-fit: cover;
+}
+
+@media (min-width: 800px) {
+  .layout {
+    flex-direction: row;
+  }
+
+  .splash {
+    min-width: 50vw;
+  }
+
+  .splash {
+    min-height: 100vh;
+  }
 }

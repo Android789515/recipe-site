@@ -47,9 +47,10 @@ const AuthInput = ({
             {
                 isDataSensitive &&
                 <Image
-                    className={styles.passwordEyeIcon}
+                    className={isPasswordShown ? styles.passwordEyeIconGreyedOut : styles.passwordEyeIcon}
                     src={passwordEyeIcon}
                     onClick={showOrHidePassword}
+                    alt='Show password'
                 />
             }
         </div>
