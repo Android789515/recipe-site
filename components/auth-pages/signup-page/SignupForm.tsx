@@ -1,11 +1,12 @@
 import styles from '../../../styles/auth-pages/AuthForm.module.scss'
-import Button from '../../generic-components/Button'
-import AuthPageFooter from '../AuthPageFooter'
+
 import AuthPageSiteLogo from '../AuthPageSiteLogo'
 import AuthPageTitle from '../AuthPageTitle'
 import SignupInputs from './SignupInputs'
+import Button from '../../generic-components/Button'
+import AuthPageFooter from '../AuthPageFooter'
 
-const signupForm = () => {
+const SignupForm = () => {
     return (
         <div className={styles.layout}>
             <AuthPageSiteLogo />
@@ -15,7 +16,7 @@ const signupForm = () => {
             <SignupInputs />
 
             <Button customStyles={styles.authBtn}>
-                <p className={styles.authBtnText}>Signup</p>
+                <p className={styles.authBtnText}>Sign up</p>
             </Button>
 
             <AuthPageFooter
@@ -27,4 +28,4 @@ const signupForm = () => {
     )
 }
 
-export default signupForm
+export default SignupForm

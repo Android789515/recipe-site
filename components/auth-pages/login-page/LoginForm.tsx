@@ -1,4 +1,5 @@
 import styles from '../../../styles/auth-pages/AuthForm.module.scss'
+import loginBtnStyles from '../../../styles/auth-pages/LoginForm_LoginBtn.module.scss'
 
 import AuthPageTitle from '../AuthPageTitle'
 import AuthPageSiteLogo from '../AuthPageSiteLogo'
@@ -17,7 +18,7 @@ const LoginForm = () => {
             <LoginInputs />
 
             <Button customStyles={styles.authBtn}>
-                <p className={styles.authBtnText}>Login</p>
+                <p className={`${styles.authBtnText} ${loginBtnStyles.loginBtnText}`}>Login</p>
             </Button>
             <ExtraLoginDetails />
 
