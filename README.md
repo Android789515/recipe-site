@@ -1,13 +1,25 @@
 # What the website looks like
 
 ## Homepage
-![Homepage](screenshots/Recipe%20Site%20-%20Homepage.png)
+![Homepage](screenshots/recipe-site-homepage.png)
 
 ## Homepage mobile
-![](screenshots/Recipe%20Site%20-%20Homepage%20(Mobile).png)
+![](screenshots/recipe-site-homepage_(mobile).png)
+
+## Login page
+![Login page](screenshots/recipe-site-login-page.png)
+
+## Login page mobile
+![](screenshots/recipe-site-login-page_(mobile).png)
+
+## Sign up page
+![Sign up page](screenshots/recipe-site-sign-up-page.png)
+
+## Sign up page mobile
+![](screenshots/recipe-site-sign-up-page_(mobile).png)
 
 ## Add recipe modal half
-![](screenshots/Recipe%20Site%20-%20Add%20Recipe%20Modal.png)
+![Add recipe modal](screenshots/recipe-site-add-recipe-modal.png)
 
 ## Add recipe modal half
-![](screenshots/Recipe%20Site%20-%20Add%20Recipe%20Modal%20(Mobile).png)
+![](screenshots/recipesite-add-recipe-modal_(mobile).png)
