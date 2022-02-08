@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 
-import styles from '../styles/login-page/Login.module.scss'
+import styles from '../styles/auth-pages/AuthPage.module.scss'
 import splash from '../public/assets/img/login-splash.png'
 
 import SiteHead from '../components/generic-components/SiteHead'
@@ -14,7 +14,6 @@ const Login: NextPage = () => {
             <SiteHead />
 
             <div className={styles.layout}>
-                {/* Main image */}
                 <Image
                     className={styles.splash}
                     src={splash}
@@ -22,7 +21,6 @@ const Login: NextPage = () => {
                     alt='A dish of spaghetti and clams.'
                 />
 
-                {/* Forms */}
                 <LoginForm />
             </div>
         </div>

@@ -1,0 +1,10 @@
+@use '../variables';
+
+.footerText {
+  font-size: .84rem;
+  font-weight: 500;
+
+  .signupLink {
+    color: variables.$accent-color;
+  }
+}

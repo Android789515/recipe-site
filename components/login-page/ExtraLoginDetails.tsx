@@ -1,4 +1,4 @@
-import styles from '../../styles/login-page/ExtraLoginDetails.module.scss'
+import styles from '../../styles/auth-pages/AuthExtras.module.scss'
 
 import inputTypes from '../../types/inputTypes'
 
