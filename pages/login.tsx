@@ -6,7 +6,7 @@ import splash from '../public/assets/img/login-splash.png'
 import SiteHead from '../components/generic-components/SiteHead'
 import Image from '../components/generic-components/Image'
 
-import LoginForm from '../components/login-page/LoginForm'
+import LoginForm from '../components/auth-pages/login-page/LoginForm'
 
 const Login: NextPage = () => {
     return (

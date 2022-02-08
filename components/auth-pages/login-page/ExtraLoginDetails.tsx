@@ -1,6 +1,6 @@
-import styles from '../../styles/auth-pages/AuthExtras.module.scss'
+import styles from '../../../styles/auth-pages/AuthExtras.module.scss'
 
-import inputTypes from '../../types/inputTypes'
+import inputTypes from '../../../types/inputTypes'
 
 const ExtraLoginDetails = () => {
     return (

@@ -3,9 +3,10 @@ import { NextPage } from 'next'
 import styles from '../styles/auth-pages/AuthPage.module.scss'
 import splash from '../public/assets/img/signup-splash.png'
 
+
 import SiteHead from '../components/generic-components/SiteHead'
 import Image from '../components/generic-components/Image'
-import SignupForm from '../components/signup-page/SignupForm'
+import SignupForm from '../components/auth-pages/signup-page/SignupForm'
 
 const Signup: NextPage = () => {
     return (

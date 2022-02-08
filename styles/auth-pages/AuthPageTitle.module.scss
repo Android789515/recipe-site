@@ -1,0 +1,7 @@
+@use '../mixins';
+
+.heading {
+  @include mixins.thinHeading;
+
+  font-size: 1.55rem;
+}

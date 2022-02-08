@@ -19,7 +19,7 @@
   background: none;
 }
 
-.loginText {
+.loginBtnText {
   @include mixins.dropShadowSmallText;
 
   font-size: .85rem;
@@ -34,7 +34,7 @@
     margin-left: 2.3em;
   }
 
-  .loginText {
+  .loginBtnText {
     @include mixins.dropShadowLargeText;
 
     font-size: .98rem;
@@ -42,7 +42,7 @@
 }
 
 @media (min-width: list.nth(Home.$largeScreenBreakpoints, 5)) {
-  .loginText {
+  .loginBtnText {
     font-size: 1.198rem;
   }
 }

@@ -1,0 +1,7 @@
+@use '../mixins';
+
+.logo {
+  @include mixins.clickable;
+
+  margin-bottom: .85em;
+}

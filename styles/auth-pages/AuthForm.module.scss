@@ -40,29 +40,19 @@
   }
 }
 
-.logo {
-  margin-bottom: .85em;
-}
-
-.heading {
-  @include mixins.thinHeading;
-
-  font-size: 1.55rem;
-}
-
 .forms {
   width: 100%;
 
   margin-bottom: 2.5em;
 }
 
-.loginBtn {
+.authBtn {
   width: 100%;
 
   margin-bottom: 1em;
 }
 
-.loginText {
+.authBtnText {
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -72,7 +62,7 @@
 }
 
 @media (min-width: 50em) {
-  .loginText {
+  .authBtnText {
     font-size: 1.2rem;
     font-weight: 700;
   }

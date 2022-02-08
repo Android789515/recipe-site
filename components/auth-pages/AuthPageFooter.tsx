@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-import styles from '../styles/auth-pages/AuthPageFooter.module.scss'
+import styles from '../../styles/auth-pages/AuthPageFooter.module.scss'
 
 interface Props {
     text: string
     linkTo: string
-    linkText: string
+    linkText: 'Login' | 'Sign up'
 }
 
 const AuthPageFooter = ({ text, linkTo, linkText }: Props) => {
