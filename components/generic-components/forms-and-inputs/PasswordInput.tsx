@@ -13,7 +13,7 @@ interface Props {
     }
 }
 
-const AuthInputProtected = ({ userAuthData: { password, update } }: Props) => {
+const PasswordInput = ({ userAuthData: { password, update } }: Props) => {
     const [ isPasswordShown, setIsPasswordShown ] = useState(false)
 
     const showOrHidePassword = () => setIsPasswordShown(isShown => !isShown)
@@ -33,4 +33,4 @@ const AuthInputProtected = ({ userAuthData: { password, update } }: Props) => {
     )
 }
 
-export default AuthInputProtected
+export default PasswordInput

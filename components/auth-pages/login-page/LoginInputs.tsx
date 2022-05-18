@@ -5,7 +5,7 @@ import styles from '../../../styles/auth-pages/AuthForm.module.scss'
 import usernameIcon from '../../../public/assets/icons/person.svg'
 
 import AuthInput from '../../generic-components/forms-and-inputs/AuthInput'
-import AuthInputProtected from '../../generic-components/forms-and-inputs/AuthInputProtected'
+import PasswordInput from '../../generic-components/forms-and-inputs/PasswordInput'
 
 const LoginInputs = () => {
     const { userAuthData, updateFormAuthData } = useControlledAuthForm({ username: '', password: '' })
@@ -22,7 +22,7 @@ const LoginInputs = () => {
                 onChange={updateFormAuthData}
             />
 
-            <AuthInputProtected
+            <PasswordInput
                 userAuthData={{
                     password: userAuthData.password,
                     update: updateFormAuthData

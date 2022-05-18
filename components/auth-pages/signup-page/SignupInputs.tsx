@@ -6,7 +6,7 @@ import emailIcon from '../../../public/assets/icons/email.svg'
 
 import AuthInput from '../../generic-components/forms-and-inputs/AuthInput'
 import useControlledAuthForm from '../../../hooks/useControlledAuthForm'
-import AuthInputProtected from '../../generic-components/forms-and-inputs/AuthInputProtected'
+import AuthInputProtected from '../../generic-components/forms-and-inputs/PasswordInput'
 
 const SignupInputs = () => {
     const { userAuthData, updateFormAuthData } = useControlledAuthForm({ username: '', email: '', password: '' })
