@@ -1,3 +1,5 @@
+import Routes from '../../../routes/routes'
+
 import styles from '../../../styles/auth-pages/AuthForm.module.scss'
 import loginBtnStyles from '../../../styles/auth-pages/LoginForm_LoginBtn.module.scss'
 
@@ -24,7 +26,7 @@ const LoginForm = () => {
 
             <AuthPageFooter
                 text='Don’t have an account?'
-                linkTo='/signup'
+                linkTo={Routes.signup}
                 linkText='Sign up'
             />
         </div>
