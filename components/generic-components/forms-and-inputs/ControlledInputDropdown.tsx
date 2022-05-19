@@ -13,6 +13,7 @@ interface Props {
     placeholder?: string
     isRequired: boolean
     customStyles?: string
+    options?: any
     value: string
     onChange: React.ChangeEventHandler
 }
