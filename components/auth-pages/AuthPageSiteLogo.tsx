@@ -2,10 +2,7 @@ import { useRouter } from 'next/router'
 
 import Routes from '../../routes/routes'
 
-import styles from '../../styles/auth-pages/AuthPageSiteLogo.module.scss'
-import logo from '../../public/favicon.svg'
-
-import Image from '../generic-components/Image'
+import SiteLogo from '../generic-components/SiteLogo'
 
 const AuthPageSiteLogo = () => {
     const router = useRouter()
@@ -13,12 +10,9 @@ const AuthPageSiteLogo = () => {
     const navigateToHome = () => router.push(Routes.home)
 
     return (
-        <Image
-            className={styles.logo}
-            src={logo}
-            alt=''
-            onClick={navigateToHome}
-        />
+        <div onClick={navigateToHome}>
+            <SiteLogo />
+        </div>
     )
 }
 
