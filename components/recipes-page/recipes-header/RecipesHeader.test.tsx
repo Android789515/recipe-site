@@ -11,4 +11,12 @@ describe('RecipesHeader', () => {
 
         expect(siteLogo).toBeInTheDocument()
     })
+
+    it('Renders search button', () => {
+
+    })
+
+    it('Renders user component', () => {
+
+    })
 })
