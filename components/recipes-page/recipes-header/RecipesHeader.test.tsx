@@ -16,7 +16,7 @@ describe('RecipesHeader', () => {
 
     })
 
-    it('Renders user component', () => {
+    it('Renders user widget', () => {
 
     })
 })
