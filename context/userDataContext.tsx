@@ -1,19 +1,19 @@
 import React, { createContext, useState } from 'react'
 
-import UserData from '../../types/userData'
+import User from '../types/user'
 
 const userDataContext = createContext<any>(undefined)
 
 const UserDataProvider: React.FC = ({ children }) => {
 
-    const [ userData, setUserData ] = useState<UserData>()
+    const [ user, updateUser ] = useState<User | undefined>()
 
-    const getUsername = () => userData?.username
+    const getUsername = () => user?.username
 
-    const setUser = (userData: UserData) => setUserData(userData)
+    const authUser = (user: User) => updateUser(user)
 
     return (
-        <userDataContext.Provider value={{ getUsername, setUser }}>
+        <userDataContext.Provider value={{ getUsername, authUser }}>
             {children}
         </userDataContext.Provider>
     )

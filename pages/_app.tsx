@@ -1,7 +1,7 @@
 import { RecoilRoot } from 'recoil'
 import type { AppProps } from 'next/app'
 
-import { UserDataProvider } from '../hooks/user-auth/userDataContext'
+import { UserDataProvider } from '../context/userDataContext'
 
 import '../styles/globals.css'
 
