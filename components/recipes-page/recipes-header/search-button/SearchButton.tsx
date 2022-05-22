@@ -1,6 +1,8 @@
 const SearchButton = () => {
     return (
-        <></>
+        <button>
+
+        </button>
     )
 }
 

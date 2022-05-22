@@ -13,10 +13,18 @@ describe('RecipesHeader', () => {
     })
 
     it('Renders search button', () => {
+        render(<RecipesHeader />)
 
+        const searchButton = screen.getByRole('button')
+
+        expect(searchButton).toBeInTheDocument()
     })
 
     it('Renders user widget', () => {
+        render(<RecipesHeader />)
 
+        const userWidget = screen.getByRole('menu')
+
+        expect(userWidget).toBeInTheDocument()
     })
 })

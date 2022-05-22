@@ -1,6 +1,6 @@
 const UserWidget = () => {
     return (
-        <div>
+        <div role='menu'>
 
         </div>
     )
