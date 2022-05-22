@@ -1,6 +1,8 @@
 const UserWidget = () => {
     return (
-        <></>
+        <div>
+
+        </div>
     )
 }
 
