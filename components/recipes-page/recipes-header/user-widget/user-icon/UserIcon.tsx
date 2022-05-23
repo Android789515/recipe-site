@@ -6,7 +6,7 @@ const UserIcon = () => {
     return (
         <Image
             src={userIcon}
-            alt=''
+            alt='Profile Icon'
         />
     )
 }
