@@ -1,17 +1,17 @@
 import { RecoilRoot } from 'recoil'
 import type { AppProps } from 'next/app'
 
-import { UserDataProvider } from '../context/userDataContext'
+import { UserProvider } from '../context/userContext'
 
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-      <UserDataProvider>
+      <UserProvider>
           <RecoilRoot>
               <Component {...pageProps} />
           </RecoilRoot>
-      </UserDataProvider>
+      </UserProvider>
   )
 }
 
